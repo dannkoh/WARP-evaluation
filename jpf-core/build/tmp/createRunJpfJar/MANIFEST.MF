@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Implementation-Title: Java Pathfinder core launch system
+Implementation-Version: JPF-8.0-124-g2345caa-SNAPSHOT
+Built-By: dankoh
+Specification-Version: JPF-8.0-124-g2345caa-SNAPSHOT
+Main-Class: gov.nasa.jpf.tool.RunJPF
+Implementation-Vendor: NASA Ames Research Center
+

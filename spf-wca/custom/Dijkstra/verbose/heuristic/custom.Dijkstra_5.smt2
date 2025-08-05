@@ -1,0 +1,15 @@
+(declare-const in31 Int)
+(declare-const in42 Int)
+(declare-const in41 Int)
+(declare-const in21 Int)
+(declare-const in32 Int)
+(declare-const in43 Int)
+(declare-const in02 Int)
+(declare-const in01 Int)
+(declare-const in04 Int)
+(declare-const in03 Int)
+
+(assert (and (and (and (and (and (and (and (and (and (and (and  ( <  in02 in01)  ( <  in03 in02))  ( <  in04 in03))  ( <  ( +  in41 in04) in01))  ( <  ( +  in42 in04) in02))  ( <  ( +  in43 in04) in03))  ( <  ( +  in42 in04) ( +  in41 in04)))  ( <  ( +  in43 in04) ( +  in42 in04)))  ( <  ( +  in31 ( +  in43 in04)) ( +  in41 in04)))  ( <  ( +  in32 ( +  in43 in04)) ( +  in42 in04)))  ( <  ( +  in32 ( +  in43 in04)) ( +  in31 ( +  in43 in04))))  ( <  ( +  in21 ( +  in32 ( +  in43 in04))) ( +  in31 ( +  in43 in04)))))
+
+(check-sat)
+(get-model)

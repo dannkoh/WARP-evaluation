@@ -1,0 +1,18 @@
+(declare-const in0 Int)
+(declare-const in2 Int)
+(declare-const in1 Int)
+(declare-const in4 Int)
+(declare-const in3 Int)
+(declare-const in6 Int)
+(declare-const in5 Int)
+(declare-const in8 Int)
+(declare-const in7 Int)
+(declare-const in11 Int)
+(declare-const in10 Int)
+(declare-const in9 Int)
+(declare-const in12 Int)
+
+(assert (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (not ( = ( mod  in0 2) 0))  ( =  ( mod  in0 3) 0)) (not ( = ( mod  in1 2) 0)))  ( =  ( mod  in1 3) 0)) (not ( = ( mod  in2 2) 0)))  ( =  ( mod  in2 3) 0)) (not ( = ( mod  in3 2) 0)))  ( =  ( mod  in3 3) 0)) (not ( = ( mod  in4 2) 0)))  ( =  ( mod  in4 3) 0)) (not ( = ( mod  in5 2) 0)))  ( =  ( mod  in5 3) 0)) (not ( = ( mod  in6 2) 0)))  ( =  ( mod  in6 3) 0)) (not ( = ( mod  in7 2) 0)))  ( =  ( mod  in7 3) 0)) (not ( = ( mod  in8 2) 0)))  ( =  ( mod  in8 3) 0)) (not ( = ( mod  in9 2) 0)))  ( =  ( mod  in9 3) 0)) (not ( = ( mod  in10 2) 0)))  ( =  ( mod  in10 3) 0)) (not ( = ( mod  in11 2) 0)))  ( =  ( mod  in11 3) 0)) (not ( = ( mod  in12 2) 0)))  ( =  ( mod  in12 3) 0)))
+
+(check-sat)
+(get-model)

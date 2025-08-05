@@ -1,0 +1,26 @@
+{
+  "gpt-4.1-mini": {
+    "correct": 1163,
+    "error_syntax": 305,
+    "error_semantics": 543,
+    "error_output_formatting": 2
+  },
+  "gpt-4.1": {
+    "correct": 885,
+    "error_syntax": 455,
+    "error_semantics": 672,
+    "error_output_formatting": 1
+  },
+  "o4-mini": {
+    "correct": 1780,
+    "error_syntax": 21,
+    "error_semantics": 196,
+    "error_output_formatting": 16
+  },
+  "gpt-4o": {
+    "correct": 720,
+    "error_syntax": 464,
+    "error_semantics": 675,
+    "error_output_formatting": 154
+  }
+}

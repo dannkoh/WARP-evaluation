@@ -1,0 +1,106 @@
+{
+  "gpt-4.1-mini": {
+    "small": {
+      "correct": 613,
+      "error_syntax": 152,
+      "error_semantics": 234,
+      "error_output_formatting": 0
+    },
+    "medium": {
+      "correct": 542,
+      "error_syntax": 152,
+      "error_semantics": 303,
+      "error_output_formatting": 2
+    },
+    "large": {
+      "correct": 8,
+      "error_syntax": 1,
+      "error_semantics": 6,
+      "error_output_formatting": 0
+    },
+    "overall": {
+      "correct": 1163,
+      "error_syntax": 305,
+      "error_semantics": 543,
+      "error_output_formatting": 2
+    }
+  },
+  "gpt-4.1": {
+    "small": {
+      "correct": 457,
+      "error_syntax": 228,
+      "error_semantics": 314,
+      "error_output_formatting": 0
+    },
+    "medium": {
+      "correct": 423,
+      "error_syntax": 222,
+      "error_semantics": 353,
+      "error_output_formatting": 1
+    },
+    "large": {
+      "correct": 5,
+      "error_syntax": 5,
+      "error_semantics": 5,
+      "error_output_formatting": 0
+    },
+    "overall": {
+      "correct": 885,
+      "error_syntax": 455,
+      "error_semantics": 672,
+      "error_output_formatting": 1
+    }
+  },
+  "o4-mini": {
+    "small": {
+      "correct": 890,
+      "error_syntax": 9,
+      "error_semantics": 91,
+      "error_output_formatting": 9
+    },
+    "medium": {
+      "correct": 876,
+      "error_syntax": 12,
+      "error_semantics": 104,
+      "error_output_formatting": 7
+    },
+    "large": {
+      "correct": 14,
+      "error_syntax": 0,
+      "error_semantics": 1,
+      "error_output_formatting": 0
+    },
+    "overall": {
+      "correct": 1780,
+      "error_syntax": 21,
+      "error_semantics": 196,
+      "error_output_formatting": 16
+    }
+  },
+  "gpt-4o": {
+    "small": {
+      "correct": 422,
+      "error_syntax": 198,
+      "error_semantics": 317,
+      "error_output_formatting": 62
+    },
+    "medium": {
+      "correct": 294,
+      "error_syntax": 264,
+      "error_semantics": 352,
+      "error_output_formatting": 89
+    },
+    "large": {
+      "correct": 4,
+      "error_syntax": 2,
+      "error_semantics": 6,
+      "error_output_formatting": 3
+    },
+    "overall": {
+      "correct": 720,
+      "error_syntax": 464,
+      "error_semantics": 675,
+      "error_output_formatting": 154
+    }
+  }
+}

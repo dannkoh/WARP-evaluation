@@ -1,0 +1,16 @@
+@using spf-wca
+
+target=custom.KnapsackSolver
+shell=wcanalysis.WorstCaseAnalyzer
+
+symbolic.min_int=-200
+symbolic.max_int=200
+symbolic.dp=z3
+
+symbolic.wc.policy.history.size=0
+symbolic.worstcase.policy.inputsize=5
+symbolic.worstcase.input.max=30
+
+symbolic.worstcase.verbose=true
+symbolic.worstcase.outputpath=${spf-wca}/custom/KnapsackSolver
+symbolic.method=custom.KnapsackSolver.knapsack(con#con#con#con)

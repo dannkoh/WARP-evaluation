@@ -1,0 +1,8 @@
+torch
+torchaudio
+torchvision
+openai
+datasets
+pandas
+z3-solver
+python-dotenv

@@ -1,0 +1,27 @@
+exclude = [
+    ".git",
+    ".vscode",
+    ".keep",
+    ".venv",
+]
+target-version = "py311"
+
+line-length = 120
+indent-width = 4
+
+[lint]
+select = ["ALL"]
+ignore = ["D200","D203","D212", "D100", "ANN001","COM812","FBT002", "N801", "ISC001", "D205", "FBT001"]
+
+[lint.per-file-ignores]
+"utils/conversation.py" = ["T201"]
+"utils/evaluation.py" = ["E501"]
+"experiment/*" = ["PD901","W291"]
+"verl/utils/reward_score/custom.py" = ["PLR0911"]
+"verl/**" = ["ALL"]
+# "**.ipynb" = ["ALL"]
+
+[format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-line-length = "dynamic"
