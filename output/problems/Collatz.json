@@ -1,0 +1,90 @@
+{
+  "problem": "Collatz",
+  "local_models": {
+    "DeepSeek-R1-Distill-Qwen-7B": {
+      "error_output_formatting": 50,
+      "total_attempts": 216,
+      "error_syntax": 162,
+      "error_semantics": 4
+    },
+    "DeepSeek-R1-Distill-Qwen-14B": {
+      "error_syntax": 114,
+      "total_attempts": 216,
+      "correct": 70,
+      "error_output_formatting": 18,
+      "error_semantics": 14
+    },
+    "DeepSeek-R1-Distill-Qwen-32B": {
+      "correct": 124,
+      "total_attempts": 216,
+      "error_syntax": 66,
+      "error_semantics": 26
+    },
+    "warp-1.0": {
+      "error_output_formatting": 60,
+      "total_attempts": 216,
+      "error_semantics": 44,
+      "correct": 94,
+      "error_syntax": 18
+    },
+    "Qwen2.5-7B-Instruct": {
+      "error_syntax": 154,
+      "total_attempts": 216,
+      "error_semantics": 26,
+      "correct": 36
+    },
+    "Qwen2.5-3B-Instruct": {
+      "error_syntax": 192,
+      "total_attempts": 216,
+      "error_semantics": 14,
+      "error_output_formatting": 10
+    },
+    "Qwen2.5-14B-Instruct": {
+      "correct": 106,
+      "total_attempts": 216,
+      "error_syntax": 108,
+      "error_semantics": 2
+    },
+    "Qwen2.5-32B-Instruct": {
+      "correct": 182,
+      "total_attempts": 216,
+      "error_syntax": 30,
+      "error_semantics": 4
+    },
+    "Falcon3-10B-Instruct": {
+      "error_syntax": 142,
+      "total_attempts": 216,
+      "correct": 50,
+      "error_output_formatting": 6,
+      "error_semantics": 18
+    }
+  },
+  "openai_models": {
+    "gpt-4.1-mini": {
+      "error_semantics": 45,
+      "total_attempts": 108,
+      "unknown": 53,
+      "error_syntax": 9,
+      "error_output_formatting": 1
+    },
+    "gpt-4.1": {
+      "error_semantics": 59,
+      "total_attempts": 108,
+      "unknown": 38,
+      "error_syntax": 11
+    },
+    "o4-mini": {
+      "unknown": 98,
+      "total_attempts": 108,
+      "error_syntax": 2,
+      "error_semantics": 5,
+      "error_output_formatting": 3
+    },
+    "gpt-4o": {
+      "error_syntax": 24,
+      "total_attempts": 108,
+      "error_semantics": 29,
+      "unknown": 55
+    }
+  }
+}

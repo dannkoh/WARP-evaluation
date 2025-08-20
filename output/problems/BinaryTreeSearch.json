@@ -1,0 +1,88 @@
+{
+  "problem": "BinaryTreeSearch",
+  "local_models": {
+    "DeepSeek-R1-Distill-Qwen-7B": {
+      "error_syntax": 90,
+      "total_attempts": 150,
+      "error_output_formatting": 54,
+      "error_semantics": 6
+    },
+    "DeepSeek-R1-Distill-Qwen-14B": {
+      "correct": 48,
+      "total_attempts": 150,
+      "error_syntax": 82,
+      "error_output_formatting": 12,
+      "error_semantics": 8
+    },
+    "DeepSeek-R1-Distill-Qwen-32B": {
+      "correct": 68,
+      "total_attempts": 150,
+      "error_syntax": 66,
+      "error_semantics": 14,
+      "error_output_formatting": 2
+    },
+    "warp-1.0": {
+      "error_output_formatting": 46,
+      "total_attempts": 150,
+      "error_semantics": 52,
+      "error_syntax": 50,
+      "correct": 2
+    },
+    "Qwen2.5-7B-Instruct": {
+      "error_syntax": 98,
+      "total_attempts": 150,
+      "correct": 30,
+      "error_semantics": 22
+    },
+    "Qwen2.5-3B-Instruct": {
+      "error_syntax": 136,
+      "total_attempts": 150,
+      "error_semantics": 4,
+      "error_output_formatting": 10
+    },
+    "Qwen2.5-14B-Instruct": {
+      "correct": 56,
+      "total_attempts": 150,
+      "error_syntax": 94
+    },
+    "Qwen2.5-32B-Instruct": {
+      "correct": 106,
+      "total_attempts": 150,
+      "error_syntax": 38,
+      "error_semantics": 6
+    },
+    "Falcon3-10B-Instruct": {
+      "error_syntax": 134,
+      "total_attempts": 150,
+      "correct": 12,
+      "error_semantics": 4
+    }
+  },
+  "openai_models": {
+    "gpt-4.1-mini": {
+      "error_syntax": 17,
+      "total_attempts": 75,
+      "unknown": 36,
+      "error_semantics": 22
+    },
+    "gpt-4.1": {
+      "error_semantics": 34,
+      "total_attempts": 75,
+      "error_syntax": 21,
+      "unknown": 20
+    },
+    "o4-mini": {
+      "unknown": 72,
+      "total_attempts": 75,
+      "error_semantics": 2,
+      "error_output_formatting": 1
+    },
+    "gpt-4o": {
+      "error_syntax": 58,
+      "total_attempts": 75,
+      "error_semantics": 10,
+      "unknown": 4,
+      "error_output_formatting": 3
+    }
+  }
+}

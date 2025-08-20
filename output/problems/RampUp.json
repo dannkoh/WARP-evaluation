@@ -1,0 +1,86 @@
+{
+  "problem": "RampUp",
+  "local_models": {
+    "DeepSeek-R1-Distill-Qwen-7B": {
+      "correct": 40,
+      "total_attempts": 192,
+      "error_syntax": 120,
+      "error_semantics": 14,
+      "error_output_formatting": 18
+    },
+    "DeepSeek-R1-Distill-Qwen-14B": {
+      "error_syntax": 138,
+      "total_attempts": 192,
+      "correct": 44,
+      "error_output_formatting": 8,
+      "error_semantics": 2
+    },
+    "DeepSeek-R1-Distill-Qwen-32B": {
+      "error_syntax": 126,
+      "total_attempts": 192,
+      "correct": 64,
+      "error_output_formatting": 2
+    },
+    "warp-1.0": {
+      "correct": 144,
+      "total_attempts": 192,
+      "error_semantics": 26,
+      "error_output_formatting": 18,
+      "error_syntax": 4
+    },
+    "Qwen2.5-7B-Instruct": {
+      "error_syntax": 152,
+      "total_attempts": 192,
+      "correct": 40
+    },
+    "Qwen2.5-3B-Instruct": {
+      "correct": 24,
+      "total_attempts": 192,
+      "error_syntax": 160,
+      "error_semantics": 6,
+      "error_output_formatting": 2
+    },
+    "Qwen2.5-14B-Instruct": {
+      "correct": 120,
+      "total_attempts": 192,
+      "error_syntax": 72
+    },
+    "Qwen2.5-32B-Instruct": {
+      "correct": 162,
+      "total_attempts": 192,
+      "error_syntax": 30
+    },
+    "Falcon3-10B-Instruct": {
+      "error_syntax": 130,
+      "total_attempts": 192,
+      "correct": 62
+    }
+  },
+  "openai_models": {
+    "gpt-4.1-mini": {
+      "unknown": 75,
+      "total_attempts": 96,
+      "error_syntax": 14,
+      "error_semantics": 7
+    },
+    "gpt-4.1": {
+      "unknown": 85,
+      "total_attempts": 96,
+      "error_syntax": 11
+    },
+    "o4-mini": {
+      "error_semantics": 10,
+      "total_attempts": 96,
+      "unknown": 83,
+      "error_output_formatting": 2,
+      "error_syntax": 1
+    },
+    "gpt-4o": {
+      "unknown": 78,
+      "total_attempts": 96,
+      "error_semantics": 14,
+      "error_syntax": 3,
+      "error_output_formatting": 1
+    }
+  }
+}

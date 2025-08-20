@@ -161,7 +161,9 @@ class _VLLMHelper(BaseLLMHelper):
             tensor_parallel_size=(torch.cuda.device_count() or 1),
             dtype="auto",
             disable_custom_all_reduce=True,
-            distributed_executor_backend="ray",
+            # distributed_executor_backend="ray",
+            max_num_batched_tokens = 8000,
+            max_model_len = 8000
         )
         self.sampling_params = SamplingParams(max_tokens=8000)
 

@@ -1,0 +1,1122 @@
+{
+  "DeepSeek-R1-Distill-Qwen-7B": {
+    "MazeSolver": {
+      "correct": 214,
+      "total_attempts": 282,
+      "error_semantics": 6,
+      "error_syntax": 42,
+      "error_output_formatting": 20
+    },
+    "BubbleSort": {
+      "error_output_formatting": 28,
+      "total_attempts": 150,
+      "error_syntax": 74,
+      "correct": 44,
+      "error_semantics": 4
+    },
+    "BinaryTreeSearch": {
+      "error_syntax": 90,
+      "total_attempts": 150,
+      "error_output_formatting": 54,
+      "error_semantics": 6
+    },
+    "TowerOfHanoi": {
+      "error_syntax": 76,
+      "total_attempts": 240,
+      "correct": 112,
+      "error_semantics": 38,
+      "error_output_formatting": 14
+    },
+    "Collatz": {
+      "error_output_formatting": 50,
+      "total_attempts": 216,
+      "error_syntax": 162,
+      "error_semantics": 4
+    },
+    "BinarySearch": {
+      "error_output_formatting": 44,
+      "total_attempts": 222,
+      "error_syntax": 148,
+      "error_semantics": 30
+    },
+    "DizzyRamp": {
+      "error_semantics": 42,
+      "total_attempts": 270,
+      "error_syntax": 130,
+      "error_output_formatting": 42,
+      "correct": 56
+    },
+    "SortedListInsert": {
+      "error_syntax": 154,
+      "total_attempts": 222,
+      "error_semantics": 32,
+      "error_output_formatting": 34,
+      "correct": 2
+    },
+    "KnapsackSolver": {
+      "error_syntax": 168,
+      "total_attempts": 228,
+      "error_output_formatting": 26,
+      "error_semantics": 14,
+      "correct": 20
+    },
+    "ArrayTwister": {
+      "error_semantics": 28,
+      "total_attempts": 216,
+      "error_syntax": 138,
+      "error_output_formatting": 26,
+      "correct": 24
+    },
+    "MergeSort": {
+      "error_semantics": 36,
+      "total_attempts": 258,
+      "error_output_formatting": 56,
+      "error_syntax": 156,
+      "correct": 10
+    },
+    "CaseFlipper": {
+      "error_syntax": 142,
+      "total_attempts": 216,
+      "error_semantics": 20,
+      "correct": 24,
+      "error_output_formatting": 30
+    },
+    "BinarySearchTreeHeight": {
+      "error_syntax": 78,
+      "total_attempts": 132,
+      "error_output_formatting": 36,
+      "error_semantics": 12,
+      "correct": 6
+    },
+    "NaiveFibonacci": {
+      "error_output_formatting": 56,
+      "total_attempts": 204,
+      "error_syntax": 126,
+      "error_semantics": 20,
+      "correct": 2
+    },
+    "GreedyStepper": {
+      "correct": 104,
+      "total_attempts": 252,
+      "error_syntax": 106,
+      "error_output_formatting": 20,
+      "error_semantics": 22
+    },
+    "ComplexStateMachineParser": {
+      "error_syntax": 146,
+      "total_attempts": 312,
+      "error_semantics": 66,
+      "error_output_formatting": 96,
+      "correct": 4
+    },
+    "QuickSort": {
+      "error_syntax": 94,
+      "total_attempts": 180,
+      "error_semantics": 28,
+      "error_output_formatting": 32,
+      "correct": 26
+    },
+    "SubarraySumFinder": {
+      "error_output_formatting": 24,
+      "total_attempts": 72,
+      "error_syntax": 44,
+      "error_semantics": 4
+    },
+    "RampUp": {
+      "correct": 40,
+      "total_attempts": 192,
+      "error_syntax": 120,
+      "error_semantics": 14,
+      "error_output_formatting": 18
+    },
+    "Dijkstra": {
+      "error_output_formatting": 6,
+      "total_attempts": 12,
+      "error_syntax": 6
+    }
+  },
+  "DeepSeek-R1-Distill-Qwen-14B": {
+    "MazeSolver": {
+      "correct": 232,
+      "total_attempts": 282,
+      "error_syntax": 46,
+      "error_semantics": 2,
+      "error_output_formatting": 2
+    },
+    "BubbleSort": {
+      "error_syntax": 60,
+      "total_attempts": 150,
+      "correct": 78,
+      "error_output_formatting": 10,
+      "error_semantics": 2
+    },
+    "BinaryTreeSearch": {
+      "correct": 48,
+      "total_attempts": 150,
+      "error_syntax": 82,
+      "error_output_formatting": 12,
+      "error_semantics": 8
+    },
+    "TowerOfHanoi": {
+      "correct": 190,
+      "total_attempts": 240,
+      "error_semantics": 10,
+      "error_output_formatting": 10,
+      "error_syntax": 30
+    },
+    "Collatz": {
+      "error_syntax": 114,
+      "total_attempts": 216,
+      "correct": 70,
+      "error_output_formatting": 18,
+      "error_semantics": 14
+    },
+    "BinarySearch": {
+      "error_syntax": 160,
+      "total_attempts": 222,
+      "error_output_formatting": 58,
+      "correct": 2,
+      "error_semantics": 2
+    },
+    "DizzyRamp": {
+      "error_syntax": 174,
+      "total_attempts": 270,
+      "correct": 88,
+      "error_output_formatting": 8
+    },
+    "SortedListInsert": {
+      "correct": 42,
+      "total_attempts": 222,
+      "error_syntax": 152,
+      "error_semantics": 20,
+      "error_output_formatting": 8
+    },
+    "KnapsackSolver": {
+      "correct": 64,
+      "total_attempts": 228,
+      "error_syntax": 160,
+      "error_output_formatting": 4
+    },
+    "ArrayTwister": {
+      "correct": 132,
+      "total_attempts": 216,
+      "error_syntax": 70,
+      "error_output_formatting": 14
+    },
+    "MergeSort": {
+      "error_syntax": 188,
+      "total_attempts": 258,
+      "correct": 24,
+      "error_output_formatting": 34,
+      "error_semantics": 12
+    },
+    "CaseFlipper": {
+      "error_syntax": 94,
+      "total_attempts": 216,
+      "correct": 110,
+      "error_output_formatting": 10,
+      "error_semantics": 2
+    },
+    "BinarySearchTreeHeight": {
+      "error_syntax": 64,
+      "total_attempts": 132,
+      "correct": 62,
+      "error_output_formatting": 4,
+      "error_semantics": 2
+    },
+    "NaiveFibonacci": {
+      "error_syntax": 198,
+      "total_attempts": 204,
+      "error_output_formatting": 4,
+      "error_semantics": 2
+    },
+    "GreedyStepper": {
+      "correct": 164,
+      "total_attempts": 252,
+      "error_syntax": 74,
+      "error_output_formatting": 14
+    },
+    "ComplexStateMachineParser": {
+      "error_semantics": 132,
+      "total_attempts": 312,
+      "correct": 66,
+      "error_syntax": 76,
+      "error_output_formatting": 38
+    },
+    "QuickSort": {
+      "error_syntax": 134,
+      "total_attempts": 180,
+      "correct": 36,
+      "error_output_formatting": 4,
+      "error_semantics": 6
+    },
+    "SubarraySumFinder": {
+      "error_syntax": 64,
+      "total_attempts": 72,
+      "error_semantics": 4,
+      "error_output_formatting": 4
+    },
+    "RampUp": {
+      "error_syntax": 138,
+      "total_attempts": 192,
+      "correct": 44,
+      "error_output_formatting": 8,
+      "error_semantics": 2
+    },
+    "Dijkstra": {
+      "error_syntax": 10,
+      "total_attempts": 12,
+      "error_output_formatting": 2
+    }
+  },
+  "DeepSeek-R1-Distill-Qwen-32B": {
+    "MazeSolver": {
+      "correct": 260,
+      "total_attempts": 282,
+      "error_syntax": 22
+    },
+    "BubbleSort": {
+      "correct": 92,
+      "total_attempts": 150,
+      "error_syntax": 56,
+      "error_output_formatting": 2
+    },
+    "BinaryTreeSearch": {
+      "correct": 68,
+      "total_attempts": 150,
+      "error_syntax": 66,
+      "error_semantics": 14,
+      "error_output_formatting": 2
+    },
+    "TowerOfHanoi": {
+      "correct": 218,
+      "total_attempts": 240,
+      "error_syntax": 18,
+      "error_semantics": 4
+    },
+    "Collatz": {
+      "correct": 124,
+      "total_attempts": 216,
+      "error_syntax": 66,
+      "error_semantics": 26
+    },
+    "BinarySearch": {
+      "error_syntax": 194,
+      "total_attempts": 222,
+      "error_output_formatting": 28
+    },
+    "DizzyRamp": {
+      "correct": 190,
+      "total_attempts": 270,
+      "error_syntax": 74,
+      "error_semantics": 4,
+      "error_output_formatting": 2
+    },
+    "SortedListInsert": {
+      "correct": 120,
+      "total_attempts": 222,
+      "error_syntax": 92,
+      "error_semantics": 10
+    },
+    "KnapsackSolver": {
+      "correct": 138,
+      "total_attempts": 228,
+      "error_syntax": 90
+    },
+    "ArrayTwister": {
+      "error_syntax": 50,
+      "total_attempts": 216,
+      "correct": 166
+    },
+    "MergeSort": {
+      "error_syntax": 160,
+      "total_attempts": 258,
+      "error_output_formatting": 6,
+      "error_semantics": 60,
+      "correct": 32
+    },
+    "CaseFlipper": {
+      "error_syntax": 80,
+      "total_attempts": 216,
+      "correct": 132,
+      "error_semantics": 2,
+      "error_output_formatting": 2
+    },
+    "BinarySearchTreeHeight": {
+      "correct": 70,
+      "total_attempts": 132,
+      "error_syntax": 56,
+      "error_output_formatting": 2,
+      "error_semantics": 4
+    },
+    "NaiveFibonacci": {
+      "error_syntax": 122,
+      "total_attempts": 204,
+      "error_semantics": 78,
+      "correct": 2,
+      "error_output_formatting": 2
+    },
+    "GreedyStepper": {
+      "error_syntax": 136,
+      "total_attempts": 252,
+      "correct": 114,
+      "error_output_formatting": 2
+    },
+    "ComplexStateMachineParser": {
+      "error_semantics": 58,
+      "total_attempts": 312,
+      "correct": 168,
+      "error_syntax": 80,
+      "error_output_formatting": 6
+    },
+    "QuickSort": {
+      "error_syntax": 92,
+      "total_attempts": 180,
+      "correct": 80,
+      "error_semantics": 6,
+      "error_output_formatting": 2
+    },
+    "SubarraySumFinder": {
+      "error_syntax": 62,
+      "total_attempts": 72,
+      "error_output_formatting": 2,
+      "correct": 6,
+      "error_semantics": 2
+    },
+    "RampUp": {
+      "error_syntax": 126,
+      "total_attempts": 192,
+      "correct": 64,
+      "error_output_formatting": 2
+    },
+    "Dijkstra": {
+      "error_syntax": 12,
+      "total_attempts": 12
+    }
+  },
+  "warp-1.0": {
+    "MazeSolver": {
+      "error_semantics": 206,
+      "total_attempts": 282,
+      "error_output_formatting": 22,
+      "correct": 36,
+      "error_syntax": 18
+    },
+    "BubbleSort": {
+      "correct": 82,
+      "total_attempts": 150,
+      "error_semantics": 28,
+      "error_output_formatting": 30,
+      "error_syntax": 10
+    },
+    "BinaryTreeSearch": {
+      "error_output_formatting": 46,
+      "total_attempts": 150,
+      "error_semantics": 52,
+      "error_syntax": 50,
+      "correct": 2
+    },
+    "TowerOfHanoi": {
+      "correct": 194,
+      "total_attempts": 240,
+      "error_semantics": 14,
+      "error_output_formatting": 28,
+      "error_syntax": 4
+    },
+    "Collatz": {
+      "error_output_formatting": 60,
+      "total_attempts": 216,
+      "error_semantics": 44,
+      "correct": 94,
+      "error_syntax": 18
+    },
+    "BinarySearch": {
+      "error_syntax": 160,
+      "total_attempts": 222,
+      "error_output_formatting": 44,
+      "error_semantics": 16,
+      "correct": 2
+    },
+    "DizzyRamp": {
+      "correct": 162,
+      "total_attempts": 270,
+      "error_semantics": 38,
+      "error_output_formatting": 68,
+      "error_syntax": 2
+    },
+    "SortedListInsert": {
+      "error_semantics": 152,
+      "total_attempts": 222,
+      "error_output_formatting": 50,
+      "error_syntax": 20
+    },
+    "KnapsackSolver": {
+      "error_output_formatting": 44,
+      "total_attempts": 228,
+      "correct": 136,
+      "error_semantics": 10,
+      "error_syntax": 38
+    },
+    "ArrayTwister": {
+      "correct": 144,
+      "total_attempts": 216,
+      "error_semantics": 16,
+      "error_output_formatting": 50,
+      "error_syntax": 6
+    },
+    "MergeSort": {
+      "error_output_formatting": 66,
+      "total_attempts": 258,
+      "error_semantics": 124,
+      "error_syntax": 20,
+      "correct": 48
+    },
+    "CaseFlipper": {
+      "correct": 154,
+      "total_attempts": 216,
+      "error_semantics": 16,
+      "error_output_formatting": 46
+    },
+    "BinarySearchTreeHeight": {
+      "correct": 28,
+      "total_attempts": 132,
+      "error_semantics": 70,
+      "error_syntax": 14,
+      "error_output_formatting": 20
+    },
+    "NaiveFibonacci": {
+      "correct": 52,
+      "total_attempts": 204,
+      "error_output_formatting": 50,
+      "error_semantics": 28,
+      "error_syntax": 74
+    },
+    "GreedyStepper": {
+      "correct": 184,
+      "total_attempts": 252,
+      "error_output_formatting": 52,
+      "error_semantics": 10,
+      "error_syntax": 6
+    },
+    "ComplexStateMachineParser": {
+      "correct": 158,
+      "total_attempts": 312,
+      "error_syntax": 36,
+      "error_semantics": 40,
+      "error_output_formatting": 78
+    },
+    "QuickSort": {
+      "error_semantics": 96,
+      "total_attempts": 180,
+      "error_output_formatting": 46,
+      "correct": 34,
+      "error_syntax": 4
+    },
+    "SubarraySumFinder": {
+      "error_syntax": 54,
+      "total_attempts": 72,
+      "error_output_formatting": 10,
+      "error_semantics": 8
+    },
+    "RampUp": {
+      "correct": 144,
+      "total_attempts": 192,
+      "error_semantics": 26,
+      "error_output_formatting": 18,
+      "error_syntax": 4
+    },
+    "Dijkstra": {
+      "error_syntax": 12,
+      "total_attempts": 12
+    }
+  },
+  "Qwen2.5-7B-Instruct": {
+    "MazeSolver": {
+      "correct": 278,
+      "total_attempts": 282,
+      "error_syntax": 4
+    },
+    "BubbleSort": {
+      "error_syntax": 114,
+      "total_attempts": 150,
+      "correct": 32,
+      "error_output_formatting": 2,
+      "error_semantics": 2
+    },
+    "BinaryTreeSearch": {
+      "error_syntax": 98,
+      "total_attempts": 150,
+      "correct": 30,
+      "error_semantics": 22
+    },
+    "TowerOfHanoi": {
+      "correct": 198,
+      "total_attempts": 240,
+      "error_semantics": 36,
+      "error_syntax": 6
+    },
+    "Collatz": {
+      "error_syntax": 154,
+      "total_attempts": 216,
+      "error_semantics": 26,
+      "correct": 36
+    },
+    "BinarySearch": {
+      "error_syntax": 216,
+      "total_attempts": 222,
+      "error_semantics": 6
+    },
+    "DizzyRamp": {
+      "error_syntax": 236,
+      "total_attempts": 270,
+      "error_semantics": 8,
+      "correct": 22,
+      "error_output_formatting": 4
+    },
+    "SortedListInsert": {
+      "error_syntax": 186,
+      "total_attempts": 222,
+      "correct": 20,
+      "error_semantics": 14,
+      "error_output_formatting": 2
+    },
+    "KnapsackSolver": {
+      "error_syntax": 190,
+      "total_attempts": 228,
+      "correct": 26,
+      "error_semantics": 10,
+      "error_output_formatting": 2
+    },
+    "ArrayTwister": {
+      "error_syntax": 170,
+      "total_attempts": 216,
+      "correct": 44,
+      "error_semantics": 2
+    },
+    "MergeSort": {
+      "error_syntax": 228,
+      "total_attempts": 258,
+      "correct": 10,
+      "error_semantics": 20
+    },
+    "CaseFlipper": {
+      "error_syntax": 204,
+      "total_attempts": 216,
+      "correct": 12
+    },
+    "BinarySearchTreeHeight": {
+      "error_syntax": 88,
+      "total_attempts": 132,
+      "error_semantics": 20,
+      "correct": 24
+    },
+    "NaiveFibonacci": {
+      "error_syntax": 184,
+      "total_attempts": 204,
+      "error_semantics": 16,
+      "error_output_formatting": 2,
+      "correct": 2
+    },
+    "GreedyStepper": {
+      "error_syntax": 130,
+      "total_attempts": 252,
+      "correct": 120,
+      "error_semantics": 2
+    },
+    "ComplexStateMachineParser": {
+      "correct": 24,
+      "total_attempts": 312,
+      "error_syntax": 194,
+      "error_semantics": 94
+    },
+    "QuickSort": {
+      "error_semantics": 22,
+      "total_attempts": 180,
+      "error_syntax": 140,
+      "correct": 14,
+      "error_output_formatting": 4
+    },
+    "SubarraySumFinder": {
+      "error_syntax": 70,
+      "total_attempts": 72,
+      "error_semantics": 2
+    },
+    "RampUp": {
+      "error_syntax": 152,
+      "total_attempts": 192,
+      "correct": 40
+    },
+    "Dijkstra": {
+      "error_syntax": 12,
+      "total_attempts": 12
+    }
+  },
+  "Qwen2.5-3B-Instruct": {
+    "MazeSolver": {
+      "correct": 122,
+      "total_attempts": 282,
+      "error_syntax": 80,
+      "error_semantics": 80
+    },
+    "BubbleSort": {
+      "error_syntax": 132,
+      "total_attempts": 150,
+      "error_output_formatting": 6,
+      "error_semantics": 10,
+      "correct": 2
+    },
+    "BinaryTreeSearch": {
+      "error_syntax": 136,
+      "total_attempts": 150,
+      "error_semantics": 4,
+      "error_output_formatting": 10
+    },
+    "TowerOfHanoi": {
+      "correct": 172,
+      "total_attempts": 240,
+      "error_semantics": 62,
+      "error_syntax": 6
+    },
+    "Collatz": {
+      "error_syntax": 192,
+      "total_attempts": 216,
+      "error_semantics": 14,
+      "error_output_formatting": 10
+    },
+    "BinarySearch": {
+      "error_syntax": 222,
+      "total_attempts": 222
+    },
+    "DizzyRamp": {
+      "error_syntax": 256,
+      "total_attempts": 270,
+      "correct": 4,
+      "error_output_formatting": 4,
+      "error_semantics": 6
+    },
+    "SortedListInsert": {
+      "error_syntax": 198,
+      "total_attempts": 222,
+      "error_semantics": 14,
+      "error_output_formatting": 10
+    },
+    "KnapsackSolver": {
+      "error_syntax": 204,
+      "total_attempts": 228,
+      "correct": 10,
+      "error_semantics": 6,
+      "error_output_formatting": 8
+    },
+    "ArrayTwister": {
+      "error_syntax": 198,
+      "total_attempts": 216,
+      "correct": 10,
+      "error_semantics": 2,
+      "error_output_formatting": 6
+    },
+    "MergeSort": {
+      "error_syntax": 250,
+      "total_attempts": 258,
+      "error_semantics": 4,
+      "correct": 2,
+      "error_output_formatting": 2
+    },
+    "CaseFlipper": {
+      "error_syntax": 202,
+      "total_attempts": 216,
+      "correct": 4,
+      "error_output_formatting": 8,
+      "error_semantics": 2
+    },
+    "BinarySearchTreeHeight": {
+      "error_syntax": 124,
+      "total_attempts": 132,
+      "error_semantics": 4,
+      "error_output_formatting": 4
+    },
+    "NaiveFibonacci": {
+      "error_syntax": 188,
+      "total_attempts": 204,
+      "error_semantics": 4,
+      "error_output_formatting": 10,
+      "correct": 2
+    },
+    "GreedyStepper": {
+      "correct": 36,
+      "total_attempts": 252,
+      "error_syntax": 194,
+      "error_output_formatting": 4,
+      "error_semantics": 18
+    },
+    "ComplexStateMachineParser": {
+      "error_syntax": 274,
+      "total_attempts": 312,
+      "error_semantics": 30,
+      "error_output_formatting": 8
+    },
+    "QuickSort": {
+      "error_syntax": 156,
+      "total_attempts": 180,
+      "error_output_formatting": 14,
+      "correct": 6,
+      "error_semantics": 4
+    },
+    "SubarraySumFinder": {
+      "error_syntax": 68,
+      "total_attempts": 72,
+      "error_output_formatting": 4
+    },
+    "RampUp": {
+      "correct": 24,
+      "total_attempts": 192,
+      "error_syntax": 160,
+      "error_semantics": 6,
+      "error_output_formatting": 2
+    },
+    "Dijkstra": {
+      "error_syntax": 12,
+      "total_attempts": 12
+    }
+  },
+  "Qwen2.5-14B-Instruct": {
+    "MazeSolver": {
+      "correct": 282,
+      "total_attempts": 282
+    },
+    "BubbleSort": {
+      "correct": 70,
+      "total_attempts": 150,
+      "error_syntax": 78,
+      "error_output_formatting": 2
+    },
+    "BinaryTreeSearch": {
+      "correct": 56,
+      "total_attempts": 150,
+      "error_syntax": 94
+    },
+    "TowerOfHanoi": {
+      "correct": 230,
+      "total_attempts": 240,
+      "error_semantics": 10
+    },
+    "Collatz": {
+      "correct": 106,
+      "total_attempts": 216,
+      "error_syntax": 108,
+      "error_semantics": 2
+    },
+    "BinarySearch": {
+      "error_syntax": 218,
+      "total_attempts": 222,
+      "correct": 4
+    },
+    "DizzyRamp": {
+      "error_syntax": 214,
+      "total_attempts": 270,
+      "correct": 54,
+      "error_output_formatting": 2
+    },
+    "SortedListInsert": {
+      "correct": 86,
+      "total_attempts": 222,
+      "error_syntax": 120,
+      "error_semantics": 16
+    },
+    "KnapsackSolver": {
+      "correct": 174,
+      "total_attempts": 228,
+      "error_syntax": 52,
+      "error_semantics": 2
+    },
+    "ArrayTwister": {
+      "error_syntax": 58,
+      "total_attempts": 216,
+      "correct": 158
+    },
+    "MergeSort": {
+      "error_syntax": 198,
+      "total_attempts": 258,
+      "correct": 24,
+      "error_semantics": 30,
+      "error_output_formatting": 6
+    },
+    "CaseFlipper": {
+      "correct": 130,
+      "total_attempts": 216,
+      "error_syntax": 84,
+      "error_output_formatting": 2
+    },
+    "BinarySearchTreeHeight": {
+      "error_syntax": 70,
+      "total_attempts": 132,
+      "correct": 60,
+      "error_semantics": 2
+    },
+    "NaiveFibonacci": {
+      "error_semantics": 44,
+      "total_attempts": 204,
+      "error_syntax": 146,
+      "correct": 14
+    },
+    "GreedyStepper": {
+      "error_syntax": 80,
+      "total_attempts": 252,
+      "correct": 172
+    },
+    "ComplexStateMachineParser": {
+      "error_semantics": 134,
+      "total_attempts": 312,
+      "error_syntax": 92,
+      "correct": 86
+    },
+    "QuickSort": {
+      "error_syntax": 120,
+      "total_attempts": 180,
+      "correct": 48,
+      "error_semantics": 10,
+      "error_output_formatting": 2
+    },
+    "SubarraySumFinder": {
+      "error_syntax": 68,
+      "total_attempts": 72,
+      "correct": 2,
+      "error_semantics": 2
+    },
+    "RampUp": {
+      "correct": 120,
+      "total_attempts": 192,
+      "error_syntax": 72
+    },
+    "Dijkstra": {
+      "error_syntax": 12,
+      "total_attempts": 12
+    }
+  },
+  "Qwen2.5-32B-Instruct": {
+    "MazeSolver": {
+      "correct": 282,
+      "total_attempts": 282
+    },
+    "BubbleSort": {
+      "correct": 134,
+      "total_attempts": 150,
+      "error_syntax": 16
+    },
+    "BinaryTreeSearch": {
+      "correct": 106,
+      "total_attempts": 150,
+      "error_syntax": 38,
+      "error_semantics": 6
+    },
+    "TowerOfHanoi": {
+      "correct": 240,
+      "total_attempts": 240
+    },
+    "Collatz": {
+      "correct": 182,
+      "total_attempts": 216,
+      "error_syntax": 30,
+      "error_semantics": 4
+    },
+    "BinarySearch": {
+      "error_syntax": 214,
+      "total_attempts": 222,
+      "error_semantics": 6,
+      "correct": 2
+    },
+    "DizzyRamp": {
+      "error_syntax": 44,
+      "total_attempts": 270,
+      "correct": 226
+    },
+    "SortedListInsert": {
+      "correct": 170,
+      "total_attempts": 222,
+      "error_syntax": 46,
+      "error_semantics": 6
+    },
+    "KnapsackSolver": {
+      "correct": 208,
+      "total_attempts": 228,
+      "error_syntax": 20
+    },
+    "ArrayTwister": {
+      "correct": 202,
+      "total_attempts": 216,
+      "error_syntax": 14
+    },
+    "MergeSort": {
+      "error_syntax": 148,
+      "total_attempts": 258,
+      "correct": 90,
+      "error_semantics": 20
+    },
+    "CaseFlipper": {
+      "correct": 200,
+      "total_attempts": 216,
+      "error_syntax": 16
+    },
+    "BinarySearchTreeHeight": {
+      "error_syntax": 32,
+      "total_attempts": 132,
+      "correct": 100
+    },
+    "NaiveFibonacci": {
+      "error_syntax": 80,
+      "total_attempts": 204,
+      "error_semantics": 116,
+      "correct": 8
+    },
+    "GreedyStepper": {
+      "correct": 238,
+      "total_attempts": 252,
+      "error_syntax": 14
+    },
+    "ComplexStateMachineParser": {
+      "correct": 116,
+      "total_attempts": 312,
+      "error_semantics": 116,
+      "error_syntax": 80
+    },
+    "QuickSort": {
+      "correct": 138,
+      "total_attempts": 180,
+      "error_syntax": 40,
+      "error_semantics": 2
+    },
+    "SubarraySumFinder": {
+      "error_syntax": 62,
+      "total_attempts": 72,
+      "correct": 8,
+      "error_semantics": 2
+    },
+    "RampUp": {
+      "correct": 162,
+      "total_attempts": 192,
+      "error_syntax": 30
+    },
+    "Dijkstra": {
+      "error_syntax": 12,
+      "total_attempts": 12
+    }
+  },
+  "Falcon3-10B-Instruct": {
+    "MazeSolver": {
+      "error_syntax": 4,
+      "total_attempts": 282,
+      "correct": 278
+    },
+    "BubbleSort": {
+      "error_syntax": 138,
+      "total_attempts": 150,
+      "correct": 10,
+      "error_semantics": 2
+    },
+    "BinaryTreeSearch": {
+      "error_syntax": 134,
+      "total_attempts": 150,
+      "correct": 12,
+      "error_semantics": 4
+    },
+    "TowerOfHanoi": {
+      "correct": 236,
+      "total_attempts": 240,
+      "error_syntax": 2,
+      "error_semantics": 2
+    },
+    "Collatz": {
+      "error_syntax": 142,
+      "total_attempts": 216,
+      "correct": 50,
+      "error_output_formatting": 6,
+      "error_semantics": 18
+    },
+    "BinarySearch": {
+      "error_syntax": 220,
+      "total_attempts": 222,
+      "correct": 2
+    },
+    "DizzyRamp": {
+      "error_syntax": 248,
+      "total_attempts": 270,
+      "correct": 20,
+      "error_output_formatting": 2
+    },
+    "SortedListInsert": {
+      "correct": 12,
+      "total_attempts": 222,
+      "error_syntax": 196,
+      "error_semantics": 12,
+      "error_output_formatting": 2
+    },
+    "KnapsackSolver": {
+      "correct": 112,
+      "total_attempts": 228,
+      "error_syntax": 116
+    },
+    "ArrayTwister": {
+      "correct": 96,
+      "total_attempts": 216,
+      "error_syntax": 114,
+      "error_output_formatting": 2,
+      "error_semantics": 4
+    },
+    "MergeSort": {
+      "error_syntax": 230,
+      "total_attempts": 258,
+      "error_semantics": 16,
+      "correct": 10,
+      "error_output_formatting": 2
+    },
+    "CaseFlipper": {
+      "correct": 60,
+      "total_attempts": 216,
+      "error_syntax": 152,
+      "error_semantics": 4
+    },
+    "BinarySearchTreeHeight": {
+      "error_syntax": 128,
+      "total_attempts": 132,
+      "correct": 4
+    },
+    "NaiveFibonacci": {
+      "error_syntax": 190,
+      "total_attempts": 204,
+      "error_semantics": 12,
+      "error_output_formatting": 2
+    },
+    "GreedyStepper": {
+      "error_syntax": 110,
+      "total_attempts": 252,
+      "correct": 140,
+      "error_semantics": 2
+    },
+    "ComplexStateMachineParser": {
+      "error_syntax": 172,
+      "total_attempts": 312,
+      "error_semantics": 92,
+      "correct": 48
+    },
+    "QuickSort": {
+      "error_syntax": 156,
+      "total_attempts": 180,
+      "correct": 18,
+      "error_semantics": 6
+    },
+    "SubarraySumFinder": {
+      "error_syntax": 68,
+      "total_attempts": 72,
+      "error_semantics": 2,
+      "error_output_formatting": 2
+    },
+    "RampUp": {
+      "error_syntax": 130,
+      "total_attempts": 192,
+      "correct": 62
+    },
+    "Dijkstra": {
+      "error_syntax": 12,
+      "total_attempts": 12
+    }
+  }
+}

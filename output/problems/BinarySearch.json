@@ -1,0 +1,80 @@
+{
+  "problem": "BinarySearch",
+  "local_models": {
+    "DeepSeek-R1-Distill-Qwen-7B": {
+      "error_output_formatting": 44,
+      "total_attempts": 222,
+      "error_syntax": 148,
+      "error_semantics": 30
+    },
+    "DeepSeek-R1-Distill-Qwen-14B": {
+      "error_syntax": 160,
+      "total_attempts": 222,
+      "error_output_formatting": 58,
+      "correct": 2,
+      "error_semantics": 2
+    },
+    "DeepSeek-R1-Distill-Qwen-32B": {
+      "error_syntax": 194,
+      "total_attempts": 222,
+      "error_output_formatting": 28
+    },
+    "warp-1.0": {
+      "error_syntax": 160,
+      "total_attempts": 222,
+      "error_output_formatting": 44,
+      "error_semantics": 16,
+      "correct": 2
+    },
+    "Qwen2.5-7B-Instruct": {
+      "error_syntax": 216,
+      "total_attempts": 222,
+      "error_semantics": 6
+    },
+    "Qwen2.5-3B-Instruct": {
+      "error_syntax": 222,
+      "total_attempts": 222
+    },
+    "Qwen2.5-14B-Instruct": {
+      "error_syntax": 218,
+      "total_attempts": 222,
+      "correct": 4
+    },
+    "Qwen2.5-32B-Instruct": {
+      "error_syntax": 214,
+      "total_attempts": 222,
+      "error_semantics": 6,
+      "correct": 2
+    },
+    "Falcon3-10B-Instruct": {
+      "error_syntax": 220,
+      "total_attempts": 222,
+      "correct": 2
+    }
+  },
+  "openai_models": {
+    "gpt-4.1-mini": {
+      "error_semantics": 107,
+      "total_attempts": 111,
+      "unknown": 3,
+      "error_syntax": 1
+    },
+    "gpt-4.1": {
+      "error_semantics": 109,
+      "total_attempts": 111,
+      "error_syntax": 1,
+      "unknown": 1
+    },
+    "o4-mini": {
+      "unknown": 74,
+      "total_attempts": 111,
+      "error_semantics": 37
+    },
+    "gpt-4o": {
+      "error_semantics": 68,
+      "total_attempts": 111,
+      "error_output_formatting": 41,
+      "error_syntax": 2
+    }
+  }
+}
