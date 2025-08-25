@@ -84,32 +84,18 @@ def extract_local_model_name(path: Path) -> str:
                 model_name = parts[i + 1]
                 log(f"Found model name '{model_name}' using results_ pattern")
                 return model_name
-
-    # Option 2: Check for model name in directory structure
-    model_indicators = ["results_", "model_", "claude", "gpt", "llama", "gemini"]
-    for part in parts:
-        for indicator in model_indicators:
-            if indicator in part.lower():
-                model_name = part
-                log(f"Found model name '{model_name}' using indicator pattern")
-                return model_name
-
-    # Option 3: Use parent directory name if all else fails
-    try:
-        model_name = path.parent.parent.name
-        log(f"Found model name '{model_name}' using parent directory name")
-    except:
-        log(f"Failed to extract model name from path: {path}")
-
-    return model_name
+    raise ValueError
 
 
 def extract_local_trial_info(path: Path) -> str:
     """Extract trial identifier from path."""
     try:
-        # First check if there's a date pattern in the path
+        # First specifically look for a date pattern (YYYY-MM-DD or with timestamps)
         for part in path.parts:
-            if part.count("-") >= 2 and len(part) >= 8:
+            # Check for YYYY-MM-DD pattern or YYYY-MM-DD_HH-MM-SS pattern
+            if (len(part) >= 10 and 
+                part[4] == '-' and part[7] == '-' and  # YYYY-MM-DD format
+                part[:4].isdigit() and part[5:7].isdigit() and part[8:10].isdigit()):
                 log(f"Found trial id '{part}' using date pattern")
                 return part
 

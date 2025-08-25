@@ -1,21 +1,21 @@
 {
   "DeepSeek-R1-Distill-Qwen-7B": {
-    "correct": 125,
-    "error_syntax": 351,
-    "error_semantics": 79,
-    "error_output_formatting": 116
+    "correct": 344,
+    "error_syntax": 1100,
+    "error_semantics": 213,
+    "error_output_formatting": 356
   },
   "DeepSeek-R1-Distill-Qwen-14B": {
-    "correct": 245,
-    "error_syntax": 347,
-    "error_semantics": 38,
-    "error_output_formatting": 41
+    "correct": 726,
+    "error_syntax": 1044,
+    "error_semantics": 110,
+    "error_output_formatting": 133
   },
   "DeepSeek-R1-Distill-Qwen-32B": {
-    "correct": 355,
-    "error_syntax": 266,
-    "error_semantics": 40,
-    "error_output_formatting": 10
+    "correct": 1022,
+    "error_syntax": 827,
+    "error_semantics": 134,
+    "error_output_formatting": 30
   },
   "warp-1.0": {
     "correct": 827,
@@ -24,33 +24,33 @@
     "error_output_formatting": 414
   },
   "Qwen2.5-7B-Instruct": {
-    "correct": 144,
-    "error_syntax": 482,
-    "error_semantics": 43,
-    "error_output_formatting": 2
+    "correct": 466,
+    "error_syntax": 1388,
+    "error_semantics": 151,
+    "error_output_formatting": 8
   },
   "Qwen2.5-3B-Instruct": {
-    "correct": 67,
-    "error_syntax": 553,
-    "error_semantics": 35,
-    "error_output_formatting": 16
+    "correct": 197,
+    "error_syntax": 1626,
+    "error_semantics": 135,
+    "error_output_formatting": 55
   },
   "Qwen2.5-14B-Instruct": {
-    "correct": 327,
-    "error_syntax": 285,
-    "error_semantics": 52,
+    "correct": 938,
+    "error_syntax": 942,
+    "error_semantics": 126,
     "error_output_formatting": 7
   },
   "Qwen2.5-32B-Instruct": {
-    "correct": 471,
-    "error_syntax": 148,
-    "error_semantics": 52,
+    "correct": 1406,
+    "error_syntax": 468,
+    "error_semantics": 139,
     "error_output_formatting": 0
   },
   "Falcon3-10B-Instruct": {
-    "correct": 197,
-    "error_syntax": 442,
-    "error_semantics": 29,
-    "error_output_formatting": 3
+    "correct": 585,
+    "error_syntax": 1331,
+    "error_semantics": 88,
+    "error_output_formatting": 9
   }
 }

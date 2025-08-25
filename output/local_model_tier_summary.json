@@ -1,80 +1,80 @@
 {
   "DeepSeek-R1-Distill-Qwen-7B": {
     "small": {
-      "correct": 67,
-      "error_syntax": 165,
-      "error_semantics": 45,
-      "error_output_formatting": 56
+      "correct": 190,
+      "error_syntax": 529,
+      "error_semantics": 112,
+      "error_output_formatting": 168
     },
     "medium": {
-      "correct": 58,
-      "error_syntax": 182,
-      "error_semantics": 34,
-      "error_output_formatting": 59
+      "correct": 154,
+      "error_syntax": 561,
+      "error_semantics": 99,
+      "error_output_formatting": 185
     },
     "large": {
       "correct": 0,
-      "error_syntax": 4,
-      "error_semantics": 0,
-      "error_output_formatting": 1
+      "error_syntax": 10,
+      "error_semantics": 2,
+      "error_output_formatting": 3
     },
     "overall": {
-      "correct": 125,
-      "error_syntax": 351,
-      "error_semantics": 79,
-      "error_output_formatting": 116
+      "correct": 344,
+      "error_syntax": 1100,
+      "error_semantics": 213,
+      "error_output_formatting": 356
     }
   },
   "DeepSeek-R1-Distill-Qwen-14B": {
     "small": {
-      "correct": 129,
-      "error_syntax": 169,
-      "error_semantics": 17,
-      "error_output_formatting": 18
+      "correct": 373,
+      "error_syntax": 526,
+      "error_semantics": 50,
+      "error_output_formatting": 50
     },
     "medium": {
-      "correct": 113,
-      "error_syntax": 176,
-      "error_semantics": 21,
-      "error_output_formatting": 23
+      "correct": 349,
+      "error_syntax": 510,
+      "error_semantics": 60,
+      "error_output_formatting": 80
     },
     "large": {
-      "correct": 3,
-      "error_syntax": 2,
+      "correct": 4,
+      "error_syntax": 8,
       "error_semantics": 0,
-      "error_output_formatting": 0
+      "error_output_formatting": 3
     },
     "overall": {
-      "correct": 245,
-      "error_syntax": 347,
-      "error_semantics": 38,
-      "error_output_formatting": 41
+      "correct": 726,
+      "error_syntax": 1044,
+      "error_semantics": 110,
+      "error_output_formatting": 133
     }
   },
   "DeepSeek-R1-Distill-Qwen-32B": {
     "small": {
-      "correct": 176,
-      "error_syntax": 132,
-      "error_semantics": 22,
-      "error_output_formatting": 3
+      "correct": 517,
+      "error_syntax": 408,
+      "error_semantics": 60,
+      "error_output_formatting": 14
     },
     "medium": {
-      "correct": 176,
-      "error_syntax": 132,
-      "error_semantics": 18,
-      "error_output_formatting": 7
+      "correct": 497,
+      "error_syntax": 412,
+      "error_semantics": 74,
+      "error_output_formatting": 16
     },
     "large": {
-      "correct": 3,
-      "error_syntax": 2,
+      "correct": 8,
+      "error_syntax": 7,
       "error_semantics": 0,
       "error_output_formatting": 0
     },
     "overall": {
-      "correct": 355,
-      "error_syntax": 266,
-      "error_semantics": 40,
-      "error_output_formatting": 10
+      "correct": 1022,
+      "error_syntax": 827,
+      "error_semantics": 134,
+      "error_output_formatting": 30
     }
   },
   "warp-1.0": {
@@ -105,132 +105,132 @@
   },
   "Qwen2.5-7B-Instruct": {
     "small": {
-      "correct": 81,
-      "error_syntax": 234,
-      "error_semantics": 17,
-      "error_output_formatting": 1
+      "correct": 257,
+      "error_syntax": 672,
+      "error_semantics": 67,
+      "error_output_formatting": 3
     },
     "medium": {
-      "correct": 61,
-      "error_syntax": 246,
-      "error_semantics": 25,
-      "error_output_formatting": 1
+      "correct": 206,
+      "error_syntax": 705,
+      "error_semantics": 83,
+      "error_output_formatting": 5
     },
     "large": {
-      "correct": 2,
-      "error_syntax": 2,
+      "correct": 3,
+      "error_syntax": 11,
       "error_semantics": 1,
       "error_output_formatting": 0
     },
     "overall": {
-      "correct": 144,
-      "error_syntax": 482,
-      "error_semantics": 43,
-      "error_output_formatting": 2
+      "correct": 466,
+      "error_syntax": 1388,
+      "error_semantics": 151,
+      "error_output_formatting": 8
     }
   },
   "Qwen2.5-3B-Instruct": {
     "small": {
-      "correct": 40,
-      "error_syntax": 266,
-      "error_semantics": 21,
-      "error_output_formatting": 6
+      "correct": 119,
+      "error_syntax": 769,
+      "error_semantics": 85,
+      "error_output_formatting": 26
     },
     "medium": {
-      "correct": 27,
-      "error_syntax": 282,
-      "error_semantics": 14,
-      "error_output_formatting": 10
+      "correct": 78,
+      "error_syntax": 842,
+      "error_semantics": 50,
+      "error_output_formatting": 29
     },
     "large": {
       "correct": 0,
-      "error_syntax": 5,
+      "error_syntax": 15,
       "error_semantics": 0,
       "error_output_formatting": 0
     },
     "overall": {
-      "correct": 67,
-      "error_syntax": 553,
-      "error_semantics": 35,
-      "error_output_formatting": 16
+      "correct": 197,
+      "error_syntax": 1626,
+      "error_semantics": 135,
+      "error_output_formatting": 55
     }
   },
   "Qwen2.5-14B-Instruct": {
     "small": {
-      "correct": 168,
-      "error_syntax": 138,
-      "error_semantics": 24,
+      "correct": 467,
+      "error_syntax": 476,
+      "error_semantics": 53,
       "error_output_formatting": 3
     },
     "medium": {
-      "correct": 157,
-      "error_syntax": 145,
-      "error_semantics": 27,
+      "correct": 465,
+      "error_syntax": 460,
+      "error_semantics": 70,
       "error_output_formatting": 4
     },
     "large": {
-      "correct": 2,
-      "error_syntax": 2,
-      "error_semantics": 1,
+      "correct": 6,
+      "error_syntax": 6,
+      "error_semantics": 3,
       "error_output_formatting": 0
     },
     "overall": {
-      "correct": 327,
-      "error_syntax": 285,
-      "error_semantics": 52,
+      "correct": 938,
+      "error_syntax": 942,
+      "error_semantics": 126,
       "error_output_formatting": 7
     }
   },
   "Qwen2.5-32B-Instruct": {
     "small": {
-      "correct": 233,
-      "error_syntax": 81,
-      "error_semantics": 19,
+      "correct": 683,
+      "error_syntax": 261,
+      "error_semantics": 55,
       "error_output_formatting": 0
     },
     "medium": {
-      "correct": 234,
-      "error_syntax": 67,
-      "error_semantics": 32,
+      "correct": 712,
+      "error_syntax": 206,
+      "error_semantics": 81,
       "error_output_formatting": 0
     },
     "large": {
-      "correct": 4,
-      "error_syntax": 0,
-      "error_semantics": 1,
+      "correct": 11,
+      "error_syntax": 1,
+      "error_semantics": 3,
       "error_output_formatting": 0
     },
     "overall": {
-      "correct": 471,
-      "error_syntax": 148,
-      "error_semantics": 52,
+      "correct": 1406,
+      "error_syntax": 468,
+      "error_semantics": 139,
       "error_output_formatting": 0
     }
   },
   "Falcon3-10B-Instruct": {
     "small": {
-      "correct": 103,
-      "error_syntax": 216,
-      "error_semantics": 12,
-      "error_output_formatting": 2
+      "correct": 308,
+      "error_syntax": 653,
+      "error_semantics": 32,
+      "error_output_formatting": 6
     },
     "medium": {
-      "correct": 93,
-      "error_syntax": 223,
-      "error_semantics": 16,
-      "error_output_formatting": 1
+      "correct": 275,
+      "error_syntax": 666,
+      "error_semantics": 55,
+      "error_output_formatting": 3
     },
     "large": {
-      "correct": 1,
-      "error_syntax": 3,
+      "correct": 2,
+      "error_syntax": 12,
       "error_semantics": 1,
       "error_output_formatting": 0
     },
     "overall": {
-      "correct": 197,
-      "error_syntax": 442,
-      "error_semantics": 29,
-      "error_output_formatting": 3
+      "correct": 585,
+      "error_syntax": 1331,
+      "error_semantics": 88,
+      "error_output_formatting": 9
     }
   }
 }

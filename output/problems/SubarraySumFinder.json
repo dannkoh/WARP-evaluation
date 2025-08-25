@@ -2,76 +2,76 @@
   "problem": "SubarraySumFinder",
   "local_models": {
     "DeepSeek-R1-Distill-Qwen-7B": {
-      "error_output_formatting": 24,
-      "total_attempts": 72,
-      "error_syntax": 44,
-      "error_semantics": 4
+      "error_output_formatting": 12,
+      "total_attempts": 36,
+      "error_syntax": 22,
+      "error_semantics": 2
     },
     "DeepSeek-R1-Distill-Qwen-14B": {
-      "error_syntax": 64,
-      "total_attempts": 72,
-      "error_semantics": 4,
-      "error_output_formatting": 4
-    },
-    "DeepSeek-R1-Distill-Qwen-32B": {
-      "error_syntax": 62,
-      "total_attempts": 72,
-      "error_output_formatting": 2,
-      "correct": 6,
-      "error_semantics": 2
-    },
-    "warp-1.0": {
-      "error_syntax": 54,
-      "total_attempts": 72,
-      "error_output_formatting": 10,
-      "error_semantics": 8
-    },
-    "Qwen2.5-7B-Instruct": {
-      "error_syntax": 70,
-      "total_attempts": 72,
-      "error_semantics": 2
-    },
-    "Qwen2.5-3B-Instruct": {
-      "error_syntax": 68,
-      "total_attempts": 72,
-      "error_output_formatting": 4
-    },
-    "Qwen2.5-14B-Instruct": {
-      "error_syntax": 68,
-      "total_attempts": 72,
-      "correct": 2,
-      "error_semantics": 2
-    },
-    "Qwen2.5-32B-Instruct": {
-      "error_syntax": 62,
-      "total_attempts": 72,
-      "correct": 8,
-      "error_semantics": 2
-    },
-    "Falcon3-10B-Instruct": {
-      "error_syntax": 68,
-      "total_attempts": 72,
+      "error_syntax": 32,
+      "total_attempts": 36,
       "error_semantics": 2,
       "error_output_formatting": 2
+    },
+    "DeepSeek-R1-Distill-Qwen-32B": {
+      "error_syntax": 31,
+      "total_attempts": 36,
+      "error_output_formatting": 1,
+      "correct": 3,
+      "error_semantics": 1
+    },
+    "warp-1.0": {
+      "error_syntax": 27,
+      "total_attempts": 36,
+      "error_output_formatting": 5,
+      "error_semantics": 4
+    },
+    "Qwen2.5-7B-Instruct": {
+      "error_syntax": 35,
+      "total_attempts": 36,
+      "error_semantics": 1
+    },
+    "Qwen2.5-3B-Instruct": {
+      "error_syntax": 34,
+      "total_attempts": 36,
+      "error_output_formatting": 2
+    },
+    "Qwen2.5-14B-Instruct": {
+      "error_syntax": 34,
+      "total_attempts": 36,
+      "correct": 1,
+      "error_semantics": 1
+    },
+    "Qwen2.5-32B-Instruct": {
+      "error_syntax": 31,
+      "total_attempts": 36,
+      "correct": 4,
+      "error_semantics": 1
+    },
+    "Falcon3-10B-Instruct": {
+      "error_syntax": 34,
+      "total_attempts": 36,
+      "error_semantics": 1,
+      "error_output_formatting": 1
     }
   },
   "openai_models": {
     "gpt-4.1-mini": {
       "error_semantics": 19,
       "total_attempts": 36,
-      "unknown": 9,
+      "correct": 9,
       "error_syntax": 8
     },
     "gpt-4.1": {
       "error_semantics": 19,
       "total_attempts": 36,
       "error_syntax": 13,
-      "unknown": 4
+      "correct": 4
     },
     "o4-mini": {
       "error_semantics": 31,
       "total_attempts": 36,
-      "unknown": 1,
+      "correct": 1,
       "error_syntax": 4
     },
     "gpt-4o": {
