@@ -9,7 +9,7 @@ if test -z "$JVM_FLAGS"; then
   JVM_FLAGS="-Xmx1024m -ea"
 fi
 
-export DYLD_LIBRARY_PATH="/Users/dankoh/jpf/jpf-symbc/lib:$DYLD_LIBRARY_PATH"
+export DYLD_LIBRARY_PATH="$JPF_HOME/../jpf-symbc/lib:$DYLD_LIBRARY_PATH"
 
 java $JVM_FLAGS -jar "$JPF_HOME/build/RunJPF.jar" "$@"
 

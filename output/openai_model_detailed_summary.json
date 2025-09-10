@@ -1,4 +1,233 @@
 {
+  "gpt-5": {
+    "trials": {
+      "trial1": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 325,
+              "error_syntax": 2,
+              "error_semantics": 6,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 97.5975975975976,
+              "error_syntax": 0.6006006006006006,
+              "error_semantics": 1.8018018018018018,
+              "error_output_formatting": 0.0
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 313,
+              "error_syntax": 3,
+              "error_semantics": 17,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 93.993993993994,
+              "error_syntax": 0.9009009009009009,
+              "error_semantics": 5.105105105105105,
+              "error_output_formatting": 0.0
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 5,
+              "error_syntax": 0,
+              "error_semantics": 0,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 100.0,
+              "error_syntax": 0.0,
+              "error_semantics": 0.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 643,
+          "error_syntax": 5,
+          "error_semantics": 23,
+          "error_output_formatting": 0
+        },
+        "overall_percentages": {
+          "correct": 95.82712369597616,
+          "error_syntax": 0.7451564828614009,
+          "error_semantics": 3.427719821162444,
+          "error_output_formatting": 0.0
+        }
+      },
+      "trial3": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 318,
+              "error_syntax": 2,
+              "error_semantics": 13,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 95.4954954954955,
+              "error_syntax": 0.6006006006006006,
+              "error_semantics": 3.903903903903904,
+              "error_output_formatting": 0.0
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 315,
+              "error_syntax": 3,
+              "error_semantics": 15,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 94.5945945945946,
+              "error_syntax": 0.9009009009009009,
+              "error_semantics": 4.504504504504505,
+              "error_output_formatting": 0.0
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 5,
+              "error_syntax": 0,
+              "error_semantics": 0,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 100.0,
+              "error_syntax": 0.0,
+              "error_semantics": 0.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 638,
+          "error_syntax": 5,
+          "error_semantics": 28,
+          "error_output_formatting": 0
+        },
+        "overall_percentages": {
+          "correct": 95.08196721311475,
+          "error_syntax": 0.7451564828614009,
+          "error_semantics": 4.172876304023846,
+          "error_output_formatting": 0.0
+        }
+      },
+      "trial2": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 318,
+              "error_syntax": 2,
+              "error_semantics": 13,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 95.4954954954955,
+              "error_syntax": 0.6006006006006006,
+              "error_semantics": 3.903903903903904,
+              "error_output_formatting": 0.0
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 315,
+              "error_syntax": 3,
+              "error_semantics": 15,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 94.5945945945946,
+              "error_syntax": 0.9009009009009009,
+              "error_semantics": 4.504504504504505,
+              "error_output_formatting": 0.0
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 5,
+              "error_syntax": 0,
+              "error_semantics": 0,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 100.0,
+              "error_syntax": 0.0,
+              "error_semantics": 0.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 638,
+          "error_syntax": 5,
+          "error_semantics": 28,
+          "error_output_formatting": 0
+        },
+        "overall_percentages": {
+          "correct": 95.08196721311475,
+          "error_syntax": 0.7451564828614009,
+          "error_semantics": 4.172876304023846,
+          "error_output_formatting": 0.0
+        }
+      }
+    },
+    "aggregate_by_tier": {
+      "small": {
+        "correct": 961,
+        "error_syntax": 6,
+        "error_semantics": 32,
+        "error_output_formatting": 0
+      },
+      "small_percentages": {
+        "correct": 96.1961961961962,
+        "error_syntax": 0.6006006006006006,
+        "error_semantics": 3.203203203203203,
+        "error_output_formatting": 0.0
+      },
+      "medium": {
+        "correct": 943,
+        "error_syntax": 9,
+        "error_semantics": 47,
+        "error_output_formatting": 0
+      },
+      "medium_percentages": {
+        "correct": 94.3943943943944,
+        "error_syntax": 0.9009009009009009,
+        "error_semantics": 4.704704704704705,
+        "error_output_formatting": 0.0
+      },
+      "large": {
+        "correct": 15,
+        "error_syntax": 0,
+        "error_semantics": 0,
+        "error_output_formatting": 0
+      },
+      "large_percentages": {
+        "correct": 100.0,
+        "error_syntax": 0.0,
+        "error_semantics": 0.0,
+        "error_output_formatting": 0.0
+      }
+    },
+    "aggregate": {
+      "correct": 1919,
+      "error_syntax": 15,
+      "error_semantics": 79,
+      "error_output_formatting": 0
+    },
+    "trial_count": 3,
+    "aggregate_percentages": {
+      "correct": 95.33035270740189,
+      "error_syntax": 0.7451564828614009,
+      "error_semantics": 3.9244908097367115,
+      "error_output_formatting": 0.0
+    }
+  },
   "gpt-4.1-mini": {
     "trials": {
       "trial1": {

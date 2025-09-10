@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Directory containing the .jpf files
-JPF_DIR="/Users/dankoh/jpf/spf-wca/src/examples/own"
-
+JPF_DIR="$(dirname "$0")/src/examples/custom"
 # Iterate over each .jpf file in the directory
 for jpf_file in "$JPF_DIR"/*.jpf; 
 do

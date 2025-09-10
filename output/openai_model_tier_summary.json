@@ -1,4 +1,30 @@
 {
+  "gpt-5": {
+    "small": {
+      "correct": 961,
+      "error_syntax": 6,
+      "error_semantics": 32,
+      "error_output_formatting": 0
+    },
+    "medium": {
+      "correct": 943,
+      "error_syntax": 9,
+      "error_semantics": 47,
+      "error_output_formatting": 0
+    },
+    "large": {
+      "correct": 15,
+      "error_syntax": 0,
+      "error_semantics": 0,
+      "error_output_formatting": 0
+    },
+    "overall": {
+      "correct": 1919,
+      "error_syntax": 15,
+      "error_semantics": 79,
+      "error_output_formatting": 0
+    }
+  },
   "gpt-4.1-mini": {
     "small": {
       "correct": 613,

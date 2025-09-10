@@ -53,6 +53,12 @@
     "error_semantics": 88,
     "error_output_formatting": 9
   },
+  "gpt-5": {
+    "correct": 1919,
+    "error_syntax": 15,
+    "error_semantics": 79,
+    "error_output_formatting": 0
+  },
   "gpt-4.1-mini": {
     "correct": 1163,
     "error_syntax": 305,
