@@ -1,44 +1,38 @@
 import json
 import os
 import argparse
+import glob
 from collections import defaultdict
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Union
 from datasets import load_dataset
+import pandas as pd
 
-# --- Type Aliases ---
 Problem = dict[str, Any]
 TierStats = dict[str, list[Problem]]
 Summary = dict[str, int]
 
-# --- Constants ---
 SUMMARY_KEYS = ["correct", "error_syntax", "error_semantics", "error_output_formatting"]
 
-# Local model constants
 PARSE_ERROR = "Parse error:"
 FORMAT_ERROR = "Failed to extract <answer> from response."
 FORMAT_ERROR_2 = "Empty side"
 
-# OpenAI specific reason strings
 REASON_CORRECT = "Constraints are logically equivalent."
 REASON_SEMANTICS_A = "Original does not imply generated."
 REASON_SEMANTICS_B = "Generated does not imply original."
 REASON_SYNTAX = "Could not parse results correctly."
 REASON_FORMAT = "Failed to extract response."
 
-# --- Debug Configuration ---
 VERBOSE = False
 
 
 def log(message):
-    """Print message if verbose mode is enabled."""
     if VERBOSE:
         print(f"[DEBUG] {message}")
 
 
-# --- Dataset Handling ---
 def load_benchmark_dataset(dataset_name="dannkoh/WARP-benchmark"):
-    """Load the benchmark dataset with tier information."""
     print(f"Loading benchmark dataset from {dataset_name}...")
     dataset = load_dataset(dataset_name, split="test")
     dataset_df = dataset.to_pandas()
@@ -46,38 +40,75 @@ def load_benchmark_dataset(dataset_name="dannkoh/WARP-benchmark"):
 
 
 def create_tier_mapping(benchmark_df):
-    """Create a mapping from problem IDs to their tiers."""
     return {i: row.get("tier", "unknown_tier") for i, row in benchmark_df.iterrows()}
 
 
+def create_problem_mapping(benchmark_df, spf_wca_path="../spf-wca/custom"):
+    print("Creating problem mapping from SMT2 files...")
+    
+    df_copy = benchmark_df.copy()
+    
+    problems = {}
+    spf_path = Path(spf_wca_path)
+    
+    if not spf_path.exists():
+        print(f"Warning: SPF-WCA path {spf_path} does not exist. Skipping problem mapping.")
+        return {}
+    
+    for problem_dir in spf_path.glob("*"):
+        if problem_dir.is_dir():
+            problems[str(problem_dir)] = set()
+            for smt2_file in problem_dir.rglob("*.smt2"):
+                try:
+                    with open(smt2_file, "r") as f:
+                        smt_lines = [line.strip() for line in f if line.strip()]
+                        assertions = [line for line in smt_lines if line.startswith("(assert")]
+                        problems[str(problem_dir)].update(assertions)
+                except Exception as e:
+                    log(f"Error reading {smt2_file}: {e}")
+    
+    id_to_problem = {}
+    df_copy["problem"] = None
+    
+    for index, row in df_copy.iterrows():
+        matches = [
+            problem.replace(str(spf_path) + "/", "") 
+            for problem in problems 
+            if row["answer"] in problems[problem]
+        ]
+        
+        if len(matches) == 1:
+            df_copy.at[index, "problem"] = matches[0]
+            id_to_problem[str(index)] = matches[0]
+        elif len(matches) > 1:
+            log(f"Ambiguous mapping for row {row['id']}: {matches}")
+            id_to_problem[str(index)] = matches[0]
+        else:
+            log(f"No mapping found for row {row['id']}")
+    
+    print(f"Created problem mapping for {len(id_to_problem)} entries")
+    return id_to_problem
+
+
 def init_summary() -> Summary:
-    """Initialize an empty summary."""
     return {key: 0 for key in SUMMARY_KEYS}
 
 
-# --- Local Model Functions ---
 def find_local_stats_files(root: str = ".") -> list[Path]:
-    """Find all individual_stats.json files in the repository."""
-    # Look in multiple possible locations
     all_files = []
-    for search_path in ["src", "archive", "."]:
-        search_root = Path(root) / search_path
-        if search_root.exists():
-            found_files = list(search_root.rglob("individual_stats.json"))
-            all_files.extend(found_files)
-            if found_files:
-                log(f"Found {len(found_files)} stats files in {search_path}")
-
+    search_root = Path(root)
+    if search_root.exists():
+        found_files = list(search_root.rglob("individual_stats.json"))
+        all_files.extend(found_files)
+        if found_files:
+            log(f"Found {len(found_files)} stats files in {root}")
     return all_files
 
 
 def extract_local_model_name(path: Path) -> str:
-    """Extract model name from path with more flexible pattern matching."""
-    # Try multiple patterns to find model name
     parts = path.parts
     model_name = "unknown_model"
 
-    # Option 1: Check for "results_X" pattern
     for i, part in enumerate(parts):
         if part.startswith("results_"):
             if i + 1 < len(parts):
@@ -88,18 +119,14 @@ def extract_local_model_name(path: Path) -> str:
 
 
 def extract_local_trial_info(path: Path) -> str:
-    """Extract trial identifier from path."""
     try:
-        # First specifically look for a date pattern (YYYY-MM-DD or with timestamps)
         for part in path.parts:
-            # Check for YYYY-MM-DD pattern or YYYY-MM-DD_HH-MM-SS pattern
             if (len(part) >= 10 and 
-                part[4] == '-' and part[7] == '-' and  # YYYY-MM-DD format
+                part[4] == '-' and part[7] == '-' and
                 part[:4].isdigit() and part[5:7].isdigit() and part[8:10].isdigit()):
                 log(f"Found trial id '{part}' using date pattern")
                 return part
 
-        # Fall back to parent directory name
         date_part = path.parts[-3]
         log(f"Found trial id '{date_part}' using parent directory")
         return date_part
@@ -109,7 +136,6 @@ def extract_local_trial_info(path: Path) -> str:
 
 
 def load_local_stats_file(file_path: Path) -> TierStats:
-    """Load a local stats file."""
     try:
         with file_path.open() as f:
             data = json.load(f)
@@ -122,7 +148,6 @@ def load_local_stats_file(file_path: Path) -> TierStats:
 
 
 def local_reason_to_category(problem: Problem) -> str:
-    """Map local model reason to error category."""
     reason = problem.get("reason", "")
     if problem.get("result") is True:
         return "correct"
@@ -137,7 +162,6 @@ def local_reason_to_category(problem: Problem) -> str:
 
 
 def syntax_semantics_summary_by_tier(tier_stats: TierStats) -> dict[str, Summary]:
-    """Generate a summary for each tier."""
     tier_summaries = {}
     all_problems = []
 
@@ -153,7 +177,6 @@ def syntax_semantics_summary_by_tier(tier_stats: TierStats) -> dict[str, Summary
         tier_summaries[tier] = tier_summary
         all_problems.extend(problems)
 
-    # Add overall summary
     overall_summary = init_summary()
     for problem in all_problems:
         try:
@@ -166,9 +189,7 @@ def syntax_semantics_summary_by_tier(tier_stats: TierStats) -> dict[str, Summary
     return tier_summaries
 
 
-# --- OpenAI Model Functions ---
 def find_openai_result_files(root: str = "results") -> list[Path]:
-    """Find all OpenAI model result files in the results directory."""
     result_files = []
     root_path = Path(root)
 
@@ -191,28 +212,22 @@ def find_openai_result_files(root: str = "results") -> list[Path]:
 
 
 def extract_openai_model_name(path: Path) -> str:
-    """Extract model name from the filename."""
-    filename = path.stem  # Remove .json
+    filename = path.stem
 
-    # Handle different naming patterns
     if "-20" in filename:
-        # Format: gpt-4o-2024-05-01
         model_name = filename.split("-20")[0]
         return model_name.rstrip("-")
     elif "gpt" in filename.lower() or "claude" in filename.lower():
-        # Just use the first part of the name before any date
         parts = filename.split("-")
         if len(parts) > 1 and parts[1].isdigit() and len(parts[1]) == 4:
             return parts[0]
         else:
             return filename
 
-    # Default fallback
     return filename
 
 
 def extract_openai_trial_id(path: Path) -> str:
-    """Extract trial ID from the path."""
     parts = path.parts
     for part in parts:
         if part.startswith("trial"):
@@ -221,7 +236,6 @@ def extract_openai_trial_id(path: Path) -> str:
 
 
 def load_openai_result_file(file_path: Path) -> Dict[str, Any]:
-    """Load an OpenAI result file."""
     try:
         with file_path.open() as f:
             data = json.load(f)
@@ -234,7 +248,6 @@ def load_openai_result_file(file_path: Path) -> Dict[str, Any]:
 
 
 def openai_reason_to_category(reason: str) -> str:
-    """Map OpenAI reason strings to error categories."""
     if reason == REASON_CORRECT:
         return "correct"
     elif reason in (REASON_SEMANTICS_A, REASON_SEMANTICS_B):
@@ -248,7 +261,6 @@ def openai_reason_to_category(reason: str) -> str:
 
 
 def generate_openai_summary_by_tier(results: List[Dict[str, Any]], tier_mapping: Dict[int, str]) -> dict[str, Summary]:
-    """Generate a summary from OpenAI results, broken down by tier from dataset."""
     tier_summaries = defaultdict(init_summary)
     all_results = init_summary()
 
@@ -257,7 +269,6 @@ def generate_openai_summary_by_tier(results: List[Dict[str, Any]], tier_mapping:
             reason = result.get("reason")
             category = openai_reason_to_category(reason)
 
-            # Get the custom_id and look up its tier
             custom_id = int(result.get("custom_id", -1))
             tier = tier_mapping.get(custom_id, "unknown_tier")
 
@@ -267,34 +278,209 @@ def generate_openai_summary_by_tier(results: List[Dict[str, Any]], tier_mapping:
             print(f"Error: {e}")
             print(f"Result causing error: {result}")
 
-    # Add overall summary
     tier_summaries["overall"] = all_results
     return dict(tier_summaries)
 
 
-# --- Common Functions ---
+def categorize_result(result):
+    if not isinstance(result, dict):
+        return "unknown"
+        
+    if "z3_result" in result:
+        if result["z3_result"] is True:
+            return "correct"
+    
+    if result.get("result") is True:
+        return "correct"
+    
+    reason = result.get("reason", "")
+    if not isinstance(reason, str):
+        return "unknown"
+        
+    if reason.startswith((FORMAT_ERROR, FORMAT_ERROR_2)) or reason == REASON_FORMAT or "Failed to extract" in reason:
+        return "error_output_formatting"
+    elif reason.startswith(PARSE_ERROR) or reason == REASON_SYNTAX or "Could not parse" in reason:
+        return "error_syntax"
+    elif "does not imply" in reason or reason in (REASON_SEMANTICS_A, REASON_SEMANTICS_B):
+        return "error_semantics"
+    elif reason == REASON_CORRECT or reason == "Constraints are logically equivalent.":
+        return "correct"
+    else:
+        return "unknown"
+
+
+def analyze_models_by_problem(problem_mapping, output_dir="output", verbose=False):
+    def log_problem(msg):
+        if verbose:
+            print(f"[PROBLEM] {msg}")
+    
+    Path(output_dir).mkdir(exist_ok=True, parents=True)
+    
+    def get_problem_name(problem_id):
+        if problem_id is None:
+            return "unknown"
+        
+        problem_id_str = str(problem_id)
+        
+        if problem_id_str in problem_mapping:
+            return problem_mapping[problem_id_str]
+        
+        try:
+            idx = int(problem_id_str)
+            if str(idx) in problem_mapping:
+                return problem_mapping[str(idx)]
+        except (ValueError, TypeError):
+            pass
+
+            
+        return problem_id_str
+    
+    local_models = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
+    openai_models = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
+    
+    local_files = find_local_stats_files()
+    log_problem(f"Processing {len(local_files)} local model result files")
+    
+    for file_path in local_files:
+        try:
+            with open(file_path) as f:
+                data = json.load(f)
+            
+            model_name = extract_local_model_name(file_path)
+            log_problem(f"Processing {file_path} for model {model_name}")
+            
+            if isinstance(data, dict) and any(k in data for k in ["small", "medium", "large"]):
+                for difficulty, items in data.items():
+                    if isinstance(items, list):
+                        log_problem(f"Processing {len(items)} items in {difficulty} category")
+                        for item in items:
+                            if not isinstance(item, dict):
+                                continue
+                                
+                            problem_id = item.get("index")
+                            if problem_id is None:
+                                continue
+                                
+                            problem_name = get_problem_name(problem_id)
+                            category = categorize_result(item)
+                            
+                            local_models[model_name][problem_name][category] += 1
+                            local_models[model_name][problem_name]["total_attempts"] += 1
+            elif isinstance(data, list):
+                log_problem(f"List format detected in {file_path}, length: {len(data)}")
+                for item in data:
+                    if not isinstance(item, dict):
+                        continue
+                        
+                    problem_id = item.get("id") or item.get("index")
+                    problem_name = get_problem_name(problem_id)
+                    category = categorize_result(item)
+                    
+                    local_models[model_name][problem_name][category] += 1
+                    local_models[model_name][problem_name]["total_attempts"] += 1
+            elif isinstance(data, dict):
+                log_problem(f"Dictionary format detected in {file_path}, keys: {len(data)}")
+                for problem_id, problem_data in data.items():
+                    if not isinstance(problem_data, dict):
+                        continue
+                        
+                    actual_problem_id = problem_data.get("id") or problem_data.get("index") or problem_id
+                    problem_name = get_problem_name(actual_problem_id)
+                    category = categorize_result(problem_data)
+                    
+                    local_models[model_name][problem_name][category] += 1
+                    local_models[model_name][problem_name]["total_attempts"] += 1
+                
+        except Exception as e:
+            log_problem(f"Error processing {file_path}: {str(e)}")
+    
+    openai_files = find_openai_result_files()
+    log_problem(f"Processing {len(openai_files)} OpenAI model result files")
+    
+    for file_path in openai_files:
+        try:
+            with open(file_path) as f:
+                data = json.load(f)
+            
+            if "results" not in data:
+                log_problem(f"No results in {file_path}")
+                continue
+                
+            model_name = extract_openai_model_name(file_path)
+            
+            for result in data["results"]:
+                if not isinstance(result, dict):
+                    continue
+                    
+                problem_id = result.get("custom_id")
+                problem_name = get_problem_name(problem_id)
+                category = categorize_result(result)
+                
+                openai_models[model_name][problem_name][category] += 1
+                openai_models[model_name][problem_name]["total_attempts"] += 1
+                
+        except Exception as e:
+            log_problem(f"Error processing {file_path}: {str(e)}")
+    
+    with open(f"{output_dir}/local_model_problem_stats.json", "w") as f:
+        json.dump(local_models, f, indent=2)
+    
+    with open(f"{output_dir}/openai_model_problem_stats.json", "w") as f:
+        json.dump(openai_models, f, indent=2)
+    
+    problem_dir = Path(output_dir) / "problems"
+    problem_dir.mkdir(exist_ok=True)
+    
+    all_problems = set()
+    for model_data in local_models.values():
+        all_problems.update(model_data.keys())
+    for model_data in openai_models.values():
+        all_problems.update(model_data.keys())
+    
+    for problem in all_problems:
+        if problem == "unknown":
+            continue
+            
+        problem_report = {
+            "problem": problem,
+            "local_models": {},
+            "openai_models": {}
+        }
+        
+        for model, problems in local_models.items():
+            if problem in problems:
+                problem_report["local_models"][model] = problems[problem]
+                
+        for model, problems in openai_models.items():
+            if problem in problems:
+                problem_report["openai_models"][model] = problems[problem]
+        
+        safe_name = problem.replace("/", "_").replace(":", "-")
+        with open(f"{problem_dir}/{safe_name}.json", "w") as f:
+            json.dump(problem_report, f, indent=2)
+    
+    print(f"Problem-based analysis complete. Reports written to:")
+    print(f"- {output_dir}/local_model_problem_stats.json")
+    print(f"- {output_dir}/openai_model_problem_stats.json")
+    print(f"- {output_dir}/problems/ (per-problem reports)")
+    
+    return {
+        "local_models": dict(local_models),
+        "openai_models": dict(openai_models)
+    }
+
+
 def calculate_percentages(summary: Summary) -> dict[str, float]:
-    """Convert raw counts to percentages."""
     total = sum(summary.values())
     return {key: (value / total) * 100 if total else 0 for key, value in summary.items()}
 
 
-def ensure_output_dir() -> Path:
-    """Ensure the output directory exists."""
-    output_dir = Path("output")
-    output_dir.mkdir(exist_ok=True)
-    return output_dir
-
-
 def write_summary_json(summary_dict: dict[str, Any], path: Path):
-    """Write a summary to a JSON file."""
     with path.open("w") as f:
         json.dump(summary_dict, f, indent=2)
 
 
-# --- Main Functions ---
-def process_local_models(tier_mapping):
-    """Process local model results with tier information."""
+def process_local_models(tier_mapping, output_dir="output"):
     stats_files = find_local_stats_files()
     print(f"Found {len(stats_files)} local model stats files.")
 
@@ -312,18 +498,14 @@ def process_local_models(tier_mapping):
             continue
 
         try:
-            # For local models, we need to map the stats to their tiers if not already done
             if any(tier in ["small", "medium", "large"] for tier in stats.keys()):
-                # The data already has tier information
                 log(f"File already has tier information")
                 tier_summaries = syntax_semantics_summary_by_tier(stats)
             else:
-                # We need to restructure the data to include tier information
                 log(f"Restructuring data with tier information")
                 tiered_stats = defaultdict(list)
                 for problem_id, problem_data in stats.items():
                     try:
-                        # Try to get the custom_id from the problem data or use the key
                         custom_id = int(problem_data.get("id", problem_id))
                         tier = tier_mapping.get(custom_id, "unknown_tier")
                         tiered_stats[tier].append(problem_data)
@@ -337,12 +519,10 @@ def process_local_models(tier_mapping):
             print(f"Error processing {stats_file}: {e}")
             continue
 
-    # Process and create final output structure
     detailed_results = {}
     tier_merged_summaries = defaultdict(lambda: defaultdict(init_summary))
 
     for model, trials in model_trial_data.items():
-        # Initialize model entry
         detailed_results[model] = {
             "trials": {},
             "aggregate_by_tier": defaultdict(init_summary),
@@ -352,18 +532,15 @@ def process_local_models(tier_mapping):
 
         log(f"Processing {len(trials)} trials for model {model}")
 
-        # Process each trial
         for trial_id, trial_data in trials.items():
             tier_data = trial_data["tier_summaries"]
 
-            # Store trial data with percentages
             detailed_results[model]["trials"][trial_id] = {
                 "tier_summaries": {},
                 "overall": tier_data["overall"],
                 "overall_percentages": calculate_percentages(tier_data["overall"]),
             }
 
-            # Process each tier
             for tier, summary in tier_data.items():
                 if tier != "overall":
                     detailed_results[model]["trials"][trial_id]["tier_summaries"][tier] = {
@@ -371,20 +548,16 @@ def process_local_models(tier_mapping):
                         "percentages": calculate_percentages(summary),
                     }
 
-                    # Aggregate tier data across trials
                     for category, count in summary.items():
                         tier_merged_summaries[model][tier][category] += count
 
-        # Set the aggregated tier data
         for tier, summary in tier_merged_summaries[model].items():
             detailed_results[model]["aggregate_by_tier"][tier] = summary
             detailed_results[model]["aggregate_by_tier"][f"{tier}_percentages"] = calculate_percentages(summary)
 
-        # Ensure we have valid aggregate data
         if "overall" in tier_merged_summaries[model]:
             detailed_results[model]["aggregate"] = tier_merged_summaries[model]["overall"]
         else:
-            # Calculate overall from all tiers if "overall" is missing
             combined_summary = init_summary()
             for tier, summary in tier_merged_summaries[model].items():
                 if tier != "overall" and not tier.endswith("_percentages"):
@@ -396,10 +569,9 @@ def process_local_models(tier_mapping):
 
         detailed_results[model]["aggregate_percentages"] = calculate_percentages(detailed_results[model]["aggregate"])
 
-    # Write output files
-    output_dir = ensure_output_dir()
+    output_path = Path(output_dir)
+    output_path.mkdir(exist_ok=True, parents=True)
 
-    # Simple tier-based summaries
     tier_summaries = {}
     for model, tiers in tier_merged_summaries.items():
         tier_summaries[model] = {}
@@ -407,23 +579,21 @@ def process_local_models(tier_mapping):
             if not tier.endswith("_percentages"):
                 tier_summaries[model][tier] = dict(summary)
 
-    write_summary_json(tier_summaries, output_dir / "local_model_tier_summary.json")
-    write_summary_json(detailed_results, output_dir / "local_model_detailed_summary.json")
+    write_summary_json(tier_summaries, output_path / "local_model_tier_summary.json")
+    write_summary_json(detailed_results, output_path / "local_model_detailed_summary.json")
 
-    # Extract just the overall summaries for backwards compatibility
     overall_summaries = {model: data["aggregate"] for model, data in detailed_results.items()}
-    write_summary_json(overall_summaries, output_dir / "local_model_summary.json")
-    write_summary_json(overall_summaries, output_dir / "model_summary.json")  # For compatibility
+    write_summary_json(overall_summaries, output_path / "local_model_summary.json")
+    write_summary_json(overall_summaries, output_path / "model_summary.json")
 
     print("Local model summaries written to:")
-    print(f"   - {output_dir}/local_model_tier_summary.json (tier-based summaries)")
-    print(f"   - {output_dir}/local_model_detailed_summary.json (detailed with trials)")
-    print(f"   - {output_dir}/local_model_summary.json (simple aggregate)")
-    print(f"   - {output_dir}/model_summary.json (for compatibility)")
+    print(f"   - {output_path}/local_model_tier_summary.json (tier-based summaries)")
+    print(f"   - {output_path}/local_model_detailed_summary.json (detailed with trials)")
+    print(f"   - {output_path}/local_model_summary.json (simple aggregate)")
+    print(f"   - {output_path}/model_summary.json (for compatibility)")
 
 
-def process_openai_models(tier_mapping):
-    """Process OpenAI model results with tier information."""
+def process_openai_models(tier_mapping, output_dir="output"):
     result_files = find_openai_result_files()
     print(f"Found {len(result_files)} OpenAI result files.")
 
@@ -440,16 +610,13 @@ def process_openai_models(tier_mapping):
             print(f"Warning: No results found in {result_file}")
             continue
 
-        # Generate tier-based summary from results using the tier mapping
         tier_summaries = generate_openai_summary_by_tier(data["results"], tier_mapping)
         model_data[model_name][trial_id] = {"tier_summaries": tier_summaries}
 
-    # Process and create final output structure
     detailed_results = {}
     tier_merged_summaries = defaultdict(lambda: defaultdict(init_summary))
 
     for model, trials in model_data.items():
-        # Initialize model entry
         detailed_results[model] = {
             "trials": {},
             "aggregate_by_tier": defaultdict(init_summary),
@@ -459,18 +626,15 @@ def process_openai_models(tier_mapping):
 
         log(f"Processing {len(trials)} trials for OpenAI model {model}")
 
-        # Process each trial
         for trial_id, trial_data in trials.items():
             tier_data = trial_data["tier_summaries"]
 
-            # Store trial data with percentages
             detailed_results[model]["trials"][trial_id] = {
                 "tier_summaries": {},
                 "overall": tier_data["overall"],
                 "overall_percentages": calculate_percentages(tier_data["overall"]),
             }
 
-            # Process each tier
             for tier, summary in tier_data.items():
                 if tier != "overall":
                     detailed_results[model]["trials"][trial_id]["tier_summaries"][tier] = {
@@ -478,20 +642,16 @@ def process_openai_models(tier_mapping):
                         "percentages": calculate_percentages(summary),
                     }
 
-                    # Aggregate tier data across trials
                     for category, count in summary.items():
                         tier_merged_summaries[model][tier][category] += count
 
-        # Set the aggregated tier data
         for tier, summary in tier_merged_summaries[model].items():
             detailed_results[model]["aggregate_by_tier"][tier] = summary
             detailed_results[model]["aggregate_by_tier"][f"{tier}_percentages"] = calculate_percentages(summary)
 
-        # Ensure we have valid aggregate data
         if "overall" in tier_merged_summaries[model]:
             detailed_results[model]["aggregate"] = tier_merged_summaries[model]["overall"]
         else:
-            # Calculate overall from all tiers if "overall" is missing
             combined_summary = init_summary()
             for tier, summary in tier_merged_summaries[model].items():
                 if tier != "overall" and not tier.endswith("_percentages"):
@@ -503,10 +663,9 @@ def process_openai_models(tier_mapping):
 
         detailed_results[model]["aggregate_percentages"] = calculate_percentages(detailed_results[model]["aggregate"])
 
-    # Write output files
-    output_dir = ensure_output_dir()
+    output_path = Path(output_dir)
+    output_path.mkdir(exist_ok=True, parents=True)
 
-    # Simple tier-based summaries
     tier_summaries = {}
     for model, tiers in tier_merged_summaries.items():
         tier_summaries[model] = {}
@@ -514,48 +673,45 @@ def process_openai_models(tier_mapping):
             if not tier.endswith("_percentages"):
                 tier_summaries[model][tier] = dict(summary)
 
-    write_summary_json(tier_summaries, output_dir / "openai_model_tier_summary.json")
-    write_summary_json(detailed_results, output_dir / "openai_model_detailed_summary.json")
+    write_summary_json(tier_summaries, output_path / "openai_model_tier_summary.json")
+    write_summary_json(detailed_results, output_path / "openai_model_detailed_summary.json")
 
-    # Extract just the overall summaries for backwards compatibility
     overall_summaries = {model: data["aggregate"] for model, data in detailed_results.items()}
-    write_summary_json(overall_summaries, output_dir / "openai_model_summary.json")
+    write_summary_json(overall_summaries, output_path / "openai_model_summary.json")
 
-    # Merge with existing model summary if it exists
-    existing_summary_file = output_dir / "model_summary.json"
+    existing_summary_file = output_path / "model_summary.json"
     if existing_summary_file.exists():
         try:
             with existing_summary_file.open() as f:
                 existing_summaries = json.load(f)
             merged_all = {**existing_summaries, **overall_summaries}
-            write_summary_json(merged_all, output_dir / "model_summary.json")
+            write_summary_json(merged_all, output_path / "model_summary.json")
             print(f"Merged OpenAI models with existing summaries.")
         except Exception as e:
             print(f"Warning: Failed to merge with existing summaries: {e}")
     else:
-        write_summary_json(overall_summaries, output_dir / "model_summary.json")
+        write_summary_json(overall_summaries, output_path / "model_summary.json")
 
     print("OpenAI model summaries written to:")
-    print(f"   - {output_dir}/openai_model_tier_summary.json (tier-based summaries)")
-    print(f"   - {output_dir}/openai_model_detailed_summary.json (detailed with trials)")
-    print(f"   - {output_dir}/openai_model_summary.json (OpenAI models only)")
-    print(f"   - {output_dir}/model_summary.json (all models combined)")
+    print(f"   - {output_path}/openai_model_tier_summary.json (tier-based summaries)")
+    print(f"   - {output_path}/openai_model_detailed_summary.json (detailed with trials)")
+    print(f"   - {output_path}/openai_model_summary.json (OpenAI models only)")
+    print(f"   - {output_path}/model_summary.json (all models combined)")
 
 
 def main():
-    """Process both local and OpenAI model results with tier information."""
-    # Parse command line arguments
-    parser = argparse.ArgumentParser(description="Aggregate evaluation results with tier-based analysis")
+    parser = argparse.ArgumentParser(description="Aggregate evaluation results with comprehensive analysis")
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose debug output")
-    parser.add_argument("--local-only", action="store_true", help="Process only local model results")
-    parser.add_argument("--openai-only", action="store_true", help="Process only OpenAI model results")
+    parser.add_argument("--local-path", default=".", help="Path to search for local model results (default: current directory)")
+    parser.add_argument("--openai-path", default="results", help="Path to search for OpenAI model results (default: results)")
+    parser.add_argument("--output-dir", default="output", help="Output directory for results (default: output)")
     args = parser.parse_args()
 
-    # Set global verbosity
     global VERBOSE
     VERBOSE = args.verbose
 
-    # Load the benchmark dataset
+    print("Starting comprehensive model evaluation analysis...")
+    
     benchmark_df = load_benchmark_dataset()
     tier_mapping = create_tier_mapping(benchmark_df)
 
@@ -567,16 +723,43 @@ def main():
     for tier, count in tier_counts.items():
         print(f"  - {tier}: {count} problems")
 
-    # Process based on command line arguments
-    if not args.openai_only:
-        print("\nProcessing local models...")
-        process_local_models(tier_mapping)
+    output_path = Path(args.output_dir)
+    output_path.mkdir(exist_ok=True, parents=True)
 
-    if not args.local_only:
-        print("\nProcessing OpenAI models...")
-        process_openai_models(tier_mapping)
+    global find_local_stats_files, find_openai_result_files
+    original_find_local = find_local_stats_files
+    original_find_openai = find_openai_result_files
+    
+    find_local_stats_files = lambda: list(Path(args.local_path).rglob("individual_stats.json")) if Path(args.local_path).exists() else []
+    find_openai_result_files = lambda: [f for trial_dir in Path(args.openai_path).glob("trial*") if trial_dir.is_dir() for f in trial_dir.glob("*.json") if "summary" not in f.name] if Path(args.openai_path).exists() else []
 
-    print("\nAll processing complete.")
+    try:
+        local_files = find_local_stats_files()
+        if local_files:
+            print(f"\nProcessing {len(local_files)} local model files from: {args.local_path}")
+            process_local_models(tier_mapping, args.output_dir)
+        else:
+            print(f"\nNo local model files found in: {args.local_path}")
+
+        openai_files = find_openai_result_files()
+        if openai_files:
+            print(f"\nProcessing {len(openai_files)} OpenAI model files from: {args.openai_path}")
+            process_openai_models(tier_mapping, args.output_dir)
+        else:
+            print(f"\nNo OpenAI model files found in: {args.openai_path}")
+
+        print("\nPerforming problem-based analysis...")
+        problem_mapping = create_problem_mapping(benchmark_df, "spf-wca/custom")
+        if problem_mapping:
+            analyze_models_by_problem(problem_mapping, output_dir=args.output_dir, verbose=args.verbose)
+        else:
+            print("Skipping problem-based analysis due to missing problem mapping.")
+
+    finally:
+        find_local_stats_files = original_find_local
+        find_openai_result_files = original_find_openai
+
+    print(f"\nAll processing complete. Results written to: {args.output_dir}")
 
 
 if __name__ == "__main__":
