@@ -49,9 +49,8 @@ cd WARP-evaluation</code></pre>
     <pre><code> src/gpt-evaluator.ipynb</code></pre>
   </li>
 
-  <li><strong>Aggregate results:</strong>
-    <pre><code>./script_aggregate.sh</code></pre>
-  </li>
+  <li><strong>Aggregate results:</strong> Once you are done with all the evaluations, run the aggregation script:
+    <pre><code>./script_aggregate.sh</code></pre>  </li>
 </ol>
 
 <h3>Repository Structure</h3>
@@ -61,13 +60,14 @@ WARP-evaluation/
 ├── src/                           # Evaluation scripts
 │   ├── aggregate.py                  # Model result aggregation script
 │   ├── gpt-evaluator.ipynb           # Batch OpenAI API evaluation notebook
-│   ├── evaluator.py                  # Main evaluation script
+│   ├── evaluator.py                  # Main evaluation script for local models
 │   ├── utils/                        # Evaluation utilities
 │   │   ├── configs.py                # Configuration management
 │   │   └── evaluation.py             # Core evaluation logic
 │   └── results_*/                    # Results for local model evaluation
 ├── results/                        # OpenAI evaluation results
-│   └── trial*/                     # Multi-trial experimental data
+│   ├── batch/                        # Batched OpenAI API requests and responses
+│   └── trial*/                       # Multi-trial experimental data
 ├── output/                         # Generated output files
 ├── jpf-core/                       # Java PathFinder core
 ├── jpf-symbc/                      # Symbolic execution engine
