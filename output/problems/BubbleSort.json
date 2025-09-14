@@ -21,13 +21,6 @@
       "error_syntax": 28,
       "error_output_formatting": 1
     },
-    "warp-1.0": {
-      "correct": 41,
-      "total_attempts": 75,
-      "error_semantics": 14,
-      "error_output_formatting": 15,
-      "error_syntax": 5
-    },
     "Qwen2.5-7B-Instruct": {
       "error_syntax": 57,
       "total_attempts": 75,
@@ -38,9 +31,9 @@
     "Qwen2.5-3B-Instruct": {
       "error_syntax": 66,
       "total_attempts": 75,
-      "error_output_formatting": 3,
       "error_semantics": 5,
-      "correct": 1
+      "correct": 1,
+      "error_output_formatting": 3
     },
     "Qwen2.5-14B-Instruct": {
       "correct": 35,
@@ -58,31 +51,42 @@
       "total_attempts": 75,
       "correct": 5,
       "error_semantics": 1
+    },
+    "warp-1.0": {
+      "correct": 41,
+      "total_attempts": 75,
+      "error_output_formatting": 15,
+      "error_syntax": 5,
+      "error_semantics": 14
     }
   },
   "openai_models": {
-    "gpt-4.1-mini": {
-      "correct": 37,
-      "total_attempts": 75,
-      "error_syntax": 19,
-      "error_semantics": 19
-    },
     "gpt-4.1": {
-      "correct": 38,
-      "total_attempts": 75,
       "error_syntax": 27,
-      "error_semantics": 10
+      "total_attempts": 75,
+      "error_semantics": 10,
+      "correct": 38
+    },
+    "gpt-5": {
+      "correct": 75,
+      "total_attempts": 75
     },
     "o4-mini": {
       "correct": 72,
       "total_attempts": 75,
       "error_semantics": 3
     },
-    "gpt-4o": {
-      "correct": 19,
+    "gpt-4.1-mini": {
+      "error_semantics": 19,
       "total_attempts": 75,
+      "correct": 37,
+      "error_syntax": 19
+    },
+    "gpt-4o": {
       "error_syntax": 39,
+      "total_attempts": 75,
       "error_semantics": 16,
+      "correct": 19,
       "error_output_formatting": 1
     }
   }

@@ -230,62 +230,62 @@
   },
   "DeepSeek-R1-Distill-Qwen-14B": {
     "trials": {
-      "2025-05-06_13-51-13": {
+      "2025-05-06_13-00-39": {
         "tier_summaries": {
           "small": {
             "summary": {
-              "correct": 121,
-              "error_syntax": 185,
+              "correct": 129,
+              "error_syntax": 169,
               "error_semantics": 17,
-              "error_output_formatting": 10
+              "error_output_formatting": 18
             },
             "percentages": {
-              "correct": 36.33633633633634,
-              "error_syntax": 55.55555555555556,
+              "correct": 38.73873873873874,
+              "error_syntax": 50.750750750750754,
               "error_semantics": 5.105105105105105,
-              "error_output_formatting": 3.003003003003003
+              "error_output_formatting": 5.405405405405405
             }
           },
           "medium": {
             "summary": {
-              "correct": 123,
-              "error_syntax": 166,
-              "error_semantics": 19,
-              "error_output_formatting": 25
+              "correct": 113,
+              "error_syntax": 176,
+              "error_semantics": 21,
+              "error_output_formatting": 23
             },
             "percentages": {
-              "correct": 36.93693693693694,
-              "error_syntax": 49.849849849849846,
-              "error_semantics": 5.7057057057057055,
-              "error_output_formatting": 7.5075075075075075
+              "correct": 33.933933933933936,
+              "error_syntax": 52.85285285285285,
+              "error_semantics": 6.306306306306306,
+              "error_output_formatting": 6.906906906906906
             }
           },
           "large": {
             "summary": {
-              "correct": 0,
-              "error_syntax": 3,
+              "correct": 3,
+              "error_syntax": 2,
               "error_semantics": 0,
-              "error_output_formatting": 2
+              "error_output_formatting": 0
             },
             "percentages": {
-              "correct": 0.0,
-              "error_syntax": 60.0,
+              "correct": 60.0,
+              "error_syntax": 40.0,
               "error_semantics": 0.0,
-              "error_output_formatting": 40.0
+              "error_output_formatting": 0.0
             }
           }
         },
         "overall": {
-          "correct": 244,
-          "error_syntax": 354,
-          "error_semantics": 36,
-          "error_output_formatting": 37
+          "correct": 245,
+          "error_syntax": 347,
+          "error_semantics": 38,
+          "error_output_formatting": 41
         },
         "overall_percentages": {
-          "correct": 36.36363636363637,
-          "error_syntax": 52.75707898658718,
-          "error_semantics": 5.365126676602086,
-          "error_output_formatting": 5.514157973174367
+          "correct": 36.51266766020864,
+          "error_syntax": 51.71385991058122,
+          "error_semantics": 5.663189269746647,
+          "error_output_formatting": 6.110283159463488
         }
       },
       "2025-05-06_14-34-41": {
@@ -346,62 +346,62 @@
           "error_output_formatting": 8.19672131147541
         }
       },
-      "2025-05-06_13-00-39": {
+      "2025-05-06_13-51-13": {
         "tier_summaries": {
           "small": {
             "summary": {
-              "correct": 129,
-              "error_syntax": 169,
+              "correct": 121,
+              "error_syntax": 185,
               "error_semantics": 17,
-              "error_output_formatting": 18
+              "error_output_formatting": 10
             },
             "percentages": {
-              "correct": 38.73873873873874,
-              "error_syntax": 50.750750750750754,
+              "correct": 36.33633633633634,
+              "error_syntax": 55.55555555555556,
               "error_semantics": 5.105105105105105,
-              "error_output_formatting": 5.405405405405405
+              "error_output_formatting": 3.003003003003003
             }
           },
           "medium": {
             "summary": {
-              "correct": 113,
-              "error_syntax": 176,
-              "error_semantics": 21,
-              "error_output_formatting": 23
+              "correct": 123,
+              "error_syntax": 166,
+              "error_semantics": 19,
+              "error_output_formatting": 25
             },
             "percentages": {
-              "correct": 33.933933933933936,
-              "error_syntax": 52.85285285285285,
-              "error_semantics": 6.306306306306306,
-              "error_output_formatting": 6.906906906906906
+              "correct": 36.93693693693694,
+              "error_syntax": 49.849849849849846,
+              "error_semantics": 5.7057057057057055,
+              "error_output_formatting": 7.5075075075075075
             }
           },
           "large": {
             "summary": {
-              "correct": 3,
-              "error_syntax": 2,
+              "correct": 0,
+              "error_syntax": 3,
               "error_semantics": 0,
-              "error_output_formatting": 0
+              "error_output_formatting": 2
             },
             "percentages": {
-              "correct": 60.0,
-              "error_syntax": 40.0,
+              "correct": 0.0,
+              "error_syntax": 60.0,
               "error_semantics": 0.0,
-              "error_output_formatting": 0.0
+              "error_output_formatting": 40.0
             }
           }
         },
         "overall": {
-          "correct": 245,
-          "error_syntax": 347,
-          "error_semantics": 38,
-          "error_output_formatting": 41
+          "correct": 244,
+          "error_syntax": 354,
+          "error_semantics": 36,
+          "error_output_formatting": 37
         },
         "overall_percentages": {
-          "correct": 36.51266766020864,
-          "error_syntax": 51.71385991058122,
-          "error_semantics": 5.663189269746647,
-          "error_output_formatting": 6.110283159463488
+          "correct": 36.36363636363637,
+          "error_syntax": 52.75707898658718,
+          "error_semantics": 5.365126676602086,
+          "error_output_formatting": 5.514157973174367
         }
       }
     },
@@ -459,62 +459,62 @@
   },
   "DeepSeek-R1-Distill-Qwen-32B": {
     "trials": {
-      "2025-05-05_21-51-34": {
+      "2025-05-06_00-09-25": {
         "tier_summaries": {
           "small": {
             "summary": {
-              "correct": 168,
-              "error_syntax": 140,
-              "error_semantics": 18,
-              "error_output_formatting": 7
+              "correct": 176,
+              "error_syntax": 132,
+              "error_semantics": 22,
+              "error_output_formatting": 3
             },
             "percentages": {
-              "correct": 50.45045045045045,
-              "error_syntax": 42.04204204204204,
-              "error_semantics": 5.405405405405405,
-              "error_output_formatting": 2.1021021021021022
+              "correct": 52.85285285285285,
+              "error_syntax": 39.63963963963964,
+              "error_semantics": 6.606606606606606,
+              "error_output_formatting": 0.9009009009009009
             }
           },
           "medium": {
             "summary": {
-              "correct": 158,
-              "error_syntax": 147,
-              "error_semantics": 24,
-              "error_output_formatting": 4
+              "correct": 176,
+              "error_syntax": 132,
+              "error_semantics": 18,
+              "error_output_formatting": 7
             },
             "percentages": {
-              "correct": 47.44744744744745,
-              "error_syntax": 44.14414414414414,
-              "error_semantics": 7.207207207207207,
-              "error_output_formatting": 1.2012012012012012
+              "correct": 52.85285285285285,
+              "error_syntax": 39.63963963963964,
+              "error_semantics": 5.405405405405405,
+              "error_output_formatting": 2.1021021021021022
             }
           },
           "large": {
             "summary": {
-              "correct": 2,
-              "error_syntax": 3,
+              "correct": 3,
+              "error_syntax": 2,
               "error_semantics": 0,
               "error_output_formatting": 0
             },
             "percentages": {
-              "correct": 40.0,
-              "error_syntax": 60.0,
+              "correct": 60.0,
+              "error_syntax": 40.0,
               "error_semantics": 0.0,
               "error_output_formatting": 0.0
             }
           }
         },
         "overall": {
-          "correct": 328,
-          "error_syntax": 290,
-          "error_semantics": 42,
-          "error_output_formatting": 11
+          "correct": 355,
+          "error_syntax": 266,
+          "error_semantics": 40,
+          "error_output_formatting": 10
         },
         "overall_percentages": {
-          "correct": 48.8822652757079,
-          "error_syntax": 43.219076005961256,
-          "error_semantics": 6.259314456035768,
-          "error_output_formatting": 1.639344262295082
+          "correct": 52.90611028315947,
+          "error_syntax": 39.642324888226526,
+          "error_semantics": 5.961251862891207,
+          "error_output_formatting": 1.4903129657228018
         }
       },
       "2025-05-05_23-00-36": {
@@ -575,62 +575,62 @@
           "error_output_formatting": 1.3412816691505216
         }
       },
-      "2025-05-06_00-09-25": {
+      "2025-05-05_21-51-34": {
         "tier_summaries": {
           "small": {
             "summary": {
-              "correct": 176,
-              "error_syntax": 132,
-              "error_semantics": 22,
-              "error_output_formatting": 3
-            },
-            "percentages": {
-              "correct": 52.85285285285285,
-              "error_syntax": 39.63963963963964,
-              "error_semantics": 6.606606606606606,
-              "error_output_formatting": 0.9009009009009009
-            }
-          },
-          "medium": {
-            "summary": {
-              "correct": 176,
-              "error_syntax": 132,
+              "correct": 168,
+              "error_syntax": 140,
               "error_semantics": 18,
               "error_output_formatting": 7
             },
             "percentages": {
-              "correct": 52.85285285285285,
-              "error_syntax": 39.63963963963964,
+              "correct": 50.45045045045045,
+              "error_syntax": 42.04204204204204,
               "error_semantics": 5.405405405405405,
               "error_output_formatting": 2.1021021021021022
             }
           },
+          "medium": {
+            "summary": {
+              "correct": 158,
+              "error_syntax": 147,
+              "error_semantics": 24,
+              "error_output_formatting": 4
+            },
+            "percentages": {
+              "correct": 47.44744744744745,
+              "error_syntax": 44.14414414414414,
+              "error_semantics": 7.207207207207207,
+              "error_output_formatting": 1.2012012012012012
+            }
+          },
           "large": {
             "summary": {
-              "correct": 3,
-              "error_syntax": 2,
+              "correct": 2,
+              "error_syntax": 3,
               "error_semantics": 0,
               "error_output_formatting": 0
             },
             "percentages": {
-              "correct": 60.0,
-              "error_syntax": 40.0,
+              "correct": 40.0,
+              "error_syntax": 60.0,
               "error_semantics": 0.0,
               "error_output_formatting": 0.0
             }
           }
         },
         "overall": {
-          "correct": 355,
-          "error_syntax": 266,
-          "error_semantics": 40,
-          "error_output_formatting": 10
+          "correct": 328,
+          "error_syntax": 290,
+          "error_semantics": 42,
+          "error_output_formatting": 11
         },
         "overall_percentages": {
-          "correct": 52.90611028315947,
-          "error_syntax": 39.642324888226526,
-          "error_semantics": 5.961251862891207,
-          "error_output_formatting": 1.4903129657228018
+          "correct": 48.8822652757079,
+          "error_syntax": 43.219076005961256,
+          "error_semantics": 6.259314456035768,
+          "error_output_formatting": 1.639344262295082
         }
       }
     },
@@ -684,235 +684,6 @@
       "error_syntax": 41.082960755091904,
       "error_semantics": 6.656731246895181,
       "error_output_formatting": 1.4903129657228018
-    }
-  },
-  "warp-1.0": {
-    "trials": {
-      "2025-05-05_20-25-50": {
-        "tier_summaries": {
-          "small": {
-            "summary": {
-              "correct": 146,
-              "error_syntax": 34,
-              "error_semantics": 85,
-              "error_output_formatting": 68
-            },
-            "percentages": {
-              "correct": 43.84384384384384,
-              "error_syntax": 10.21021021021021,
-              "error_semantics": 25.525525525525527,
-              "error_output_formatting": 20.42042042042042
-            }
-          },
-          "medium": {
-            "summary": {
-              "correct": 130,
-              "error_syntax": 44,
-              "error_semantics": 77,
-              "error_output_formatting": 82
-            },
-            "percentages": {
-              "correct": 39.03903903903904,
-              "error_syntax": 13.213213213213212,
-              "error_semantics": 23.123123123123122,
-              "error_output_formatting": 24.624624624624623
-            }
-          },
-          "large": {
-            "summary": {
-              "correct": 2,
-              "error_syntax": 1,
-              "error_semantics": 2,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 40.0,
-              "error_syntax": 20.0,
-              "error_semantics": 40.0,
-              "error_output_formatting": 0.0
-            }
-          }
-        },
-        "overall": {
-          "correct": 278,
-          "error_syntax": 79,
-          "error_semantics": 164,
-          "error_output_formatting": 150
-        },
-        "overall_percentages": {
-          "correct": 41.43070044709389,
-          "error_syntax": 11.773472429210134,
-          "error_semantics": 24.44113263785395,
-          "error_output_formatting": 22.35469448584203
-        }
-      },
-      "2025-05-05_20-46-32": {
-        "tier_summaries": {
-          "small": {
-            "summary": {
-              "correct": 132,
-              "error_syntax": 46,
-              "error_semantics": 80,
-              "error_output_formatting": 75
-            },
-            "percentages": {
-              "correct": 39.63963963963964,
-              "error_syntax": 13.813813813813812,
-              "error_semantics": 24.024024024024023,
-              "error_output_formatting": 22.52252252252252
-            }
-          },
-          "medium": {
-            "summary": {
-              "correct": 136,
-              "error_syntax": 50,
-              "error_semantics": 78,
-              "error_output_formatting": 69
-            },
-            "percentages": {
-              "correct": 40.84084084084084,
-              "error_syntax": 15.015015015015015,
-              "error_semantics": 23.423423423423422,
-              "error_output_formatting": 20.72072072072072
-            }
-          },
-          "large": {
-            "summary": {
-              "correct": 2,
-              "error_syntax": 2,
-              "error_semantics": 1,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 40.0,
-              "error_syntax": 40.0,
-              "error_semantics": 20.0,
-              "error_output_formatting": 0.0
-            }
-          }
-        },
-        "overall": {
-          "correct": 270,
-          "error_syntax": 98,
-          "error_semantics": 159,
-          "error_output_formatting": 144
-        },
-        "overall_percentages": {
-          "correct": 40.23845007451565,
-          "error_syntax": 14.605067064083457,
-          "error_semantics": 23.69597615499255,
-          "error_output_formatting": 21.460506706408346
-        }
-      },
-      "2025-05-05_20-36-32": {
-        "tier_summaries": {
-          "small": {
-            "summary": {
-              "correct": 141,
-              "error_syntax": 45,
-              "error_semantics": 85,
-              "error_output_formatting": 62
-            },
-            "percentages": {
-              "correct": 42.34234234234234,
-              "error_syntax": 13.513513513513514,
-              "error_semantics": 25.525525525525527,
-              "error_output_formatting": 18.61861861861862
-            }
-          },
-          "medium": {
-            "summary": {
-              "correct": 135,
-              "error_syntax": 52,
-              "error_semantics": 88,
-              "error_output_formatting": 58
-            },
-            "percentages": {
-              "correct": 40.54054054054054,
-              "error_syntax": 15.615615615615615,
-              "error_semantics": 26.426426426426424,
-              "error_output_formatting": 17.417417417417415
-            }
-          },
-          "large": {
-            "summary": {
-              "correct": 3,
-              "error_syntax": 1,
-              "error_semantics": 1,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 60.0,
-              "error_syntax": 20.0,
-              "error_semantics": 20.0,
-              "error_output_formatting": 0.0
-            }
-          }
-        },
-        "overall": {
-          "correct": 279,
-          "error_syntax": 98,
-          "error_semantics": 174,
-          "error_output_formatting": 120
-        },
-        "overall_percentages": {
-          "correct": 41.57973174366617,
-          "error_syntax": 14.605067064083457,
-          "error_semantics": 25.93144560357675,
-          "error_output_formatting": 17.883755588673623
-        }
-      }
-    },
-    "aggregate_by_tier": {
-      "small": {
-        "correct": 419,
-        "error_syntax": 125,
-        "error_semantics": 250,
-        "error_output_formatting": 205
-      },
-      "small_percentages": {
-        "correct": 41.94194194194194,
-        "error_syntax": 12.512512512512513,
-        "error_semantics": 25.025025025025027,
-        "error_output_formatting": 20.52052052052052
-      },
-      "medium": {
-        "correct": 401,
-        "error_syntax": 146,
-        "error_semantics": 243,
-        "error_output_formatting": 209
-      },
-      "medium_percentages": {
-        "correct": 40.14014014014014,
-        "error_syntax": 14.614614614614615,
-        "error_semantics": 24.324324324324326,
-        "error_output_formatting": 20.92092092092092
-      },
-      "large": {
-        "correct": 7,
-        "error_syntax": 4,
-        "error_semantics": 4,
-        "error_output_formatting": 0
-      },
-      "large_percentages": {
-        "correct": 46.666666666666664,
-        "error_syntax": 26.666666666666668,
-        "error_semantics": 26.666666666666668,
-        "error_output_formatting": 0.0
-      }
-    },
-    "aggregate": {
-      "correct": 827,
-      "error_syntax": 275,
-      "error_semantics": 497,
-      "error_output_formatting": 414
-    },
-    "trial_count": 3,
-    "aggregate_percentages": {
-      "correct": 41.082960755091904,
-      "error_syntax": 13.661202185792352,
-      "error_semantics": 24.68951813214108,
-      "error_output_formatting": 20.566318926974663
     }
   },
   "Qwen2.5-7B-Instruct": {
@@ -975,64 +746,6 @@
           "error_output_formatting": 0.29806259314456035
         }
       },
-      "2025-05-07_09-57-10": {
-        "tier_summaries": {
-          "small": {
-            "summary": {
-              "correct": 96,
-              "error_syntax": 211,
-              "error_semantics": 25,
-              "error_output_formatting": 1
-            },
-            "percentages": {
-              "correct": 28.82882882882883,
-              "error_syntax": 63.36336336336337,
-              "error_semantics": 7.5075075075075075,
-              "error_output_formatting": 0.3003003003003003
-            }
-          },
-          "medium": {
-            "summary": {
-              "correct": 71,
-              "error_syntax": 225,
-              "error_semantics": 34,
-              "error_output_formatting": 3
-            },
-            "percentages": {
-              "correct": 21.32132132132132,
-              "error_syntax": 67.56756756756756,
-              "error_semantics": 10.21021021021021,
-              "error_output_formatting": 0.9009009009009009
-            }
-          },
-          "large": {
-            "summary": {
-              "correct": 1,
-              "error_syntax": 4,
-              "error_semantics": 0,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 20.0,
-              "error_syntax": 80.0,
-              "error_semantics": 0.0,
-              "error_output_formatting": 0.0
-            }
-          }
-        },
-        "overall": {
-          "correct": 168,
-          "error_syntax": 440,
-          "error_semantics": 59,
-          "error_output_formatting": 4
-        },
-        "overall_percentages": {
-          "correct": 25.037257824143072,
-          "error_syntax": 65.57377049180327,
-          "error_semantics": 8.79284649776453,
-          "error_output_formatting": 0.5961251862891207
-        }
-      },
       "2025-05-07_09-42-51": {
         "tier_summaries": {
           "small": {
@@ -1090,6 +803,64 @@
           "error_semantics": 6.4083457526080485,
           "error_output_formatting": 0.29806259314456035
         }
+      },
+      "2025-05-07_09-57-10": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 96,
+              "error_syntax": 211,
+              "error_semantics": 25,
+              "error_output_formatting": 1
+            },
+            "percentages": {
+              "correct": 28.82882882882883,
+              "error_syntax": 63.36336336336337,
+              "error_semantics": 7.5075075075075075,
+              "error_output_formatting": 0.3003003003003003
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 71,
+              "error_syntax": 225,
+              "error_semantics": 34,
+              "error_output_formatting": 3
+            },
+            "percentages": {
+              "correct": 21.32132132132132,
+              "error_syntax": 67.56756756756756,
+              "error_semantics": 10.21021021021021,
+              "error_output_formatting": 0.9009009009009009
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 1,
+              "error_syntax": 4,
+              "error_semantics": 0,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 20.0,
+              "error_syntax": 80.0,
+              "error_semantics": 0.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 168,
+          "error_syntax": 440,
+          "error_semantics": 59,
+          "error_output_formatting": 4
+        },
+        "overall_percentages": {
+          "correct": 25.037257824143072,
+          "error_syntax": 65.57377049180327,
+          "error_semantics": 8.79284649776453,
+          "error_output_formatting": 0.5961251862891207
+        }
       }
     },
     "aggregate_by_tier": {
@@ -1146,64 +917,6 @@
   },
   "Qwen2.5-3B-Instruct": {
     "trials": {
-      "2025-05-06_04-32-43": {
-        "tier_summaries": {
-          "small": {
-            "summary": {
-              "correct": 47,
-              "error_syntax": 256,
-              "error_semantics": 24,
-              "error_output_formatting": 6
-            },
-            "percentages": {
-              "correct": 14.114114114114114,
-              "error_syntax": 76.87687687687688,
-              "error_semantics": 7.207207207207207,
-              "error_output_formatting": 1.8018018018018018
-            }
-          },
-          "medium": {
-            "summary": {
-              "correct": 28,
-              "error_syntax": 274,
-              "error_semantics": 19,
-              "error_output_formatting": 12
-            },
-            "percentages": {
-              "correct": 8.408408408408409,
-              "error_syntax": 82.28228228228228,
-              "error_semantics": 5.7057057057057055,
-              "error_output_formatting": 3.6036036036036037
-            }
-          },
-          "large": {
-            "summary": {
-              "correct": 0,
-              "error_syntax": 5,
-              "error_semantics": 0,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 0.0,
-              "error_syntax": 100.0,
-              "error_semantics": 0.0,
-              "error_output_formatting": 0.0
-            }
-          }
-        },
-        "overall": {
-          "correct": 75,
-          "error_syntax": 535,
-          "error_semantics": 43,
-          "error_output_formatting": 18
-        },
-        "overall_percentages": {
-          "correct": 11.177347242921014,
-          "error_syntax": 79.73174366616989,
-          "error_semantics": 6.4083457526080485,
-          "error_output_formatting": 2.682563338301043
-        }
-      },
       "2025-05-06_04-54-10": {
         "tier_summaries": {
           "small": {
@@ -1260,6 +973,64 @@
           "error_syntax": 80.17883755588674,
           "error_semantics": 8.49478390461997,
           "error_output_formatting": 3.129657228017884
+        }
+      },
+      "2025-05-06_04-32-43": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 47,
+              "error_syntax": 256,
+              "error_semantics": 24,
+              "error_output_formatting": 6
+            },
+            "percentages": {
+              "correct": 14.114114114114114,
+              "error_syntax": 76.87687687687688,
+              "error_semantics": 7.207207207207207,
+              "error_output_formatting": 1.8018018018018018
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 28,
+              "error_syntax": 274,
+              "error_semantics": 19,
+              "error_output_formatting": 12
+            },
+            "percentages": {
+              "correct": 8.408408408408409,
+              "error_syntax": 82.28228228228228,
+              "error_semantics": 5.7057057057057055,
+              "error_output_formatting": 3.6036036036036037
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 0,
+              "error_syntax": 5,
+              "error_semantics": 0,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 0.0,
+              "error_syntax": 100.0,
+              "error_semantics": 0.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 75,
+          "error_syntax": 535,
+          "error_semantics": 43,
+          "error_output_formatting": 18
+        },
+        "overall_percentages": {
+          "correct": 11.177347242921014,
+          "error_syntax": 79.73174366616989,
+          "error_semantics": 6.4083457526080485,
+          "error_output_formatting": 2.682563338301043
         }
       },
       "2025-05-06_04-43-30": {
@@ -1433,64 +1204,6 @@
           "error_output_formatting": 0.0
         }
       },
-      "2025-05-06_16-01-51": {
-        "tier_summaries": {
-          "small": {
-            "summary": {
-              "correct": 148,
-              "error_syntax": 171,
-              "error_semantics": 14,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 44.44444444444444,
-              "error_syntax": 51.35135135135135,
-              "error_semantics": 4.2042042042042045,
-              "error_output_formatting": 0.0
-            }
-          },
-          "medium": {
-            "summary": {
-              "correct": 151,
-              "error_syntax": 161,
-              "error_semantics": 21,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 45.34534534534534,
-              "error_syntax": 48.348348348348345,
-              "error_semantics": 6.306306306306306,
-              "error_output_formatting": 0.0
-            }
-          },
-          "large": {
-            "summary": {
-              "correct": 2,
-              "error_syntax": 2,
-              "error_semantics": 1,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 40.0,
-              "error_syntax": 40.0,
-              "error_semantics": 20.0,
-              "error_output_formatting": 0.0
-            }
-          }
-        },
-        "overall": {
-          "correct": 301,
-          "error_syntax": 334,
-          "error_semantics": 36,
-          "error_output_formatting": 0
-        },
-        "overall_percentages": {
-          "correct": 44.85842026825633,
-          "error_syntax": 49.77645305514158,
-          "error_semantics": 5.365126676602086,
-          "error_output_formatting": 0.0
-        }
-      },
       "2025-05-06_18-39-51": {
         "tier_summaries": {
           "small": {
@@ -1547,6 +1260,64 @@
           "error_syntax": 42.47391952309985,
           "error_semantics": 7.749627421758569,
           "error_output_formatting": 1.0432190760059614
+        }
+      },
+      "2025-05-06_16-01-51": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 148,
+              "error_syntax": 171,
+              "error_semantics": 14,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 44.44444444444444,
+              "error_syntax": 51.35135135135135,
+              "error_semantics": 4.2042042042042045,
+              "error_output_formatting": 0.0
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 151,
+              "error_syntax": 161,
+              "error_semantics": 21,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 45.34534534534534,
+              "error_syntax": 48.348348348348345,
+              "error_semantics": 6.306306306306306,
+              "error_output_formatting": 0.0
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 2,
+              "error_syntax": 2,
+              "error_semantics": 1,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 40.0,
+              "error_syntax": 40.0,
+              "error_semantics": 20.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 301,
+          "error_syntax": 334,
+          "error_semantics": 36,
+          "error_output_formatting": 0
+        },
+        "overall_percentages": {
+          "correct": 44.85842026825633,
+          "error_syntax": 49.77645305514158,
+          "error_semantics": 5.365126676602086,
+          "error_output_formatting": 0.0
         }
       }
     },
@@ -2058,6 +1829,235 @@
       "error_syntax": 66.12021857923497,
       "error_semantics": 4.371584699453552,
       "error_output_formatting": 0.44709388971684055
+    }
+  },
+  "warp-1.0": {
+    "trials": {
+      "2025-05-05_20-46-32": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 132,
+              "error_syntax": 46,
+              "error_semantics": 80,
+              "error_output_formatting": 75
+            },
+            "percentages": {
+              "correct": 39.63963963963964,
+              "error_syntax": 13.813813813813812,
+              "error_semantics": 24.024024024024023,
+              "error_output_formatting": 22.52252252252252
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 136,
+              "error_syntax": 50,
+              "error_semantics": 78,
+              "error_output_formatting": 69
+            },
+            "percentages": {
+              "correct": 40.84084084084084,
+              "error_syntax": 15.015015015015015,
+              "error_semantics": 23.423423423423422,
+              "error_output_formatting": 20.72072072072072
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 2,
+              "error_syntax": 2,
+              "error_semantics": 1,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 40.0,
+              "error_syntax": 40.0,
+              "error_semantics": 20.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 270,
+          "error_syntax": 98,
+          "error_semantics": 159,
+          "error_output_formatting": 144
+        },
+        "overall_percentages": {
+          "correct": 40.23845007451565,
+          "error_syntax": 14.605067064083457,
+          "error_semantics": 23.69597615499255,
+          "error_output_formatting": 21.460506706408346
+        }
+      },
+      "2025-05-05_20-25-50": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 146,
+              "error_syntax": 34,
+              "error_semantics": 85,
+              "error_output_formatting": 68
+            },
+            "percentages": {
+              "correct": 43.84384384384384,
+              "error_syntax": 10.21021021021021,
+              "error_semantics": 25.525525525525527,
+              "error_output_formatting": 20.42042042042042
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 130,
+              "error_syntax": 44,
+              "error_semantics": 77,
+              "error_output_formatting": 82
+            },
+            "percentages": {
+              "correct": 39.03903903903904,
+              "error_syntax": 13.213213213213212,
+              "error_semantics": 23.123123123123122,
+              "error_output_formatting": 24.624624624624623
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 2,
+              "error_syntax": 1,
+              "error_semantics": 2,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 40.0,
+              "error_syntax": 20.0,
+              "error_semantics": 40.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 278,
+          "error_syntax": 79,
+          "error_semantics": 164,
+          "error_output_formatting": 150
+        },
+        "overall_percentages": {
+          "correct": 41.43070044709389,
+          "error_syntax": 11.773472429210134,
+          "error_semantics": 24.44113263785395,
+          "error_output_formatting": 22.35469448584203
+        }
+      },
+      "2025-05-05_20-36-32": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 141,
+              "error_syntax": 45,
+              "error_semantics": 85,
+              "error_output_formatting": 62
+            },
+            "percentages": {
+              "correct": 42.34234234234234,
+              "error_syntax": 13.513513513513514,
+              "error_semantics": 25.525525525525527,
+              "error_output_formatting": 18.61861861861862
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 135,
+              "error_syntax": 52,
+              "error_semantics": 88,
+              "error_output_formatting": 58
+            },
+            "percentages": {
+              "correct": 40.54054054054054,
+              "error_syntax": 15.615615615615615,
+              "error_semantics": 26.426426426426424,
+              "error_output_formatting": 17.417417417417415
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 3,
+              "error_syntax": 1,
+              "error_semantics": 1,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 60.0,
+              "error_syntax": 20.0,
+              "error_semantics": 20.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 279,
+          "error_syntax": 98,
+          "error_semantics": 174,
+          "error_output_formatting": 120
+        },
+        "overall_percentages": {
+          "correct": 41.57973174366617,
+          "error_syntax": 14.605067064083457,
+          "error_semantics": 25.93144560357675,
+          "error_output_formatting": 17.883755588673623
+        }
+      }
+    },
+    "aggregate_by_tier": {
+      "small": {
+        "correct": 419,
+        "error_syntax": 125,
+        "error_semantics": 250,
+        "error_output_formatting": 205
+      },
+      "small_percentages": {
+        "correct": 41.94194194194194,
+        "error_syntax": 12.512512512512513,
+        "error_semantics": 25.025025025025027,
+        "error_output_formatting": 20.52052052052052
+      },
+      "medium": {
+        "correct": 401,
+        "error_syntax": 146,
+        "error_semantics": 243,
+        "error_output_formatting": 209
+      },
+      "medium_percentages": {
+        "correct": 40.14014014014014,
+        "error_syntax": 14.614614614614615,
+        "error_semantics": 24.324324324324326,
+        "error_output_formatting": 20.92092092092092
+      },
+      "large": {
+        "correct": 7,
+        "error_syntax": 4,
+        "error_semantics": 4,
+        "error_output_formatting": 0
+      },
+      "large_percentages": {
+        "correct": 46.666666666666664,
+        "error_syntax": 26.666666666666668,
+        "error_semantics": 26.666666666666668,
+        "error_output_formatting": 0.0
+      }
+    },
+    "aggregate": {
+      "correct": 827,
+      "error_syntax": 275,
+      "error_semantics": 497,
+      "error_output_formatting": 414
+    },
+    "trial_count": 3,
+    "aggregate_percentages": {
+      "correct": 41.082960755091904,
+      "error_syntax": 13.661202185792352,
+      "error_semantics": 24.68951813214108,
+      "error_output_formatting": 20.566318926974663
     }
   }
 }

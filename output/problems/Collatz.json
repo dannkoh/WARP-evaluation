@@ -8,24 +8,17 @@
       "error_semantics": 2
     },
     "DeepSeek-R1-Distill-Qwen-14B": {
-      "error_syntax": 57,
-      "total_attempts": 108,
-      "correct": 35,
       "error_output_formatting": 9,
+      "total_attempts": 108,
+      "error_syntax": 57,
+      "correct": 35,
       "error_semantics": 7
     },
     "DeepSeek-R1-Distill-Qwen-32B": {
-      "correct": 62,
-      "total_attempts": 108,
       "error_syntax": 33,
-      "error_semantics": 13
-    },
-    "warp-1.0": {
-      "error_output_formatting": 30,
       "total_attempts": 108,
-      "error_semantics": 22,
-      "correct": 47,
-      "error_syntax": 9
+      "error_semantics": 13,
+      "correct": 62
     },
     "Qwen2.5-7B-Instruct": {
       "error_syntax": 77,
@@ -57,34 +50,46 @@
       "correct": 25,
       "error_output_formatting": 3,
       "error_semantics": 9
+    },
+    "warp-1.0": {
+      "error_semantics": 22,
+      "total_attempts": 108,
+      "correct": 47,
+      "error_output_formatting": 30,
+      "error_syntax": 9
     }
   },
   "openai_models": {
-    "gpt-4.1-mini": {
-      "error_semantics": 45,
-      "total_attempts": 108,
-      "correct": 53,
-      "error_syntax": 9,
-      "error_output_formatting": 1
-    },
     "gpt-4.1": {
       "error_semantics": 59,
       "total_attempts": 108,
       "correct": 38,
       "error_syntax": 11
     },
+    "gpt-5": {
+      "correct": 107,
+      "total_attempts": 108,
+      "error_semantics": 1
+    },
     "o4-mini": {
       "correct": 98,
       "total_attempts": 108,
-      "error_syntax": 2,
       "error_semantics": 5,
-      "error_output_formatting": 3
+      "error_output_formatting": 3,
+      "error_syntax": 2
+    },
+    "gpt-4.1-mini": {
+      "error_syntax": 9,
+      "total_attempts": 108,
+      "correct": 53,
+      "error_semantics": 45,
+      "error_output_formatting": 1
     },
     "gpt-4o": {
-      "error_syntax": 24,
+      "correct": 55,
       "total_attempts": 108,
       "error_semantics": 29,
-      "correct": 55
+      "error_syntax": 24
     }
   }
 }

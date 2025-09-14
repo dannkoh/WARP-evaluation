@@ -11,22 +11,15 @@
     "DeepSeek-R1-Distill-Qwen-14B": {
       "correct": 95,
       "total_attempts": 120,
-      "error_semantics": 5,
+      "error_syntax": 15,
       "error_output_formatting": 5,
-      "error_syntax": 15
+      "error_semantics": 5
     },
     "DeepSeek-R1-Distill-Qwen-32B": {
       "correct": 109,
       "total_attempts": 120,
-      "error_syntax": 9,
-      "error_semantics": 2
-    },
-    "warp-1.0": {
-      "correct": 97,
-      "total_attempts": 120,
-      "error_semantics": 7,
-      "error_output_formatting": 14,
-      "error_syntax": 2
+      "error_semantics": 2,
+      "error_syntax": 9
     },
     "Qwen2.5-7B-Instruct": {
       "correct": 99,
@@ -35,9 +28,9 @@
       "error_syntax": 3
     },
     "Qwen2.5-3B-Instruct": {
-      "correct": 86,
-      "total_attempts": 120,
       "error_semantics": 31,
+      "total_attempts": 120,
+      "correct": 86,
       "error_syntax": 3
     },
     "Qwen2.5-14B-Instruct": {
@@ -54,18 +47,29 @@
       "total_attempts": 120,
       "error_syntax": 1,
       "error_semantics": 1
+    },
+    "warp-1.0": {
+      "correct": 97,
+      "total_attempts": 120,
+      "error_output_formatting": 14,
+      "error_semantics": 7,
+      "error_syntax": 2
     }
   },
   "openai_models": {
-    "gpt-4.1-mini": {
-      "correct": 120,
-      "total_attempts": 120
-    },
     "gpt-4.1": {
       "correct": 120,
       "total_attempts": 120
     },
+    "gpt-5": {
+      "correct": 120,
+      "total_attempts": 120
+    },
     "o4-mini": {
+      "correct": 120,
+      "total_attempts": 120
+    },
+    "gpt-4.1-mini": {
       "correct": 120,
       "total_attempts": 120
     },

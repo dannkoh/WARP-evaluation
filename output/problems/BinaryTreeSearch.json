@@ -8,10 +8,10 @@
       "error_semantics": 3
     },
     "DeepSeek-R1-Distill-Qwen-14B": {
-      "correct": 24,
+      "error_output_formatting": 6,
       "total_attempts": 75,
       "error_syntax": 41,
-      "error_output_formatting": 6,
+      "correct": 24,
       "error_semantics": 4
     },
     "DeepSeek-R1-Distill-Qwen-32B": {
@@ -20,13 +20,6 @@
       "error_syntax": 33,
       "error_semantics": 7,
       "error_output_formatting": 1
-    },
-    "warp-1.0": {
-      "error_output_formatting": 23,
-      "total_attempts": 75,
-      "error_semantics": 26,
-      "error_syntax": 25,
-      "correct": 1
     },
     "Qwen2.5-7B-Instruct": {
       "error_syntax": 49,
@@ -37,8 +30,8 @@
     "Qwen2.5-3B-Instruct": {
       "error_syntax": 68,
       "total_attempts": 75,
-      "error_semantics": 2,
-      "error_output_formatting": 5
+      "error_output_formatting": 5,
+      "error_semantics": 2
     },
     "Qwen2.5-14B-Instruct": {
       "correct": 28,
@@ -56,20 +49,25 @@
       "total_attempts": 75,
       "correct": 6,
       "error_semantics": 2
+    },
+    "warp-1.0": {
+      "correct": 1,
+      "total_attempts": 75,
+      "error_syntax": 25,
+      "error_semantics": 26,
+      "error_output_formatting": 23
     }
   },
   "openai_models": {
-    "gpt-4.1-mini": {
-      "error_syntax": 17,
-      "total_attempts": 75,
-      "correct": 36,
-      "error_semantics": 22
-    },
     "gpt-4.1": {
       "error_semantics": 34,
       "total_attempts": 75,
-      "error_syntax": 21,
-      "correct": 20
+      "correct": 20,
+      "error_syntax": 21
+    },
+    "gpt-5": {
+      "correct": 75,
+      "total_attempts": 75
     },
     "o4-mini": {
       "correct": 72,
@@ -77,12 +75,18 @@
       "error_semantics": 2,
       "error_output_formatting": 1
     },
+    "gpt-4.1-mini": {
+      "error_semantics": 22,
+      "total_attempts": 75,
+      "correct": 36,
+      "error_syntax": 17
+    },
     "gpt-4o": {
       "error_syntax": 58,
       "total_attempts": 75,
       "error_semantics": 10,
-      "correct": 4,
-      "error_output_formatting": 3
+      "error_output_formatting": 3,
+      "correct": 4
     }
   }
 }

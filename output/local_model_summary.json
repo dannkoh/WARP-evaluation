@@ -17,12 +17,6 @@
     "error_semantics": 134,
     "error_output_formatting": 30
   },
-  "warp-1.0": {
-    "correct": 827,
-    "error_syntax": 275,
-    "error_semantics": 497,
-    "error_output_formatting": 414
-  },
   "Qwen2.5-7B-Instruct": {
     "correct": 466,
     "error_syntax": 1388,
@@ -52,5 +46,11 @@
     "error_syntax": 1331,
     "error_semantics": 88,
     "error_output_formatting": 9
+  },
+  "warp-1.0": {
+    "correct": 827,
+    "error_syntax": 275,
+    "error_semantics": 497,
+    "error_output_formatting": 414
   }
 }

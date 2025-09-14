@@ -77,32 +77,6 @@
       "error_output_formatting": 30
     }
   },
-  "warp-1.0": {
-    "small": {
-      "correct": 419,
-      "error_syntax": 125,
-      "error_semantics": 250,
-      "error_output_formatting": 205
-    },
-    "medium": {
-      "correct": 401,
-      "error_syntax": 146,
-      "error_semantics": 243,
-      "error_output_formatting": 209
-    },
-    "large": {
-      "correct": 7,
-      "error_syntax": 4,
-      "error_semantics": 4,
-      "error_output_formatting": 0
-    },
-    "overall": {
-      "correct": 827,
-      "error_syntax": 275,
-      "error_semantics": 497,
-      "error_output_formatting": 414
-    }
-  },
   "Qwen2.5-7B-Instruct": {
     "small": {
       "correct": 257,
@@ -231,6 +205,32 @@
       "error_syntax": 1331,
       "error_semantics": 88,
       "error_output_formatting": 9
+    }
+  },
+  "warp-1.0": {
+    "small": {
+      "correct": 419,
+      "error_syntax": 125,
+      "error_semantics": 250,
+      "error_output_formatting": 205
+    },
+    "medium": {
+      "correct": 401,
+      "error_syntax": 146,
+      "error_semantics": 243,
+      "error_output_formatting": 209
+    },
+    "large": {
+      "correct": 7,
+      "error_syntax": 4,
+      "error_semantics": 4,
+      "error_output_formatting": 0
+    },
+    "overall": {
+      "correct": 827,
+      "error_syntax": 275,
+      "error_semantics": 497,
+      "error_output_formatting": 414
     }
   }
 }

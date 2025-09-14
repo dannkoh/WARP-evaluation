@@ -8,23 +8,16 @@
       "error_semantics": 15
     },
     "DeepSeek-R1-Distill-Qwen-14B": {
-      "error_syntax": 80,
-      "total_attempts": 111,
       "error_output_formatting": 29,
-      "correct": 1,
-      "error_semantics": 1
+      "total_attempts": 111,
+      "error_syntax": 80,
+      "error_semantics": 1,
+      "correct": 1
     },
     "DeepSeek-R1-Distill-Qwen-32B": {
       "error_syntax": 97,
       "total_attempts": 111,
       "error_output_formatting": 14
-    },
-    "warp-1.0": {
-      "error_syntax": 80,
-      "total_attempts": 111,
-      "error_output_formatting": 22,
-      "error_semantics": 8,
-      "correct": 1
     },
     "Qwen2.5-7B-Instruct": {
       "error_syntax": 108,
@@ -50,25 +43,38 @@
       "error_syntax": 110,
       "total_attempts": 111,
       "correct": 1
+    },
+    "warp-1.0": {
+      "error_output_formatting": 22,
+      "total_attempts": 111,
+      "error_syntax": 80,
+      "error_semantics": 8,
+      "correct": 1
     }
   },
   "openai_models": {
-    "gpt-4.1-mini": {
-      "error_semantics": 107,
-      "total_attempts": 111,
-      "correct": 3,
-      "error_syntax": 1
-    },
     "gpt-4.1": {
       "error_semantics": 109,
       "total_attempts": 111,
-      "error_syntax": 1,
-      "correct": 1
+      "correct": 1,
+      "error_syntax": 1
+    },
+    "gpt-5": {
+      "error_semantics": 58,
+      "total_attempts": 111,
+      "correct": 52,
+      "error_syntax": 1
     },
     "o4-mini": {
       "correct": 74,
       "total_attempts": 111,
       "error_semantics": 37
+    },
+    "gpt-4.1-mini": {
+      "error_semantics": 107,
+      "total_attempts": 111,
+      "correct": 3,
+      "error_syntax": 1
     },
     "gpt-4o": {
       "error_semantics": 68,

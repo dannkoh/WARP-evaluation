@@ -12,21 +12,14 @@
       "error_syntax": 69,
       "total_attempts": 96,
       "correct": 22,
-      "error_output_formatting": 4,
-      "error_semantics": 1
+      "error_semantics": 1,
+      "error_output_formatting": 4
     },
     "DeepSeek-R1-Distill-Qwen-32B": {
-      "error_syntax": 63,
-      "total_attempts": 96,
       "correct": 32,
-      "error_output_formatting": 1
-    },
-    "warp-1.0": {
-      "correct": 72,
       "total_attempts": 96,
-      "error_semantics": 13,
-      "error_output_formatting": 9,
-      "error_syntax": 2
+      "error_syntax": 63,
+      "error_output_formatting": 1
     },
     "Qwen2.5-7B-Instruct": {
       "error_syntax": 76,
@@ -34,9 +27,9 @@
       "correct": 20
     },
     "Qwen2.5-3B-Instruct": {
-      "correct": 12,
-      "total_attempts": 96,
       "error_syntax": 80,
+      "total_attempts": 96,
+      "correct": 12,
       "error_semantics": 3,
       "error_output_formatting": 1
     },
@@ -54,19 +47,26 @@
       "error_syntax": 65,
       "total_attempts": 96,
       "correct": 31
+    },
+    "warp-1.0": {
+      "correct": 72,
+      "total_attempts": 96,
+      "error_output_formatting": 9,
+      "error_semantics": 13,
+      "error_syntax": 2
     }
   },
   "openai_models": {
-    "gpt-4.1-mini": {
-      "correct": 75,
-      "total_attempts": 96,
-      "error_syntax": 14,
-      "error_semantics": 7
-    },
     "gpt-4.1": {
       "correct": 85,
       "total_attempts": 96,
       "error_syntax": 11
+    },
+    "gpt-5": {
+      "correct": 91,
+      "total_attempts": 96,
+      "error_semantics": 3,
+      "error_syntax": 2
     },
     "o4-mini": {
       "error_semantics": 10,
@@ -75,11 +75,17 @@
       "error_output_formatting": 2,
       "error_syntax": 1
     },
+    "gpt-4.1-mini": {
+      "correct": 75,
+      "total_attempts": 96,
+      "error_syntax": 14,
+      "error_semantics": 7
+    },
     "gpt-4o": {
       "correct": 78,
       "total_attempts": 96,
-      "error_semantics": 14,
       "error_syntax": 3,
+      "error_semantics": 14,
       "error_output_formatting": 1
     }
   }

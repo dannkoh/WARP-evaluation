@@ -1,522 +1,6 @@
 {
-  "gpt-5": {
-    "trials": {
-      "trial1": {
-        "tier_summaries": {
-          "small": {
-            "summary": {
-              "correct": 325,
-              "error_syntax": 2,
-              "error_semantics": 6,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 97.5975975975976,
-              "error_syntax": 0.6006006006006006,
-              "error_semantics": 1.8018018018018018,
-              "error_output_formatting": 0.0
-            }
-          },
-          "medium": {
-            "summary": {
-              "correct": 313,
-              "error_syntax": 3,
-              "error_semantics": 17,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 93.993993993994,
-              "error_syntax": 0.9009009009009009,
-              "error_semantics": 5.105105105105105,
-              "error_output_formatting": 0.0
-            }
-          },
-          "large": {
-            "summary": {
-              "correct": 5,
-              "error_syntax": 0,
-              "error_semantics": 0,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 100.0,
-              "error_syntax": 0.0,
-              "error_semantics": 0.0,
-              "error_output_formatting": 0.0
-            }
-          }
-        },
-        "overall": {
-          "correct": 643,
-          "error_syntax": 5,
-          "error_semantics": 23,
-          "error_output_formatting": 0
-        },
-        "overall_percentages": {
-          "correct": 95.82712369597616,
-          "error_syntax": 0.7451564828614009,
-          "error_semantics": 3.427719821162444,
-          "error_output_formatting": 0.0
-        }
-      },
-      "trial3": {
-        "tier_summaries": {
-          "small": {
-            "summary": {
-              "correct": 318,
-              "error_syntax": 2,
-              "error_semantics": 13,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 95.4954954954955,
-              "error_syntax": 0.6006006006006006,
-              "error_semantics": 3.903903903903904,
-              "error_output_formatting": 0.0
-            }
-          },
-          "medium": {
-            "summary": {
-              "correct": 315,
-              "error_syntax": 3,
-              "error_semantics": 15,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 94.5945945945946,
-              "error_syntax": 0.9009009009009009,
-              "error_semantics": 4.504504504504505,
-              "error_output_formatting": 0.0
-            }
-          },
-          "large": {
-            "summary": {
-              "correct": 5,
-              "error_syntax": 0,
-              "error_semantics": 0,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 100.0,
-              "error_syntax": 0.0,
-              "error_semantics": 0.0,
-              "error_output_formatting": 0.0
-            }
-          }
-        },
-        "overall": {
-          "correct": 638,
-          "error_syntax": 5,
-          "error_semantics": 28,
-          "error_output_formatting": 0
-        },
-        "overall_percentages": {
-          "correct": 95.08196721311475,
-          "error_syntax": 0.7451564828614009,
-          "error_semantics": 4.172876304023846,
-          "error_output_formatting": 0.0
-        }
-      },
-      "trial2": {
-        "tier_summaries": {
-          "small": {
-            "summary": {
-              "correct": 318,
-              "error_syntax": 2,
-              "error_semantics": 13,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 95.4954954954955,
-              "error_syntax": 0.6006006006006006,
-              "error_semantics": 3.903903903903904,
-              "error_output_formatting": 0.0
-            }
-          },
-          "medium": {
-            "summary": {
-              "correct": 315,
-              "error_syntax": 3,
-              "error_semantics": 15,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 94.5945945945946,
-              "error_syntax": 0.9009009009009009,
-              "error_semantics": 4.504504504504505,
-              "error_output_formatting": 0.0
-            }
-          },
-          "large": {
-            "summary": {
-              "correct": 5,
-              "error_syntax": 0,
-              "error_semantics": 0,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 100.0,
-              "error_syntax": 0.0,
-              "error_semantics": 0.0,
-              "error_output_formatting": 0.0
-            }
-          }
-        },
-        "overall": {
-          "correct": 638,
-          "error_syntax": 5,
-          "error_semantics": 28,
-          "error_output_formatting": 0
-        },
-        "overall_percentages": {
-          "correct": 95.08196721311475,
-          "error_syntax": 0.7451564828614009,
-          "error_semantics": 4.172876304023846,
-          "error_output_formatting": 0.0
-        }
-      }
-    },
-    "aggregate_by_tier": {
-      "small": {
-        "correct": 961,
-        "error_syntax": 6,
-        "error_semantics": 32,
-        "error_output_formatting": 0
-      },
-      "small_percentages": {
-        "correct": 96.1961961961962,
-        "error_syntax": 0.6006006006006006,
-        "error_semantics": 3.203203203203203,
-        "error_output_formatting": 0.0
-      },
-      "medium": {
-        "correct": 943,
-        "error_syntax": 9,
-        "error_semantics": 47,
-        "error_output_formatting": 0
-      },
-      "medium_percentages": {
-        "correct": 94.3943943943944,
-        "error_syntax": 0.9009009009009009,
-        "error_semantics": 4.704704704704705,
-        "error_output_formatting": 0.0
-      },
-      "large": {
-        "correct": 15,
-        "error_syntax": 0,
-        "error_semantics": 0,
-        "error_output_formatting": 0
-      },
-      "large_percentages": {
-        "correct": 100.0,
-        "error_syntax": 0.0,
-        "error_semantics": 0.0,
-        "error_output_formatting": 0.0
-      }
-    },
-    "aggregate": {
-      "correct": 1919,
-      "error_syntax": 15,
-      "error_semantics": 79,
-      "error_output_formatting": 0
-    },
-    "trial_count": 3,
-    "aggregate_percentages": {
-      "correct": 95.33035270740189,
-      "error_syntax": 0.7451564828614009,
-      "error_semantics": 3.9244908097367115,
-      "error_output_formatting": 0.0
-    }
-  },
-  "gpt-4.1-mini": {
-    "trials": {
-      "trial1": {
-        "tier_summaries": {
-          "small": {
-            "summary": {
-              "correct": 206,
-              "error_syntax": 53,
-              "error_semantics": 74,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 61.86186186186187,
-              "error_syntax": 15.915915915915916,
-              "error_semantics": 22.22222222222222,
-              "error_output_formatting": 0.0
-            }
-          },
-          "medium": {
-            "summary": {
-              "correct": 180,
-              "error_syntax": 48,
-              "error_semantics": 105,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 54.054054054054056,
-              "error_syntax": 14.414414414414415,
-              "error_semantics": 31.53153153153153,
-              "error_output_formatting": 0.0
-            }
-          },
-          "large": {
-            "summary": {
-              "correct": 2,
-              "error_syntax": 0,
-              "error_semantics": 3,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 40.0,
-              "error_syntax": 0.0,
-              "error_semantics": 60.0,
-              "error_output_formatting": 0.0
-            }
-          }
-        },
-        "overall": {
-          "correct": 388,
-          "error_syntax": 101,
-          "error_semantics": 182,
-          "error_output_formatting": 0
-        },
-        "overall_percentages": {
-          "correct": 57.82414307004471,
-          "error_syntax": 15.052160953800298,
-          "error_semantics": 27.123695976154995,
-          "error_output_formatting": 0.0
-        }
-      },
-      "trial3": {
-        "tier_summaries": {
-          "small": {
-            "summary": {
-              "correct": 197,
-              "error_syntax": 49,
-              "error_semantics": 87,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 59.15915915915916,
-              "error_syntax": 14.714714714714713,
-              "error_semantics": 26.126126126126124,
-              "error_output_formatting": 0.0
-            }
-          },
-          "medium": {
-            "summary": {
-              "correct": 174,
-              "error_syntax": 52,
-              "error_semantics": 106,
-              "error_output_formatting": 1
-            },
-            "percentages": {
-              "correct": 52.25225225225225,
-              "error_syntax": 15.615615615615615,
-              "error_semantics": 31.83183183183183,
-              "error_output_formatting": 0.3003003003003003
-            }
-          },
-          "large": {
-            "summary": {
-              "correct": 4,
-              "error_syntax": 0,
-              "error_semantics": 1,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 80.0,
-              "error_syntax": 0.0,
-              "error_semantics": 20.0,
-              "error_output_formatting": 0.0
-            }
-          }
-        },
-        "overall": {
-          "correct": 375,
-          "error_syntax": 101,
-          "error_semantics": 194,
-          "error_output_formatting": 1
-        },
-        "overall_percentages": {
-          "correct": 55.88673621460507,
-          "error_syntax": 15.052160953800298,
-          "error_semantics": 28.912071535022356,
-          "error_output_formatting": 0.14903129657228018
-        }
-      },
-      "trial2": {
-        "tier_summaries": {
-          "small": {
-            "summary": {
-              "correct": 210,
-              "error_syntax": 50,
-              "error_semantics": 73,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 63.06306306306306,
-              "error_syntax": 15.015015015015015,
-              "error_semantics": 21.92192192192192,
-              "error_output_formatting": 0.0
-            }
-          },
-          "medium": {
-            "summary": {
-              "correct": 188,
-              "error_syntax": 52,
-              "error_semantics": 92,
-              "error_output_formatting": 1
-            },
-            "percentages": {
-              "correct": 56.45645645645646,
-              "error_syntax": 15.615615615615615,
-              "error_semantics": 27.627627627627625,
-              "error_output_formatting": 0.3003003003003003
-            }
-          },
-          "large": {
-            "summary": {
-              "correct": 2,
-              "error_syntax": 1,
-              "error_semantics": 2,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 40.0,
-              "error_syntax": 20.0,
-              "error_semantics": 40.0,
-              "error_output_formatting": 0.0
-            }
-          }
-        },
-        "overall": {
-          "correct": 400,
-          "error_syntax": 103,
-          "error_semantics": 167,
-          "error_output_formatting": 1
-        },
-        "overall_percentages": {
-          "correct": 59.61251862891207,
-          "error_syntax": 15.350223546944857,
-          "error_semantics": 24.88822652757079,
-          "error_output_formatting": 0.14903129657228018
-        }
-      }
-    },
-    "aggregate_by_tier": {
-      "small": {
-        "correct": 613,
-        "error_syntax": 152,
-        "error_semantics": 234,
-        "error_output_formatting": 0
-      },
-      "small_percentages": {
-        "correct": 61.36136136136137,
-        "error_syntax": 15.215215215215217,
-        "error_semantics": 23.423423423423422,
-        "error_output_formatting": 0.0
-      },
-      "medium": {
-        "correct": 542,
-        "error_syntax": 152,
-        "error_semantics": 303,
-        "error_output_formatting": 2
-      },
-      "medium_percentages": {
-        "correct": 54.25425425425425,
-        "error_syntax": 15.215215215215217,
-        "error_semantics": 30.33033033033033,
-        "error_output_formatting": 0.20020020020020018
-      },
-      "large": {
-        "correct": 8,
-        "error_syntax": 1,
-        "error_semantics": 6,
-        "error_output_formatting": 0
-      },
-      "large_percentages": {
-        "correct": 53.333333333333336,
-        "error_syntax": 6.666666666666667,
-        "error_semantics": 40.0,
-        "error_output_formatting": 0.0
-      }
-    },
-    "aggregate": {
-      "correct": 1163,
-      "error_syntax": 305,
-      "error_semantics": 543,
-      "error_output_formatting": 2
-    },
-    "trial_count": 3,
-    "aggregate_percentages": {
-      "correct": 57.77446597118728,
-      "error_syntax": 15.151515151515152,
-      "error_semantics": 26.97466467958271,
-      "error_output_formatting": 0.09935419771485346
-    }
-  },
   "gpt-4.1": {
     "trials": {
-      "trial1": {
-        "tier_summaries": {
-          "small": {
-            "summary": {
-              "correct": 152,
-              "error_syntax": 69,
-              "error_semantics": 112,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 45.645645645645644,
-              "error_syntax": 20.72072072072072,
-              "error_semantics": 33.633633633633636,
-              "error_output_formatting": 0.0
-            }
-          },
-          "medium": {
-            "summary": {
-              "correct": 143,
-              "error_syntax": 69,
-              "error_semantics": 121,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 42.94294294294294,
-              "error_syntax": 20.72072072072072,
-              "error_semantics": 36.33633633633634,
-              "error_output_formatting": 0.0
-            }
-          },
-          "large": {
-            "summary": {
-              "correct": 1,
-              "error_syntax": 2,
-              "error_semantics": 2,
-              "error_output_formatting": 0
-            },
-            "percentages": {
-              "correct": 20.0,
-              "error_syntax": 40.0,
-              "error_semantics": 40.0,
-              "error_output_formatting": 0.0
-            }
-          }
-        },
-        "overall": {
-          "correct": 296,
-          "error_syntax": 140,
-          "error_semantics": 235,
-          "error_output_formatting": 0
-        },
-        "overall_percentages": {
-          "correct": 44.113263785394935,
-          "error_syntax": 20.864381520119224,
-          "error_semantics": 35.02235469448584,
-          "error_output_formatting": 0.0
-        }
-      },
       "trial3": {
         "tier_summaries": {
           "small": {
@@ -632,6 +116,64 @@
           "error_semantics": 31.445603576751118,
           "error_output_formatting": 0.0
         }
+      },
+      "trial1": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 152,
+              "error_syntax": 69,
+              "error_semantics": 112,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 45.645645645645644,
+              "error_syntax": 20.72072072072072,
+              "error_semantics": 33.633633633633636,
+              "error_output_formatting": 0.0
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 143,
+              "error_syntax": 69,
+              "error_semantics": 121,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 42.94294294294294,
+              "error_syntax": 20.72072072072072,
+              "error_semantics": 36.33633633633634,
+              "error_output_formatting": 0.0
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 1,
+              "error_syntax": 2,
+              "error_semantics": 2,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 20.0,
+              "error_syntax": 40.0,
+              "error_semantics": 40.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 296,
+          "error_syntax": 140,
+          "error_semantics": 235,
+          "error_output_formatting": 0
+        },
+        "overall_percentages": {
+          "correct": 44.113263785394935,
+          "error_syntax": 20.864381520119224,
+          "error_semantics": 35.02235469448584,
+          "error_output_formatting": 0.0
+        }
       }
     },
     "aggregate_by_tier": {
@@ -686,66 +228,237 @@
       "error_output_formatting": 0.04967709885742673
     }
   },
-  "o4-mini": {
+  "gpt-5": {
     "trials": {
-      "trial1": {
+      "trial3": {
         "tier_summaries": {
           "small": {
             "summary": {
-              "correct": 287,
-              "error_syntax": 4,
-              "error_semantics": 36,
-              "error_output_formatting": 6
+              "correct": 318,
+              "error_syntax": 2,
+              "error_semantics": 13,
+              "error_output_formatting": 0
             },
             "percentages": {
-              "correct": 86.18618618618619,
-              "error_syntax": 1.2012012012012012,
-              "error_semantics": 10.81081081081081,
-              "error_output_formatting": 1.8018018018018018
+              "correct": 95.4954954954955,
+              "error_syntax": 0.6006006006006006,
+              "error_semantics": 3.903903903903904,
+              "error_output_formatting": 0.0
             }
           },
           "medium": {
             "summary": {
-              "correct": 292,
-              "error_syntax": 4,
-              "error_semantics": 34,
-              "error_output_formatting": 3
+              "correct": 315,
+              "error_syntax": 3,
+              "error_semantics": 15,
+              "error_output_formatting": 0
             },
             "percentages": {
-              "correct": 87.68768768768768,
-              "error_syntax": 1.2012012012012012,
-              "error_semantics": 10.21021021021021,
-              "error_output_formatting": 0.9009009009009009
+              "correct": 94.5945945945946,
+              "error_syntax": 0.9009009009009009,
+              "error_semantics": 4.504504504504505,
+              "error_output_formatting": 0.0
             }
           },
           "large": {
             "summary": {
-              "correct": 4,
+              "correct": 5,
               "error_syntax": 0,
-              "error_semantics": 1,
+              "error_semantics": 0,
               "error_output_formatting": 0
             },
             "percentages": {
-              "correct": 80.0,
+              "correct": 100.0,
               "error_syntax": 0.0,
-              "error_semantics": 20.0,
+              "error_semantics": 0.0,
               "error_output_formatting": 0.0
             }
           }
         },
         "overall": {
-          "correct": 583,
-          "error_syntax": 8,
-          "error_semantics": 71,
-          "error_output_formatting": 9
+          "correct": 638,
+          "error_syntax": 5,
+          "error_semantics": 28,
+          "error_output_formatting": 0
         },
         "overall_percentages": {
-          "correct": 86.88524590163934,
-          "error_syntax": 1.1922503725782414,
-          "error_semantics": 10.581222056631892,
-          "error_output_formatting": 1.3412816691505216
+          "correct": 95.08196721311475,
+          "error_syntax": 0.7451564828614009,
+          "error_semantics": 4.172876304023846,
+          "error_output_formatting": 0.0
         }
       },
+      "trial2": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 318,
+              "error_syntax": 2,
+              "error_semantics": 13,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 95.4954954954955,
+              "error_syntax": 0.6006006006006006,
+              "error_semantics": 3.903903903903904,
+              "error_output_formatting": 0.0
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 315,
+              "error_syntax": 3,
+              "error_semantics": 15,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 94.5945945945946,
+              "error_syntax": 0.9009009009009009,
+              "error_semantics": 4.504504504504505,
+              "error_output_formatting": 0.0
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 5,
+              "error_syntax": 0,
+              "error_semantics": 0,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 100.0,
+              "error_syntax": 0.0,
+              "error_semantics": 0.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 638,
+          "error_syntax": 5,
+          "error_semantics": 28,
+          "error_output_formatting": 0
+        },
+        "overall_percentages": {
+          "correct": 95.08196721311475,
+          "error_syntax": 0.7451564828614009,
+          "error_semantics": 4.172876304023846,
+          "error_output_formatting": 0.0
+        }
+      },
+      "trial1": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 325,
+              "error_syntax": 2,
+              "error_semantics": 6,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 97.5975975975976,
+              "error_syntax": 0.6006006006006006,
+              "error_semantics": 1.8018018018018018,
+              "error_output_formatting": 0.0
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 313,
+              "error_syntax": 3,
+              "error_semantics": 17,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 93.993993993994,
+              "error_syntax": 0.9009009009009009,
+              "error_semantics": 5.105105105105105,
+              "error_output_formatting": 0.0
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 5,
+              "error_syntax": 0,
+              "error_semantics": 0,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 100.0,
+              "error_syntax": 0.0,
+              "error_semantics": 0.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 643,
+          "error_syntax": 5,
+          "error_semantics": 23,
+          "error_output_formatting": 0
+        },
+        "overall_percentages": {
+          "correct": 95.82712369597616,
+          "error_syntax": 0.7451564828614009,
+          "error_semantics": 3.427719821162444,
+          "error_output_formatting": 0.0
+        }
+      }
+    },
+    "aggregate_by_tier": {
+      "small": {
+        "correct": 961,
+        "error_syntax": 6,
+        "error_semantics": 32,
+        "error_output_formatting": 0
+      },
+      "small_percentages": {
+        "correct": 96.1961961961962,
+        "error_syntax": 0.6006006006006006,
+        "error_semantics": 3.203203203203203,
+        "error_output_formatting": 0.0
+      },
+      "medium": {
+        "correct": 943,
+        "error_syntax": 9,
+        "error_semantics": 47,
+        "error_output_formatting": 0
+      },
+      "medium_percentages": {
+        "correct": 94.3943943943944,
+        "error_syntax": 0.9009009009009009,
+        "error_semantics": 4.704704704704705,
+        "error_output_formatting": 0.0
+      },
+      "large": {
+        "correct": 15,
+        "error_syntax": 0,
+        "error_semantics": 0,
+        "error_output_formatting": 0
+      },
+      "large_percentages": {
+        "correct": 100.0,
+        "error_syntax": 0.0,
+        "error_semantics": 0.0,
+        "error_output_formatting": 0.0
+      }
+    },
+    "aggregate": {
+      "correct": 1919,
+      "error_syntax": 15,
+      "error_semantics": 79,
+      "error_output_formatting": 0
+    },
+    "trial_count": 3,
+    "aggregate_percentages": {
+      "correct": 95.33035270740189,
+      "error_syntax": 0.7451564828614009,
+      "error_semantics": 3.9244908097367115,
+      "error_output_formatting": 0.0
+    }
+  },
+  "o4-mini": {
+    "trials": {
       "trial3": {
         "tier_summaries": {
           "small": {
@@ -861,6 +574,64 @@
           "error_semantics": 10.879284649776453,
           "error_output_formatting": 0.5961251862891207
         }
+      },
+      "trial1": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 287,
+              "error_syntax": 4,
+              "error_semantics": 36,
+              "error_output_formatting": 6
+            },
+            "percentages": {
+              "correct": 86.18618618618619,
+              "error_syntax": 1.2012012012012012,
+              "error_semantics": 10.81081081081081,
+              "error_output_formatting": 1.8018018018018018
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 292,
+              "error_syntax": 4,
+              "error_semantics": 34,
+              "error_output_formatting": 3
+            },
+            "percentages": {
+              "correct": 87.68768768768768,
+              "error_syntax": 1.2012012012012012,
+              "error_semantics": 10.21021021021021,
+              "error_output_formatting": 0.9009009009009009
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 4,
+              "error_syntax": 0,
+              "error_semantics": 1,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 80.0,
+              "error_syntax": 0.0,
+              "error_semantics": 20.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 583,
+          "error_syntax": 8,
+          "error_semantics": 71,
+          "error_output_formatting": 9
+        },
+        "overall_percentages": {
+          "correct": 86.88524590163934,
+          "error_syntax": 1.1922503725782414,
+          "error_semantics": 10.581222056631892,
+          "error_output_formatting": 1.3412816691505216
+        }
       }
     },
     "aggregate_by_tier": {
@@ -915,36 +686,94 @@
       "error_output_formatting": 0.7948335817188277
     }
   },
-  "gpt-4o": {
+  "gpt-4.1-mini": {
     "trials": {
-      "trial1": {
+      "trial3": {
         "tier_summaries": {
           "small": {
             "summary": {
-              "correct": 145,
-              "error_syntax": 64,
-              "error_semantics": 111,
-              "error_output_formatting": 13
+              "correct": 197,
+              "error_syntax": 49,
+              "error_semantics": 87,
+              "error_output_formatting": 0
             },
             "percentages": {
-              "correct": 43.54354354354354,
-              "error_syntax": 19.21921921921922,
-              "error_semantics": 33.33333333333333,
-              "error_output_formatting": 3.903903903903904
+              "correct": 59.15915915915916,
+              "error_syntax": 14.714714714714713,
+              "error_semantics": 26.126126126126124,
+              "error_output_formatting": 0.0
             }
           },
           "medium": {
             "summary": {
-              "correct": 103,
-              "error_syntax": 93,
-              "error_semantics": 114,
-              "error_output_formatting": 23
+              "correct": 174,
+              "error_syntax": 52,
+              "error_semantics": 106,
+              "error_output_formatting": 1
             },
             "percentages": {
-              "correct": 30.930930930930934,
-              "error_syntax": 27.927927927927925,
-              "error_semantics": 34.234234234234236,
-              "error_output_formatting": 6.906906906906906
+              "correct": 52.25225225225225,
+              "error_syntax": 15.615615615615615,
+              "error_semantics": 31.83183183183183,
+              "error_output_formatting": 0.3003003003003003
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 4,
+              "error_syntax": 0,
+              "error_semantics": 1,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 80.0,
+              "error_syntax": 0.0,
+              "error_semantics": 20.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 375,
+          "error_syntax": 101,
+          "error_semantics": 194,
+          "error_output_formatting": 1
+        },
+        "overall_percentages": {
+          "correct": 55.88673621460507,
+          "error_syntax": 15.052160953800298,
+          "error_semantics": 28.912071535022356,
+          "error_output_formatting": 0.14903129657228018
+        }
+      },
+      "trial2": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 210,
+              "error_syntax": 50,
+              "error_semantics": 73,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 63.06306306306306,
+              "error_syntax": 15.015015015015015,
+              "error_semantics": 21.92192192192192,
+              "error_output_formatting": 0.0
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 188,
+              "error_syntax": 52,
+              "error_semantics": 92,
+              "error_output_formatting": 1
+            },
+            "percentages": {
+              "correct": 56.45645645645646,
+              "error_syntax": 15.615615615615615,
+              "error_semantics": 27.627627627627625,
+              "error_output_formatting": 0.3003003003003003
             }
           },
           "large": {
@@ -963,18 +792,131 @@
           }
         },
         "overall": {
-          "correct": 250,
-          "error_syntax": 158,
-          "error_semantics": 227,
-          "error_output_formatting": 36
+          "correct": 400,
+          "error_syntax": 103,
+          "error_semantics": 167,
+          "error_output_formatting": 1
         },
         "overall_percentages": {
-          "correct": 37.257824143070046,
-          "error_syntax": 23.546944858420268,
-          "error_semantics": 33.8301043219076,
-          "error_output_formatting": 5.365126676602086
+          "correct": 59.61251862891207,
+          "error_syntax": 15.350223546944857,
+          "error_semantics": 24.88822652757079,
+          "error_output_formatting": 0.14903129657228018
         }
       },
+      "trial1": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 206,
+              "error_syntax": 53,
+              "error_semantics": 74,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 61.86186186186187,
+              "error_syntax": 15.915915915915916,
+              "error_semantics": 22.22222222222222,
+              "error_output_formatting": 0.0
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 180,
+              "error_syntax": 48,
+              "error_semantics": 105,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 54.054054054054056,
+              "error_syntax": 14.414414414414415,
+              "error_semantics": 31.53153153153153,
+              "error_output_formatting": 0.0
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 2,
+              "error_syntax": 0,
+              "error_semantics": 3,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 40.0,
+              "error_syntax": 0.0,
+              "error_semantics": 60.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 388,
+          "error_syntax": 101,
+          "error_semantics": 182,
+          "error_output_formatting": 0
+        },
+        "overall_percentages": {
+          "correct": 57.82414307004471,
+          "error_syntax": 15.052160953800298,
+          "error_semantics": 27.123695976154995,
+          "error_output_formatting": 0.0
+        }
+      }
+    },
+    "aggregate_by_tier": {
+      "small": {
+        "correct": 613,
+        "error_syntax": 152,
+        "error_semantics": 234,
+        "error_output_formatting": 0
+      },
+      "small_percentages": {
+        "correct": 61.36136136136137,
+        "error_syntax": 15.215215215215217,
+        "error_semantics": 23.423423423423422,
+        "error_output_formatting": 0.0
+      },
+      "medium": {
+        "correct": 542,
+        "error_syntax": 152,
+        "error_semantics": 303,
+        "error_output_formatting": 2
+      },
+      "medium_percentages": {
+        "correct": 54.25425425425425,
+        "error_syntax": 15.215215215215217,
+        "error_semantics": 30.33033033033033,
+        "error_output_formatting": 0.20020020020020018
+      },
+      "large": {
+        "correct": 8,
+        "error_syntax": 1,
+        "error_semantics": 6,
+        "error_output_formatting": 0
+      },
+      "large_percentages": {
+        "correct": 53.333333333333336,
+        "error_syntax": 6.666666666666667,
+        "error_semantics": 40.0,
+        "error_output_formatting": 0.0
+      }
+    },
+    "aggregate": {
+      "correct": 1163,
+      "error_syntax": 305,
+      "error_semantics": 543,
+      "error_output_formatting": 2
+    },
+    "trial_count": 3,
+    "aggregate_percentages": {
+      "correct": 57.77446597118728,
+      "error_syntax": 15.151515151515152,
+      "error_semantics": 26.97466467958271,
+      "error_output_formatting": 0.09935419771485346
+    }
+  },
+  "gpt-4o": {
+    "trials": {
       "trial3": {
         "tier_summaries": {
           "small": {
@@ -1089,6 +1031,64 @@
           "error_syntax": 21.162444113263785,
           "error_semantics": 33.53204172876304,
           "error_output_formatting": 8.345752608047691
+        }
+      },
+      "trial1": {
+        "tier_summaries": {
+          "small": {
+            "summary": {
+              "correct": 145,
+              "error_syntax": 64,
+              "error_semantics": 111,
+              "error_output_formatting": 13
+            },
+            "percentages": {
+              "correct": 43.54354354354354,
+              "error_syntax": 19.21921921921922,
+              "error_semantics": 33.33333333333333,
+              "error_output_formatting": 3.903903903903904
+            }
+          },
+          "medium": {
+            "summary": {
+              "correct": 103,
+              "error_syntax": 93,
+              "error_semantics": 114,
+              "error_output_formatting": 23
+            },
+            "percentages": {
+              "correct": 30.930930930930934,
+              "error_syntax": 27.927927927927925,
+              "error_semantics": 34.234234234234236,
+              "error_output_formatting": 6.906906906906906
+            }
+          },
+          "large": {
+            "summary": {
+              "correct": 2,
+              "error_syntax": 1,
+              "error_semantics": 2,
+              "error_output_formatting": 0
+            },
+            "percentages": {
+              "correct": 40.0,
+              "error_syntax": 20.0,
+              "error_semantics": 40.0,
+              "error_output_formatting": 0.0
+            }
+          }
+        },
+        "overall": {
+          "correct": 250,
+          "error_syntax": 158,
+          "error_semantics": 227,
+          "error_output_formatting": 36
+        },
+        "overall_percentages": {
+          "correct": 37.257824143070046,
+          "error_syntax": 23.546944858420268,
+          "error_semantics": 33.8301043219076,
+          "error_output_formatting": 5.365126676602086
         }
       }
     },

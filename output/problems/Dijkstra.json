@@ -15,10 +15,6 @@
       "error_syntax": 6,
       "total_attempts": 6
     },
-    "warp-1.0": {
-      "error_syntax": 6,
-      "total_attempts": 6
-    },
     "Qwen2.5-7B-Instruct": {
       "error_syntax": 6,
       "total_attempts": 6
@@ -38,29 +34,39 @@
     "Falcon3-10B-Instruct": {
       "error_syntax": 6,
       "total_attempts": 6
+    },
+    "warp-1.0": {
+      "error_syntax": 6,
+      "total_attempts": 6
     }
   },
   "openai_models": {
-    "gpt-4.1-mini": {
-      "error_semantics": 3,
-      "total_attempts": 6,
-      "error_syntax": 3
-    },
     "gpt-4.1": {
       "error_semantics": 5,
       "total_attempts": 6,
       "error_syntax": 1
     },
-    "o4-mini": {
-      "error_semantics": 2,
+    "gpt-5": {
+      "correct": 3,
       "total_attempts": 6,
-      "error_syntax": 4
+      "error_syntax": 2,
+      "error_semantics": 1
+    },
+    "o4-mini": {
+      "error_syntax": 4,
+      "total_attempts": 6,
+      "error_semantics": 2
+    },
+    "gpt-4.1-mini": {
+      "error_syntax": 3,
+      "total_attempts": 6,
+      "error_semantics": 3
     },
     "gpt-4o": {
       "error_syntax": 3,
       "total_attempts": 6,
-      "error_output_formatting": 2,
-      "error_semantics": 1
+      "error_semantics": 1,
+      "error_output_formatting": 2
     }
   }
 }

@@ -18,15 +18,8 @@
       "correct": 95,
       "total_attempts": 135,
       "error_syntax": 37,
-      "error_semantics": 2,
-      "error_output_formatting": 1
-    },
-    "warp-1.0": {
-      "correct": 81,
-      "total_attempts": 135,
-      "error_semantics": 19,
-      "error_output_formatting": 34,
-      "error_syntax": 1
+      "error_output_formatting": 1,
+      "error_semantics": 2
     },
     "Qwen2.5-7B-Instruct": {
       "error_syntax": 118,
@@ -38,9 +31,9 @@
     "Qwen2.5-3B-Instruct": {
       "error_syntax": 128,
       "total_attempts": 135,
-      "correct": 2,
       "error_output_formatting": 2,
-      "error_semantics": 3
+      "error_semantics": 3,
+      "correct": 2
     },
     "Qwen2.5-14B-Instruct": {
       "error_syntax": 107,
@@ -58,34 +51,46 @@
       "total_attempts": 135,
       "correct": 10,
       "error_output_formatting": 1
+    },
+    "warp-1.0": {
+      "error_output_formatting": 34,
+      "total_attempts": 135,
+      "error_semantics": 19,
+      "correct": 81,
+      "error_syntax": 1
     }
   },
   "openai_models": {
-    "gpt-4.1-mini": {
-      "error_syntax": 45,
-      "total_attempts": 135,
-      "correct": 59,
-      "error_semantics": 31
-    },
     "gpt-4.1": {
       "error_syntax": 90,
       "total_attempts": 135,
       "correct": 25,
       "error_semantics": 20
     },
-    "o4-mini": {
-      "error_semantics": 3,
+    "gpt-5": {
+      "correct": 132,
       "total_attempts": 135,
+      "error_semantics": 3
+    },
+    "o4-mini": {
       "correct": 129,
+      "total_attempts": 135,
+      "error_semantics": 3,
       "error_output_formatting": 2,
       "error_syntax": 1
     },
-    "gpt-4o": {
-      "error_semantics": 82,
+    "gpt-4.1-mini": {
+      "error_semantics": 31,
       "total_attempts": 135,
+      "error_syntax": 45,
+      "correct": 59
+    },
+    "gpt-4o": {
+      "error_output_formatting": 3,
+      "total_attempts": 135,
+      "error_semantics": 82,
       "correct": 36,
-      "error_syntax": 14,
-      "error_output_formatting": 3
+      "error_syntax": 14
     }
   }
 }

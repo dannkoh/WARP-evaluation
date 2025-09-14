@@ -11,9 +11,9 @@
     "DeepSeek-R1-Distill-Qwen-14B": {
       "error_syntax": 94,
       "total_attempts": 129,
-      "correct": 12,
+      "error_semantics": 6,
       "error_output_formatting": 17,
-      "error_semantics": 6
+      "correct": 12
     },
     "DeepSeek-R1-Distill-Qwen-32B": {
       "error_syntax": 80,
@@ -21,13 +21,6 @@
       "error_output_formatting": 3,
       "error_semantics": 30,
       "correct": 16
-    },
-    "warp-1.0": {
-      "error_output_formatting": 33,
-      "total_attempts": 129,
-      "error_semantics": 62,
-      "error_syntax": 10,
-      "correct": 24
     },
     "Qwen2.5-7B-Instruct": {
       "error_syntax": 114,
@@ -38,9 +31,9 @@
     "Qwen2.5-3B-Instruct": {
       "error_syntax": 125,
       "total_attempts": 129,
+      "error_output_formatting": 1,
       "error_semantics": 2,
-      "correct": 1,
-      "error_output_formatting": 1
+      "correct": 1
     },
     "Qwen2.5-14B-Instruct": {
       "error_syntax": 99,
@@ -61,20 +54,26 @@
       "error_semantics": 8,
       "correct": 5,
       "error_output_formatting": 1
+    },
+    "warp-1.0": {
+      "error_semantics": 62,
+      "total_attempts": 129,
+      "error_syntax": 10,
+      "error_output_formatting": 33,
+      "correct": 24
     }
   },
   "openai_models": {
-    "gpt-4.1-mini": {
-      "error_semantics": 39,
-      "total_attempts": 129,
-      "correct": 54,
-      "error_syntax": 36
-    },
     "gpt-4.1": {
-      "error_semantics": 69,
+      "correct": 28,
       "total_attempts": 129,
-      "error_syntax": 32,
-      "correct": 28
+      "error_semantics": 69,
+      "error_syntax": 32
+    },
+    "gpt-5": {
+      "correct": 127,
+      "total_attempts": 129,
+      "error_semantics": 2
     },
     "o4-mini": {
       "correct": 111,
@@ -83,11 +82,17 @@
       "error_syntax": 4,
       "error_output_formatting": 1
     },
-    "gpt-4o": {
-      "error_semantics": 52,
+    "gpt-4.1-mini": {
+      "error_syntax": 36,
       "total_attempts": 129,
+      "correct": 54,
+      "error_semantics": 39
+    },
+    "gpt-4o": {
       "error_syntax": 39,
+      "total_attempts": 129,
       "error_output_formatting": 32,
+      "error_semantics": 52,
       "correct": 6
     }
   }

@@ -20,13 +20,6 @@
       "total_attempts": 141,
       "error_syntax": 11
     },
-    "warp-1.0": {
-      "error_semantics": 103,
-      "total_attempts": 141,
-      "error_output_formatting": 11,
-      "correct": 18,
-      "error_syntax": 9
-    },
     "Qwen2.5-7B-Instruct": {
       "correct": 139,
       "total_attempts": 141,
@@ -50,14 +43,21 @@
       "error_syntax": 2,
       "total_attempts": 141,
       "correct": 139
+    },
+    "warp-1.0": {
+      "correct": 18,
+      "total_attempts": 141,
+      "error_semantics": 103,
+      "error_syntax": 9,
+      "error_output_formatting": 11
     }
   },
   "openai_models": {
-    "gpt-4.1-mini": {
+    "gpt-4.1": {
       "correct": 141,
       "total_attempts": 141
     },
-    "gpt-4.1": {
+    "gpt-5": {
       "correct": 141,
       "total_attempts": 141
     },
@@ -65,6 +65,10 @@
       "correct": 140,
       "total_attempts": 141,
       "error_semantics": 1
+    },
+    "gpt-4.1-mini": {
+      "correct": 141,
+      "total_attempts": 141
     },
     "gpt-4o": {
       "correct": 141,
