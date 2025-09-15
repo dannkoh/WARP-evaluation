@@ -1,0 +1,89 @@
+{
+  "problem": "KnapsackSolver",
+  "local_models": {
+    "DeepSeek-R1-Distill-Qwen-7B": {
+      "error_syntax": 84,
+      "total_attempts": 114,
+      "error_output_formatting": 13,
+      "error_semantics": 7,
+      "correct": 10
+    },
+    "DeepSeek-R1-Distill-Qwen-14B": {
+      "error_syntax": 80,
+      "total_attempts": 114,
+      "correct": 32,
+      "error_output_formatting": 2
+    },
+    "DeepSeek-R1-Distill-Qwen-32B": {
+      "error_syntax": 45,
+      "total_attempts": 114,
+      "correct": 69
+    },
+    "Qwen2.5-7B-Instruct": {
+      "error_syntax": 95,
+      "total_attempts": 114,
+      "correct": 13,
+      "error_semantics": 5,
+      "error_output_formatting": 1
+    },
+    "Qwen2.5-3B-Instruct": {
+      "error_syntax": 102,
+      "total_attempts": 114,
+      "error_semantics": 3,
+      "error_output_formatting": 4,
+      "correct": 5
+    },
+    "Qwen2.5-14B-Instruct": {
+      "correct": 87,
+      "total_attempts": 114,
+      "error_syntax": 26,
+      "error_semantics": 1
+    },
+    "Qwen2.5-32B-Instruct": {
+      "correct": 104,
+      "total_attempts": 114,
+      "error_syntax": 10
+    },
+    "Falcon3-10B-Instruct": {
+      "correct": 56,
+      "total_attempts": 114,
+      "error_syntax": 58
+    },
+    "warp-1.0": {
+      "error_output_formatting": 22,
+      "total_attempts": 114,
+      "error_syntax": 19,
+      "correct": 68,
+      "error_semantics": 5
+    }
+  },
+  "openai_models": {
+    "gpt-4.1": {
+      "correct": 113,
+      "total_attempts": 114,
+      "error_output_formatting": 1
+    },
+    "gpt-5": {
+      "correct": 114,
+      "total_attempts": 114
+    },
+    "o4-mini": {
+      "correct": 113,
+      "total_attempts": 114,
+      "error_syntax": 1
+    },
+    "gpt-4.1-mini": {
+      "correct": 109,
+      "total_attempts": 114,
+      "error_syntax": 4,
+      "error_semantics": 1
+    },
+    "gpt-4o": {
+      "correct": 110,
+      "total_attempts": 114,
+      "error_semantics": 1,
+      "error_syntax": 1,
+      "error_output_formatting": 2
+    }
+  }
+}

@@ -1,0 +1,15 @@
+(declare-const in6 Int)
+(declare-const in5 Int)
+(declare-const in8 Int)
+(declare-const in7 Int)
+(declare-const in9 Int)
+(declare-const in0 Int)
+(declare-const in2 Int)
+(declare-const in1 Int)
+(declare-const in4 Int)
+(declare-const in3 Int)
+
+(assert (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and (and  ( <=  in0 in9)  ( <=  in1 in9))  ( <=  in2 in9))  ( <=  in3 in9))  ( <=  in4 in9))  ( <=  in5 in9))  ( <=  in6 in9))  ( <=  in7 in9))  ( <=  in8 in9))  ( <=  in0 in8))  ( <=  in1 in8))  ( <=  in2 in8))  ( <=  in3 in8))  ( <=  in4 in8))  ( <=  in5 in8))  ( <=  in6 in8))  ( <=  in7 in8))  ( <=  in0 in7))  ( <=  in1 in7))  ( <=  in2 in7))  ( <=  in3 in7))  ( <=  in4 in7))  ( <=  in5 in7))  ( <=  in6 in7))  ( <=  in0 in6))  ( <=  in1 in6))  ( <=  in2 in6))  ( <=  in3 in6))  ( <=  in4 in6))  ( <=  in5 in6))  ( <=  in0 in5))  ( <=  in1 in5))  ( <=  in2 in5))  ( <=  in3 in5))  ( <=  in4 in5))  ( <=  in0 in4))  ( <=  in1 in4))  ( <=  in2 in4))  ( <=  in3 in4))  ( <=  in0 in3))  ( <=  in1 in3))  ( <=  in2 in3))  ( <=  in0 in2))  ( <=  in1 in2))  ( <=  in0 in1)))
+
+(check-sat)
+(get-model)

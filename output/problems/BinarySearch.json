@@ -1,0 +1,86 @@
+{
+  "problem": "BinarySearch",
+  "local_models": {
+    "DeepSeek-R1-Distill-Qwen-7B": {
+      "error_output_formatting": 22,
+      "total_attempts": 111,
+      "error_syntax": 74,
+      "error_semantics": 15
+    },
+    "DeepSeek-R1-Distill-Qwen-14B": {
+      "error_output_formatting": 29,
+      "total_attempts": 111,
+      "error_syntax": 80,
+      "error_semantics": 1,
+      "correct": 1
+    },
+    "DeepSeek-R1-Distill-Qwen-32B": {
+      "error_syntax": 97,
+      "total_attempts": 111,
+      "error_output_formatting": 14
+    },
+    "Qwen2.5-7B-Instruct": {
+      "error_syntax": 108,
+      "total_attempts": 111,
+      "error_semantics": 3
+    },
+    "Qwen2.5-3B-Instruct": {
+      "error_syntax": 111,
+      "total_attempts": 111
+    },
+    "Qwen2.5-14B-Instruct": {
+      "error_syntax": 109,
+      "total_attempts": 111,
+      "correct": 2
+    },
+    "Qwen2.5-32B-Instruct": {
+      "error_syntax": 107,
+      "total_attempts": 111,
+      "error_semantics": 3,
+      "correct": 1
+    },
+    "Falcon3-10B-Instruct": {
+      "error_syntax": 110,
+      "total_attempts": 111,
+      "correct": 1
+    },
+    "warp-1.0": {
+      "error_output_formatting": 22,
+      "total_attempts": 111,
+      "error_syntax": 80,
+      "error_semantics": 8,
+      "correct": 1
+    }
+  },
+  "openai_models": {
+    "gpt-4.1": {
+      "error_semantics": 109,
+      "total_attempts": 111,
+      "correct": 1,
+      "error_syntax": 1
+    },
+    "gpt-5": {
+      "error_semantics": 58,
+      "total_attempts": 111,
+      "correct": 52,
+      "error_syntax": 1
+    },
+    "o4-mini": {
+      "correct": 74,
+      "total_attempts": 111,
+      "error_semantics": 37
+    },
+    "gpt-4.1-mini": {
+      "error_semantics": 107,
+      "total_attempts": 111,
+      "correct": 3,
+      "error_syntax": 1
+    },
+    "gpt-4o": {
+      "error_semantics": 68,
+      "total_attempts": 111,
+      "error_output_formatting": 41,
+      "error_syntax": 2
+    }
+  }
+}

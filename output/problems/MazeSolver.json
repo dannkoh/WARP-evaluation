@@ -1,0 +1,78 @@
+{
+  "problem": "MazeSolver",
+  "local_models": {
+    "DeepSeek-R1-Distill-Qwen-7B": {
+      "correct": 107,
+      "total_attempts": 141,
+      "error_semantics": 3,
+      "error_syntax": 21,
+      "error_output_formatting": 10
+    },
+    "DeepSeek-R1-Distill-Qwen-14B": {
+      "correct": 116,
+      "total_attempts": 141,
+      "error_syntax": 23,
+      "error_semantics": 1,
+      "error_output_formatting": 1
+    },
+    "DeepSeek-R1-Distill-Qwen-32B": {
+      "correct": 130,
+      "total_attempts": 141,
+      "error_syntax": 11
+    },
+    "Qwen2.5-7B-Instruct": {
+      "correct": 139,
+      "total_attempts": 141,
+      "error_syntax": 2
+    },
+    "Qwen2.5-3B-Instruct": {
+      "correct": 61,
+      "total_attempts": 141,
+      "error_syntax": 40,
+      "error_semantics": 40
+    },
+    "Qwen2.5-14B-Instruct": {
+      "correct": 141,
+      "total_attempts": 141
+    },
+    "Qwen2.5-32B-Instruct": {
+      "correct": 141,
+      "total_attempts": 141
+    },
+    "Falcon3-10B-Instruct": {
+      "error_syntax": 2,
+      "total_attempts": 141,
+      "correct": 139
+    },
+    "warp-1.0": {
+      "correct": 18,
+      "total_attempts": 141,
+      "error_semantics": 103,
+      "error_syntax": 9,
+      "error_output_formatting": 11
+    }
+  },
+  "openai_models": {
+    "gpt-4.1": {
+      "correct": 141,
+      "total_attempts": 141
+    },
+    "gpt-5": {
+      "correct": 141,
+      "total_attempts": 141
+    },
+    "o4-mini": {
+      "correct": 140,
+      "total_attempts": 141,
+      "error_semantics": 1
+    },
+    "gpt-4.1-mini": {
+      "correct": 141,
+      "total_attempts": 141
+    },
+    "gpt-4o": {
+      "correct": 141,
+      "total_attempts": 141
+    }
+  }
+}

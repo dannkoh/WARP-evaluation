@@ -1,0 +1,95 @@
+{
+  "problem": "SortedListInsert",
+  "local_models": {
+    "DeepSeek-R1-Distill-Qwen-7B": {
+      "error_syntax": 77,
+      "total_attempts": 111,
+      "error_semantics": 16,
+      "error_output_formatting": 17,
+      "correct": 1
+    },
+    "DeepSeek-R1-Distill-Qwen-14B": {
+      "error_syntax": 76,
+      "total_attempts": 111,
+      "correct": 21,
+      "error_semantics": 10,
+      "error_output_formatting": 4
+    },
+    "DeepSeek-R1-Distill-Qwen-32B": {
+      "error_syntax": 46,
+      "total_attempts": 111,
+      "correct": 60,
+      "error_semantics": 5
+    },
+    "Qwen2.5-7B-Instruct": {
+      "error_syntax": 93,
+      "total_attempts": 111,
+      "correct": 10,
+      "error_semantics": 7,
+      "error_output_formatting": 1
+    },
+    "Qwen2.5-3B-Instruct": {
+      "error_syntax": 99,
+      "total_attempts": 111,
+      "error_output_formatting": 5,
+      "error_semantics": 7
+    },
+    "Qwen2.5-14B-Instruct": {
+      "correct": 43,
+      "total_attempts": 111,
+      "error_syntax": 60,
+      "error_semantics": 8
+    },
+    "Qwen2.5-32B-Instruct": {
+      "correct": 85,
+      "total_attempts": 111,
+      "error_syntax": 23,
+      "error_semantics": 3
+    },
+    "Falcon3-10B-Instruct": {
+      "correct": 6,
+      "total_attempts": 111,
+      "error_syntax": 98,
+      "error_semantics": 6,
+      "error_output_formatting": 1
+    },
+    "warp-1.0": {
+      "error_syntax": 10,
+      "total_attempts": 111,
+      "error_semantics": 76,
+      "error_output_formatting": 25
+    }
+  },
+  "openai_models": {
+    "gpt-4.1": {
+      "error_syntax": 50,
+      "total_attempts": 111,
+      "error_semantics": 29,
+      "correct": 32
+    },
+    "gpt-5": {
+      "correct": 110,
+      "total_attempts": 111,
+      "error_syntax": 1
+    },
+    "o4-mini": {
+      "correct": 106,
+      "total_attempts": 111,
+      "error_semantics": 5
+    },
+    "gpt-4.1-mini": {
+      "error_syntax": 17,
+      "total_attempts": 111,
+      "error_semantics": 16,
+      "correct": 77,
+      "error_output_formatting": 1
+    },
+    "gpt-4o": {
+      "error_semantics": 37,
+      "total_attempts": 111,
+      "correct": 19,
+      "error_syntax": 51,
+      "error_output_formatting": 4
+    }
+  }
+}
