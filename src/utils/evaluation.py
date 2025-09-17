@@ -130,7 +130,7 @@ class Loader:
         """
         instructions = ("All per-variable constraints must be combined using a top-level (assert (and ...)) clause.\nThe output must be in exact, canonical SMT-LIB format without extra commentary in the constraint string.\nShow your work in <think> </think> tags. And return the final SMT-LIB constraint string in <answer> </answer> tags.\nFor example: <answer>(assert (and  ( >=  in0 97)  ( <=  in0 122)))</answer>.")
         if instruct:
-            return f"<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n<|im_start|>user\n{instructions}\n{prompt}<|im_end|>\n<|im_start|>assistant\n"
+            return f"<|im_start|>system\nYou are K2-Think, a helpful assistant trained by MBZUAI. To answer the user\'s question, you first think about the reasoning process and then provide the user with the answer. The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>.<|im_end|>\n<|im_start|>user\n{instructions}\n{prompt}<|im_end|>\n<|im_start|>assistant\n"
         else:
             return f"You are a helpful assistant.\nUser:\n{instructions}\n{prompt}\nAssistant:\n"
 
