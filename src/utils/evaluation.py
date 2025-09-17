@@ -162,10 +162,8 @@ class _VLLMHelper(BaseLLMHelper):
             dtype="auto",
             disable_custom_all_reduce=True,
             # distributed_executor_backend="ray",
-            max_num_batched_tokens = 8000,
-            max_model_len = 8000
         )
-        self.sampling_params = SamplingParams(max_tokens=8000)
+        self.sampling_params = SamplingParams(max_tokens=32768)
 
     def _get_responses(self, prompts: list[str]) -> list[str]:
         # generate all prompts in one shot
