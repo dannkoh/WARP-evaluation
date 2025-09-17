@@ -159,6 +159,7 @@ class _VLLMHelper(BaseLLMHelper):
             model=modelconfig.model,
             trust_remote_code=True,
             tensor_parallel_size=(torch.cuda.device_count() or 1),
+            pipeline_parallel_size=2,
             dtype="auto",
             disable_custom_all_reduce=True,
             # distributed_executor_backend="ray",
