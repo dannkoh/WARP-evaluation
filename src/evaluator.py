@@ -122,6 +122,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "--instruct", action="store_true", help="Enable instruct-style prompts",
     )
+    parser.add_argument(
+        "--pp", type=int, default=1, help="Pipeline Parallelism (Number of Nodes)"
+    )
     args = parser.parse_args()
 
     modelcfg = ModelConfig(
@@ -129,6 +132,7 @@ if __name__ == "__main__":
         quantization_mode=None,
         token=os.getenv("HUGGINGFACE_TOKEN"),
         instruct=args.instruct,
+        pipeline_parallelism=args.pp,
     )
     evalcfg = EvaluationConfig(results_dir=f"./results_{args.model}")
 

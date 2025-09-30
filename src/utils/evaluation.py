@@ -162,7 +162,7 @@ class _VLLMHelper(BaseLLMHelper):
             pipeline_parallel_size=2,
             dtype="auto",
             disable_custom_all_reduce=True,
-            # distributed_executor_backend="ray",
+            distributed_executor_backend="ray",
         )
         self.sampling_params = SamplingParams(max_tokens=32768)
 
