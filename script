@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=1
+#SBATCH --gres=gpu:4
+#SBATCH --cpus-per-task=256
+#SBATCH --mem=256G
+#SBATCH -p long
+#SBATCH -q gpu-12
+#SBATCH --output=output.k2
+#SBATCH --job-name=k2-think-eval
+
+set -euo pipefail
+
+
+chmod +x "k2-think.sh" 2>/dev/null || true
+
+srun bash "k2-think.sh"

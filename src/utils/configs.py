@@ -54,6 +54,7 @@ class ModelConfig:
         quantization_mode: str | None = None,
         token: str | None = None,
         instruct: bool | None = None,
+        pipeline_parallelism: int = 1,
     ) -> None:
         """
         Initialize the VLLM Helper.
@@ -70,3 +71,4 @@ class ModelConfig:
         self.quantization = quantization_mode
         self.token = token
         self.is_instruct = instruct
+        self.pipeline_parallelism = pipeline_parallelism
