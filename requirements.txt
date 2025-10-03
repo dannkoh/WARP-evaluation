@@ -6,3 +6,4 @@ datasets
 pandas
 z3-solver
 python-dotenv
+vllm
