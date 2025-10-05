@@ -1,0 +1,42 @@
+model:
+  model_name: null
+  quantization_mode: null
+  instruct: false
+  pipeline_parallelism: 1
+  sampling:
+    n: 1
+    best_of: null
+    presence_penalty: 0.0
+    frequency_penalty: 0.0
+    repetition_penalty: 1.0
+    temperature: 1.0
+    top_p: 1.0
+    top_k: 0
+    min_p: 0.0
+    seed: null
+    stop: null
+    stop_token_ids: null
+    bad_words: null
+    include_stop_str_in_output: false
+    ignore_eos: false
+    max_tokens: 32
+    min_tokens: 0
+    logprobs: null
+    prompt_logprobs: null
+    detokenize: true
+    skip_special_tokens: true
+    spaces_between_special_tokens: true
+    logits_processors: null
+    truncate_prompt_tokens: null
+    structured_outputs: null
+    guided_decoding: null
+    logit_bias: null
+    allowed_token_ids: null
+    extra_args: null
+
+evaluation:
+  results_dir: "./results"
+  attempts: 3
+  max_file_size: 2000000
+  batch_size: 64
+  dataset: null

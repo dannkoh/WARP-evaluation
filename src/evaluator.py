@@ -1,18 +1,18 @@
 import argparse
 import os
 from pathlib import Path
-from typing import Any, Dict, List, Optional
 
 from datasets import load_dataset
-from torch.utils.data import DataLoader
 from dotenv import load_dotenv
+from omegaconf import OmegaConf
+from torch.utils.data import DataLoader
 
-from utils.configs import ModelConfig, EvaluationConfig
+from utils.configs import EvaluationConfig, ModelConfig, load_config
 from utils.evaluation import (
     EvaluationStats,
+    LLMHelper,
     Loader,
     check_logical_equivalence,
-    LLMHelper,
 )
 
 # Load environment variables from .env file
@@ -24,12 +24,11 @@ class Experiment:
     One-shot, batched evaluation over a HuggingFace dataset using Z3,
     with a formatting instruction for the LLM.
     """
+
     def __init__(
         self,
         modelcfg: ModelConfig,
-        dataset_id: str,
         evalcfg: EvaluationConfig,
-        batch_size: int = 64,
     ) -> None:
         self.model = LLMHelper(modelconfig=modelcfg)
         self.configs = evalcfg
@@ -37,10 +36,10 @@ class Experiment:
         self.stats = EvaluationStats()
 
         # Load HF dataset by identifier
-        ds = load_dataset(dataset_id, split="test")
+        ds = load_dataset(self.configs.dataset, split="test")
 
         ds = ds.map(
-            lambda example, idx: {"index": idx},
+            lambda _, idx: {"index": idx},
             with_indices=True,
             remove_columns=[],
         )
@@ -49,7 +48,7 @@ class Experiment:
         def make_prompt(example):
             example["question"] = Loader.apply_chat_template(
                 prompt=example["question"],
-                instruct=modelcfg.is_instruct
+                instruct=modelcfg.instruct
             )
             return example
 
@@ -57,7 +56,7 @@ class Experiment:
         ds = ds.map(
             make_prompt,
             batched=False,
-            batch_size=64,
+            batch_size=evalcfg.batch_size,
             num_proc=8,
             remove_columns=[])
         # 2. Tell HF to return PyTorch tensors for the columns you need:
@@ -65,7 +64,7 @@ class Experiment:
 
         self.dataloader = DataLoader(
             ds,
-            batch_size=batch_size,
+            batch_size=self.configs.batch_size,
             shuffle=False,
             pin_memory=True,
             num_workers=8,
@@ -73,11 +72,11 @@ class Experiment:
 
     def run(self) -> None:
         for batch in self.dataloader:
-            indices:    List[int]              = batch["index"].tolist()
-            problems:   List[str]              = batch["tier"]
-            questions:  List[str]              = batch["question"]
-            truths:     List[str]              = batch["answer"]
-            constants:  List[Optional[str]]    = batch.get("constants", [None]*len(indices))
+            indices:    list[int]              = batch["index"].tolist()
+            problems:   list[str]              = batch["tier"]
+            questions:  list[str]              = batch["question"]
+            truths:     list[str]              = batch["answer"]
+            constants:  list[str | None]    = batch.get("constants", [None]*len(indices))
 
             responses = self.model.get_response(questions)
 
@@ -110,36 +109,18 @@ class Experiment:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Batched Z3-based evaluation")
-    parser.add_argument(
-        "dataset", help="HuggingFace dataset ID",
-    )
-    parser.add_argument("--model", required=True, help="Model identifier")
-    parser.add_argument(
-        "--batch_size", type=int, default=64,
-        help="Number of examples per LLM batch",
-    )
-    parser.add_argument(
-        "--instruct", action="store_true", help="Enable instruct-style prompts",
-    )
-    parser.add_argument(
-        "--pp", type=int, default=1, help="Pipeline Parallelism (Number of Nodes)"
-    )
-    args = parser.parse_args()
 
-    modelcfg = ModelConfig(
-        model_name=args.model,
-        quantization_mode=None,
-        token=os.getenv("HUGGINGFACE_TOKEN"),
-        instruct=args.instruct,
-        pipeline_parallelism=args.pp,
-    )
-    evalcfg = EvaluationConfig(results_dir=f"./results_{args.model}")
+    cfg = load_config()
+    print("=== Loaded Configuration ===")
+    print(OmegaConf.to_yaml(cfg))
+
+    modelcfg = ModelConfig(**cfg.model)
+    evalcfg = EvaluationConfig(**cfg.evaluation)
+
+
 
     exp = Experiment(
         modelcfg=modelcfg,
-        dataset_id=args.dataset,
         evalcfg=evalcfg,
-        batch_size=args.batch_size,
     )
     exp.run()

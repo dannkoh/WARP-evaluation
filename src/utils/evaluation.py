@@ -153,18 +153,15 @@ class _VLLMHelper(BaseLLMHelper):
     def __init__(self, modelconfig: ModelConfig) -> None:
         from vllm import LLM, SamplingParams
 
-        os.environ["HF_TOKEN"] = modelconfig.token
-
         self.pipeline = LLM(
             model=modelconfig.model,
             trust_remote_code=True,
             tensor_parallel_size=(torch.cuda.device_count() or 1),
-            pipeline_parallel_size=2,
+            pipeline_parallel_size=modelconfig.pipeline_parallelism,
             dtype="auto",
             disable_custom_all_reduce=True,
-            distributed_executor_backend="ray",
         )
-        self.sampling_params = SamplingParams(max_tokens=32768)
+        self.sampling_params = SamplingParams(**modelconfig.sampling.__dict__)
 
     def _get_responses(self, prompts: list[str]) -> list[str]:
         # generate all prompts in one shot
