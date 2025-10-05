@@ -5,7 +5,6 @@ model:
   pipeline_parallelism: 1
   sampling:
     n: 1
-    best_of: null
     presence_penalty: 0.0
     frequency_penalty: 0.0
     repetition_penalty: 1.0
@@ -23,15 +22,9 @@ model:
     min_tokens: 0
     logprobs: null
     prompt_logprobs: null
-    detokenize: true
     skip_special_tokens: true
     spaces_between_special_tokens: true
-    logits_processors: null
     truncate_prompt_tokens: null
-    structured_outputs: null
-    guided_decoding: null
-    logit_bias: null
-    allowed_token_ids: null
     extra_args: null
 
 evaluation:

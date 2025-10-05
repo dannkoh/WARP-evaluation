@@ -46,7 +46,6 @@ class SamplingParamsConfig:
 
     Attributes:
         n (int): Number of outputs to return for the given prompt request.
-        best_of (Optional[int]): Number of output sequences generated, top n returned.
         presence_penalty (float): Penalizes new tokens based on presence.
         frequency_penalty (float): Penalizes new tokens based on frequency.
         repetition_penalty (float): Penalizes new tokens based on repetition.
@@ -64,22 +63,14 @@ class SamplingParamsConfig:
         min_tokens (int): Minimum number of tokens to generate.
         logprobs (Optional[int]): Number of log probabilities to return per output token.
         prompt_logprobs (Optional[int]): Number of log probabilities to return per prompt token.
-        detokenize (bool): Whether to detokenize the output.
         skip_special_tokens (bool): Whether to skip special tokens in output.
         spaces_between_special_tokens (bool): Add spaces between special tokens.
-        logits_processors (Optional[Any]): Functions that modify logits.
         truncate_prompt_tokens (Optional[int]): Prompt truncation size.
-        output_kind (str): Output kind (CUMULATIVE, DELTA, FINAL_ONLY).
-        structured_outputs (Optional[Any]): Parameters for structured outputs.
-        guided_decoding (Optional[Any]): Deprecated alias for structured_outputs.
-        logit_bias (Optional[dict]): Logit bias mapping.
-        allowed_token_ids (Optional[list[int]]): Only allow these token ids.
         extra_args (Optional[dict]): Arbitrary additional args.
 
     """
 
     n: int = 1
-    best_of: int | None = None
     presence_penalty: float = 0.0
     frequency_penalty: float = 0.0
     repetition_penalty: float = 1.0
@@ -97,15 +88,9 @@ class SamplingParamsConfig:
     min_tokens: int = 0
     logprobs: int | None = None
     prompt_logprobs: int | None = None
-    detokenize: bool = True
     skip_special_tokens: bool = True
     spaces_between_special_tokens: bool = True
-    logits_processors: Any | None = None
     truncate_prompt_tokens: int | None = None
-    structured_outputs: Any | None = None
-    guided_decoding: Any | None = None
-    logit_bias: dict | None = None
-    allowed_token_ids: list[int] | None = None
     extra_args: dict | None = None
 
 
