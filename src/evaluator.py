@@ -115,7 +115,7 @@ if __name__ == "__main__":
     print(OmegaConf.to_yaml(cfg))
 
     modelcfg = ModelConfig(**cfg.model)
-    evalcfg = EvaluationConfig(**cfg.evaluation)
+    evalcfg = EvaluationConfig(**cfg.evaluation, model_name=modelcfg.model)
 
 
 

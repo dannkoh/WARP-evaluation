@@ -28,7 +28,7 @@ model:
     extra_args: null
 
 evaluation:
-  results_dir: "./results"
+  results_dir: "./src/results"
   attempts: 3
   max_file_size: 2000000
   batch_size: 64

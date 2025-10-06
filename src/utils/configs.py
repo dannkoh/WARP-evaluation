@@ -139,12 +139,13 @@ class EvaluationConfig:
     max_file_size: int = 2_000_000
     batch_size: int | None = None
     dataset: str | None = None
+    model_name: str | None = None
 
     def __post_init__(self) -> None:
         """
         Initialize output directories based on the current timestamp.
         """
-        results_dir = Path(self.results_dir) / datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        results_dir = Path(self.results_dir+ "_" + self.model_name) / datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         self.logs_dir = results_dir / "logs"
         self.stats_dir = results_dir / "stats"
         self.generals = results_dir / "generals"
